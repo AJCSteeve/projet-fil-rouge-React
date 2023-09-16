@@ -3,11 +3,11 @@ import './App.css';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import {Route, Routes} from "react-router-dom";
-import Login from "./components/Login";
-import SearchTickets from "./components/SearchTickets";
+import Login from "./components/user/Login";
+import SearchTickets from "./components/transaction/SearchTickets";
 import React from "react";
-import SellingTickets from "./components/SellingTickets";
-import PurchaseTickets from "./components/PurchaseTickets";
+import SellingTickets from "./components/transaction/SellingTickets";
+import PurchaseTickets from "./components/transaction/PurchaseTickets";
 
 function App() {
     return (
