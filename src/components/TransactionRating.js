@@ -1,7 +1,7 @@
-function Ratings() {
-    return (<><h2>RATINGS TICKETS</h2></>);
+function TransactionRating() {
+    return (<><h2>RATING TRANSACTIONS</h2></>);
 }
 
 
 
-export default Ratings;
+export default TransactionRating;

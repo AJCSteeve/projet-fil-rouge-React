@@ -1,7 +1,7 @@
-function Update() {
+function UpdateProfile() {
     return (<><h2>UPDATE PROFILE</h2></>);
 }
 
 
 
-export default Update;
+export default UpdateProfile;
