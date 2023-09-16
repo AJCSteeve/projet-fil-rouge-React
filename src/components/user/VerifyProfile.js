@@ -1,5 +1,5 @@
 function VerifyProfile() {
-    return (<><h2>UPDATE PROFILE</h2></>);
+    return (<><h2>VERIFY PROFILE</h2></>);
 }
 
 
