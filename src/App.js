@@ -13,7 +13,7 @@ import VerifyProfile from "./components/user/VerifyProfile";
 import TransactionRating from "./components/transaction/TransactionRating";
 import CheckSellingHistory from "./components/transaction/CheckSellingHistory";
 import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Navbar/NavBar";
 
 
 function App() {
