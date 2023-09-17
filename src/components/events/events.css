@@ -1,0 +1,34 @@
+.events {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start; /* pour ajuster l'alignement horizontal */
+}
+
+.eventItem {
+    position: relative;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 250px;
+}
+.eventTitle {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.eventImg {
+    width: 100%;
+    object-fit: cover;
+}
+.top-section,
+.bottom-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
