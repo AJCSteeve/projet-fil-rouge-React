@@ -1,14 +1,14 @@
-
 import React from "react";
-import NavBar from "./Navbar/NavBar";
+import "./navbar/Navbar.css";
+import Navbar from "./navbar/Navbar";
+
 
 function Header() {
     return (<>
-        <h2>My Ticket</h2>
         {/* TODO: insert Navbar somewhere in Header */}
-
+        <Navbar/>
         {/* Temporaire : pour faciliter navigation et tests des routes*/}
-        {/*<NavBar/>*/}
+
     </>);
 }
 

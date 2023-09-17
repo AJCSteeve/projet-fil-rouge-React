@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.NavbarItems {
+    background-color: midnightblue;
+    margin: 0;
+    padding: 0;
+    height: 80px;
+}
+
+.NavbarItems h1 {
+    color: burlywood;
+    padding: 10px;
+    font-size: 25px;
+}
+.logo {
+    width: 20%;
+    display: inline-block;
+}
+.navbar-ul {
+    width: 80%;
+    display: inline-block;
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+}
+li {
+    display: inline-block;
+    list-style: none;
+    font-size: 18px;
+    padding: 10px;
+    line-height: 80px;
+    margin-right: 20px;
+}
+.nav-links {
+    color: white;
+    text-decoration: none;
+}
+.nav-links-mobile {
+    color: white;
+    text-decoration: none;
+}
