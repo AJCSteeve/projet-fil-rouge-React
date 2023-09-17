@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -14,11 +13,14 @@ import VerifyProfile from "./components/user/VerifyProfile";
 import TransactionRating from "./components/transaction/TransactionRating";
 import CheckSellingHistory from "./components/transaction/CheckSellingHistory";
 import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory";
+import NavBar from "./components/NavBar";
+
 
 function App() {
     return (
         <div className="App">
             <><Header/></>
+            <NavBar/>
             <Routes>
                 {/* Routes about user account :
                 - register
@@ -43,7 +45,6 @@ function App() {
                 <Route path="/transaction/history/purchase" element={<CheckPurchaseHistory/>}/>
 
             </Routes>
-
             <><Footer/></>
         </div>
     );
