@@ -13,7 +13,7 @@ function Register() {
     const [emailError, setEmailError] = useState('');
     const [phoneNumberError, setPhoneNumberError] = useState('');
 
-
+    // TODO : REFACTOR into separated component to reduce size of Register component
     // Validate values transmitted via form submission
     const handleSubmit = (submitClicked) => {
         submitClicked.preventDefault();
@@ -41,15 +41,46 @@ function Register() {
             setPhoneNumberError('Invalid phone number format');
             isValid = false;
         }/* else if(){
-                // TODO check username availability
+                // TODO CHECK username availability : username isn't already in the database
             }*/
 
         if (isValid) {
-            //
-            // Proceed with registration, e.g., send a request to your server
-            // You can also check for username uniqueness here before making the request
-            // If username is not unique, set an error using setUsernameError('Username is not available');
-            // If the registration is successful, you can redirect or show a success message
+            // userData : content of the JSON which is sent to the server
+            // TODO : REFACTOR into separated component to reduce size of Register component
+            const userData = {
+                username,
+                email,
+                password,
+                phoneNumber,
+                photoUrl,
+            };
+
+            // Send a POST request to your server endpoint
+            fetch('/api/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(userData),
+            })
+                .then((response) => {
+                    if (response.status === 200) {
+                        // Registration was successful
+                        // You can redirect or show a success message here
+                    } else if (response.status === 409) {
+                        // Username is not unique
+                        setUsernameError('Username is not available');
+                    } else {
+                        // Handle other error cases
+                        console.error('Registration failed with status:', response.status);
+                        // You can display an error message to the user if needed
+                    }
+                })
+                .catch((error) => {
+                    console.error('Registration failed:', error);
+                    // Handle network errors or other issues here
+                    // You can display an error message to the user if needed
+                });
         }
     };
 
@@ -105,7 +136,7 @@ function Register() {
                 <button type="submit">Register</button>
             </form>
         </div>
-);
+    );
 };
 export default Register;
 
