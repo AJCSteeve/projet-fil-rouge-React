@@ -1,8 +1,16 @@
+import {Link} from "react-router-dom";
+
 function Footer() {
     return (
         <>
-            <h2>Footer</h2>
-
+            <table id="temporary-footer-nav">
+                <tr>
+                    <td><h2>Footer</h2></td>
+                    <td><p>Temporary links : </p></td>
+                    <td><a href="register">register</a></td>
+                    <td><a href="login">login</a></td>
+                </tr>
+            </table>
         </>
     );
 }
