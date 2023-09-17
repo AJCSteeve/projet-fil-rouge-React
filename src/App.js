@@ -55,9 +55,16 @@ function App() {
                     <Route path="/transaction/history/purchase" element={<CheckPurchaseHistory/>}/>
                 </Routes>
                 {/*fixme the background image isn't displayed, while the picture URL is right.*/}
-                <div className='bg-image p-5 text-center shadow-1-strong rounded mb-5 text-light'></div>
+                {/*<div className='bg-image p-5 text-center shadow-1-strong rounded mb-5 text-light'></div>*/}
+            <div style={{
+                backgroundImage: 'url("https://mdbootstrap.com/img/Photos/Others/images/68.jpg")',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                minHeight: 'calc(100vh - 80px - 60px)', // 80px pour le header et 60px pour le footer
+            }}>
+                </div>
             <div className='footer'><Footer/></div>
-
         </div>
     );
 }

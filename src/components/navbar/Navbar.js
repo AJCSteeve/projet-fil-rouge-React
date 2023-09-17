@@ -9,8 +9,8 @@ export default function Navbar() {
             <ul className="navbar-ul">
                 {MenuItems.map((item, index) => {
                     return (
-                        <li key={index} className={item.cName}>
-                            <a href={item.url}>{item.Title}</a>
+                        <li key={index}>
+                            <a  className={`nav-links ${item.colorClass}`}href={item.url}>{item.Title}</a>
                         </li>
                     );
                 })}
