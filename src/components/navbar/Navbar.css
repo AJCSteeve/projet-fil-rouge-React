@@ -2,42 +2,39 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .NavbarItems {
-    background-color: midnightblue;
+    background-color: #70370f;
     margin: 0;
     padding: 0;
     height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.NavbarItems h1 {
+.logo {
     color: burlywood;
     padding: 10px;
     font-size: 25px;
 }
-.logo {
-    width: 20%;
-    display: inline-block;
-}
+
 .navbar-ul {
-    width: 80%;
-    display: inline-block;
     list-style: none;
-    margin: 0px;
+    margin: 0;
     padding: 0;
 }
+
 li {
+    color: white;
     display: inline-block;
     list-style: none;
     font-size: 18px;
     padding: 10px;
-    line-height: 80px;
     margin-right: 20px;
 }
+
 .nav-links {
-    color: white;
-    text-decoration: none;
-}
-.nav-links-mobile {
     color: white;
     text-decoration: none;
 }
