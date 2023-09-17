@@ -5,6 +5,7 @@ body {
 
 .NavbarItems {
     background-color: #70370f;
+    color: burlywood;
     margin: 0;
     padding: 0;
     height: 80px;
@@ -20,13 +21,14 @@ body {
 }
 
 .navbar-ul {
+    color: burlywood;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 li {
-    color: white;
+    color: burlywood;
     display: inline-block;
     list-style: none;
     font-size: 18px;
@@ -35,6 +37,8 @@ li {
 }
 
 .nav-links {
-    color: white;
+    color: burlywood;
     text-decoration: none;
 }
+
+
