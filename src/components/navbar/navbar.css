@@ -16,6 +16,7 @@
 
 .logo {
     font-weight: bold;
+    font-size: xx-large;
 }
 
 .navButton {
@@ -25,4 +26,5 @@
     cursor: pointer;
     background-color: gold;
     color: maroon;
+    border-radius: 10px;
 }

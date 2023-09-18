@@ -42,7 +42,7 @@ const Header = () => {
                 </div>
                 <h1 className="headerTitle">Vous ne pouvez pas vous présenter à un évènement ?</h1>
                 <p className="headerDescr">Ne perdez pas votre argent, revendez vos billets de théâtre, concerts, parcs d’attraction, spectacles...</p>
-                <button className="headerBtn">Sign in / Register</button>
+                <button className="headerBtn">Recherche</button>
             </div>
         </div>
     );
