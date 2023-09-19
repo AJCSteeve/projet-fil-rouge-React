@@ -1,6 +1,6 @@
 import { Nav } from "react-bootstrap";
 import { MenuItems } from "./MenuItems";
-import './Navbar.css';
+import './navbar.css';
 
 export default function Navbar() {
     return (
