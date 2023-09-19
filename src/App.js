@@ -20,7 +20,7 @@ import List from "./pages/list/List";
 function App() {
     return (
         <div className="App">
-            <div className='my-custom-bg'>
+            <div className="main">
                     <Routes>
                         {/* Routes about user account :
                 - register
