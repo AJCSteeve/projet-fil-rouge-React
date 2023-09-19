@@ -1,8 +1,11 @@
 import React, {useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 function Register(){
+    let navigate=useNavigate();
+
     // store form content into a state :
     // 1) initialize user object
     const [user, setUser]=useState({
@@ -23,8 +26,8 @@ function Register(){
 
     const onSubmit=async (e)=>{
         e.preventDefault();
-        await axios.post("")
-
+        await axios.post("http://localhost:8080/api/auth/register", user) // note : url pas nécessairement le même que url partie
+        navigate("/"); //navigate to home after submitting form
 
     };
 
