@@ -13,8 +13,8 @@ const Home = () => {
             <div className="homeContainer">
                 <Cards />
                 <MailList />
+                <Footer/>
             </div>
-            <Footer/>
         </div>
     );
 };
