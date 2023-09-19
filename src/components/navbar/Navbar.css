@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.NavbarItems {
+    background-color: #70370f;
+    color: burlywood;
+    margin: 0;
+    padding: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: burlywood;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.navbar-ul {
+    color: burlywood;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    color: burlywood;
+    display: inline-block;
+    list-style: none;
+    font-size: 18px;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.nav-links {
+    color: burlywood;
+    text-decoration: none;
+}
+
+

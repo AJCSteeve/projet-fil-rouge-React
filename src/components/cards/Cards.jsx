@@ -1,8 +1,8 @@
 import React from 'react';
-import "./events.css"
+import "./cards.css"
 import * as events from "events";
 
-const Events = () => {
+const Cards = () => {
     return (
         <div className="events">
             <div className={"top-section"}>
@@ -67,4 +67,4 @@ const Events = () => {
     );
 };
 
-export default Events;
+export default Cards;

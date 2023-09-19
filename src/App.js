@@ -21,8 +21,8 @@ import Navbar from "./components/navbar/Navbar";
 function App() {
     return (
         <div className="App">
+            <div className="main">
             <><Navbar /></>
-            <div className='my-custom-bg'>
                     <Routes>
                         {/* Routes about user account :
                 - register

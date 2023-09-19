@@ -2,7 +2,7 @@ import React from 'react';
 import "./home.css"
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/Header";
-import Events from "../../components/events/Events";
+import Cards from "../../components/cards/Cards";
 import MailList from "../../components/mailList/MailList";
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
         <div>
             <Header />
             <div className="homeContainer">
-                <Events />
+                <Cards />
                 <MailList />
             </div>
         </div>
