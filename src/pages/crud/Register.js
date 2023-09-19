@@ -29,7 +29,6 @@ function Register(){
                             name="password"
                         />
                     </div>
-
                     <div div className="mb-3">
                         <label htmlFor="Email" className="form-label">
                             E-mail
@@ -39,6 +38,28 @@ function Register(){
                             className="form-control"
                             placeholder="Entrez votre adresse mail"
                             name="mail"
+                        />
+                    </div>
+                    <div div className="mb-3">
+                        <label htmlFor="phoneNumber" className="form-label">
+                            Numéro de téléphone
+                        </label>
+                        <input
+                            type={"tel"}
+                            className="form-control"
+                            placeholder="Entrez votre numéro de téléphone (optionnel)"
+                            name="phoneNumber"
+                        />
+                    </div>
+                    <div div className="mb-3">
+                        <label htmlFor="photoUrl" className="form-label">
+                            Photo de profil
+                        </label>
+                        <input
+                            type={"url"}
+                            className="form-control"
+                            placeholder="URL vers votre photo de profil (optionnel)"
+                            name="photoUrl"
                         />
                     </div>
                     <div className="fa-pull-right">
