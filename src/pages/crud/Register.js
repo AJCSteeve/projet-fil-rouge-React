@@ -1,34 +1,49 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function Register(){
     return(
         <div className="container">
             <div className="row">
-                <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-                    <h2 className="text-center m-4">Register User</h2>
+                <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 border-warning">
+                    <h2 className="text-center m-4">Inscription</h2>
                     <div div className="mb-3">
                         <label htmlFor="Username" className="form-label">
-                            Pseudonyme
+                            Nom d'utilisateur
                         </label>
                         <input
                             type={"text"}
                             className="form-control"
-                            placeholder="Entrez votre pseudonyme"
+                            placeholder="Entrez votre nom d'utilisateur"
                             name="username"
                         />
                     </div>
                     <div div className="mb-3">
-                    <label htmlFor="Email" className="form-label">
+                        <label htmlFor="Password" className="form-label">
+                            Mot de passe
+                        </label>
+                        <input
+                            type={"password"}
+                            className="form-control"
+                            placeholder="Entrez votre mot de passe"
+                            name="password"
+                        />
+                    </div>
+
+                    <div div className="mb-3">
+                        <label htmlFor="Email" className="form-label">
                             E-mail
                         </label>
                         <input
-                            type={"text"}
+                            type={"email"}
                             className="form-control"
                             placeholder="Entrez votre adresse mail"
                             name="mail"
                         />
                     </div>
-                    <button type="submit" className="btn btn-outline-primary">Soumettre</button>
+                    <div className="fa-pull-right">
+                        <button type="submit" className="btn  btn-outline-warning">Soumettre</button>
+                    </div>
                 </div>
             </div>
         </div>
