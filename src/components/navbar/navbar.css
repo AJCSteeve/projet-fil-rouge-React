@@ -1,33 +1,30 @@
-.navbar {
-    height: 50px;
-    background-color: #70370f;
-    display: flex;
-    justify-content: center;
+body {
+    margin: 0;
+    padding: 0;
 }
 
-.navContainer {
+.NavbarItems {
+    background-color: #70370f;
+    color: burlywood;
+    margin: 0;
+    padding: 0;
+    height: 80px;
     display: flex;
-    width: 100%;
-    max-width: 1024px;
-    color: white;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo {
-    font-weight: bold;
-    font-size: xx-large;
+    color: burlywood;
+    padding: 10px;
+    font-size: 25px;
 }
 
-.navButton {
-    margin-left: 20px;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    background-color: gold;
-    color: maroon;
-    border-radius: 10px;
-    text-decoration: none;
+.navbar-ul {
+    color: burlywood;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 li {
@@ -38,3 +35,10 @@ li {
     padding: 10px;
     margin-right: 20px;
 }
+
+.nav-links {
+    color: burlywood;
+    text-decoration: none;
+}
+
+
