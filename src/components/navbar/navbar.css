@@ -27,4 +27,14 @@
     background-color: gold;
     color: maroon;
     border-radius: 10px;
+    text-decoration: none;
+}
+
+li {
+    color: burlywood;
+    display: inline-block;
+    list-style: none;
+    font-size: 18px;
+    padding: 10px;
+    margin-right: 20px;
 }
