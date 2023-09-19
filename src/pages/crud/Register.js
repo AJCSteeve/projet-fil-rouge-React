@@ -7,15 +7,28 @@ function Register(){
                 <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
                     <h2 className="text-center m-4">Register User</h2>
                     <div div className="mb-3">
-                        <label htmlFor="Name" className="form-label">
-                            Name
+                        <label htmlFor="Username" className="form-label">
+                            Pseudonyme
                         </label>
                         <input
-                        type={"text"}
-                        className="form-control"
-                        placeholder="Enter your name"
-                        name="name"/>
+                            type={"text"}
+                            className="form-control"
+                            placeholder="Entrez votre pseudonyme"
+                            name="username"
+                        />
                     </div>
+                    <div div className="mb-3">
+                    <label htmlFor="Email" className="form-label">
+                            E-mail
+                        </label>
+                        <input
+                            type={"text"}
+                            className="form-control"
+                            placeholder="Entrez votre adresse mail"
+                            name="mail"
+                        />
+                    </div>
+                    <button type="submit" className="btn btn-outline-primary">Soumettre</button>
                 </div>
             </div>
         </div>
