@@ -14,6 +14,7 @@ const Home = () => {
                 <Cards />
                 <MailList />
             </div>
+            <Footer />
         </div>
     );
 };

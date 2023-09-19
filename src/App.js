@@ -51,7 +51,6 @@ function App() {
                 {/*fixme the background image isn't displayed, while the picture URL is right.*/}
                 <div className='bg-image p-5 text-center shadow-1-strong rounded mb-5 text-light'></div>
             </div>
-            <><Footer /></>
         </div>
     );
 }
