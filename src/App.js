@@ -15,12 +15,14 @@ import CheckSellingHistory from "./components/transaction/CheckSellingHistory";
 import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory";
 import Home from "./pages/home/Home";
 import List from "./pages/list/List";
+import Navbar from "./components/navbar/Navbar";
 
 
 function App() {
     return (
         <div className="App">
             <div className="main">
+            <><Navbar /></>
                     <Routes>
                         {/* Routes about user account :
                 - register
@@ -49,6 +51,7 @@ function App() {
                 {/*fixme the background image isn't displayed, while the picture URL is right.*/}
                 <div className='bg-image p-5 text-center shadow-1-strong rounded mb-5 text-light'></div>
             </div>
+            <><Footer /></>
         </div>
     );
 }
