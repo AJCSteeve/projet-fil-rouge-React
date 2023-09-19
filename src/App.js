@@ -21,7 +21,7 @@ import Navbar from "./components/navbar/Navbar";
 function App() {
     return (
         <div className="App">
-            <Navbar />
+            <><Navbar /></>
             <div className='my-custom-bg'>
                     <Routes>
                         {/* Routes about user account :
@@ -51,7 +51,7 @@ function App() {
                 {/*fixme the background image isn't displayed, while the picture URL is right.*/}
                 <div className='bg-image p-5 text-center shadow-1-strong rounded mb-5 text-light'></div>
             </div>
-            <Footer />
+            <><Footer /></>
         </div>
     );
 }
