@@ -4,6 +4,7 @@ import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/Header";
 import Cards from "../../components/cards/Cards";
 import MailList from "../../components/mailList/MailList";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
     return (
