@@ -1,10 +1,9 @@
 import './App.css';
-import Header from "./components/Header";
-import Footer from "./components/footer/Footer";
+import React from "react";
 import {Route, Routes} from "react-router-dom";
+import Home from "./pages/home/Home";
 import Login from "./pages/crud/Login";
 import SearchTickets from "./components/transaction/SearchTickets";
-import React from "react";
 import SellingTickets from "./components/transaction/SellingTickets";
 import PurchaseTickets from "./components/transaction/PurchaseTickets";
 import Register from "./pages/crud/Register";
@@ -13,15 +12,15 @@ import VerifyProfile from "./pages/crud/VerifyProfile";
 import TransactionRating from "./components/transaction/TransactionRating";
 import CheckSellingHistory from "./components/transaction/CheckSellingHistory";
 import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory";
-import Home from "./pages/home/Home";
-import List from "./pages/list/List";
 import Navbar from "./components/navbar/Navbar";
+import HomeTheatre from "./pages/home/HomeTheatre";
+import TicketDetails from "./pages/details/TicketDetails";
 
 
 function App() {
     return (
         <div className="App">
-            <div className='my-custom-bg'>
+            <div>
                 <><Navbar/></>
                 <Routes>
                     {/* Routes about user account :
@@ -31,6 +30,9 @@ function App() {
                 - verify user profile //TODO DEFINIR VERIFICATION DU PROFIL
                 */}
                     <Route path="/" element={<Home/>}/>
+                    <Route path='/theatre' element={<HomeTheatre />} />
+                    <Route path='/product/:id' element={<TicketDetails />} />
+
                     <Route path="/register" element={<Register/>}/>
                     <Route path="/login" element={<Login/>}/>
                     <Route path="/profile/update" element={<UpdateProfile/>}/>
@@ -40,7 +42,6 @@ function App() {
                 - rating of a transaction,
                 - consulting transaction history (sellings & purchases)
                 */}
-                    <Route path="/tickets" element={<List/>}/>
                     <Route path="/tickets/search" element={<SearchTickets/>}/>
                     <Route path="/tickets/selling" element={<SellingTickets/>}/>
                     <Route path="/tickets/purchase" element={<PurchaseTickets/>}/>
