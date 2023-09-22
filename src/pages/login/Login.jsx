@@ -19,12 +19,12 @@ const Login = () => {
                     </Link>
                 </div>
                 <div className="login-right">
-                    <h1>Login</h1>
+                    <h1>Connexion</h1>
                     <form>
-                        <input type="text" placeholder="Username" />
-                        <input type="password" placeholder="Password" />
+                        <input type="text" placeholder="Identifiant" />
+                        <input type="password" placeholder="Mot de passe" />
                         <Link to="/">
-                            <button className="login-btn">Login</button>
+                            <button className="login-btn">Se connecter</button>
                         </Link>
                     </form>
                 </div>

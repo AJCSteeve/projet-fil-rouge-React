@@ -19,13 +19,13 @@ const Register = () => {
                     </Link>
                 </div>
                 <div className="register-right">
-                    <h1>Register</h1>
+                    <h1>Créer un compte</h1>
                     <form>
-                        <input type="text" placeholder="Username" />
+                        <input type="text" placeholder="Identifiant" />
                         <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
+                        <input type="password" placeholder="Mot de passe" />
                         <Link to="/">
-                            <button className="register-btn">Register</button>
+                            <button className="register-btn">S'inscrire</button>
                         </Link>
                     </form>
                 </div>

@@ -1,16 +1,16 @@
 export const MenuItems = [
     {
-        Title: "Home",
+        Title: "Accueil",
         url: "/",
         cName: "menu-home",
     },
     {
-        Title: "Register",
+        Title: "S'inscrire",
         url: "/register",
         cName: "menu-register",
     },
     {
-        Title: "Login",
+        Title: "Se connecter",
         url: "/login",
         cName: "menu-login",
     },
