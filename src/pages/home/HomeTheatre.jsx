@@ -1,12 +1,5 @@
 import React, {useContext} from 'react';
 
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Header from "../../components/header/Header";
-import MailList from "../../components/mailList/MailList";
-import Footer from "../../components/footer/Footer";
-
-import TicketDetails from "../details/TicketDetails"
-
 // import tickets du json
 import {TicketContext} from "../../context/TicketContext";
 const HomeTheatre = () => {
