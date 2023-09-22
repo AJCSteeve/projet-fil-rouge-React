@@ -1,6 +1,6 @@
 import './App.css';
 import React from "react";
-import {Outlet, Route, Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
@@ -13,12 +13,7 @@ import TransactionRating from "./components/transaction/TransactionRating";
 import CheckSellingHistory from "./components/transaction/CheckSellingHistory";
 import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory";
 import Navbar from "./components/navbar/Navbar";
-import HomeTheatre from "./pages/home/HomeTheatre";
 import TicketDetails from "./pages/details/TicketDetails";
-import Profile from "./pages/profile/Profile";
-import RightBar from "./components/rightBar/RightBar";
-import LeftBar from "./components/leftBar/LeftBar";
-import NavbarProfile from "./components/navbar-profile/NavbarProfile";
 
 function App() {
     return (
@@ -36,11 +31,9 @@ function App() {
                     <Route path="/" index element={<Home />} />
                     <Route path="/register" element={<Register/>}/>
                     <Route path="/login" element={<Login/>}/>
-                    <Route path="/profile" element={<Profile />} />
                     <Route path="/profile/update" element={<UpdateProfile/>}/>
                     <Route path="/profile/verify" element={<VerifyProfile/>}/>
 
-                    <Route path='/theatre' element={<HomeTheatre />} />
                     <Route path='/product/:id' element={<TicketDetails />} />
                     {/* Routes about transactions :
                 - search, selling, purchase of tickets,
