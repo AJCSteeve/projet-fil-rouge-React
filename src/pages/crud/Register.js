@@ -11,12 +11,11 @@ function Register(){
     const [user, setUser]=useState({
         username:"",
         password:"",
-        email:"",
-        phoneNumber:"",
-        photoUrl:""
+        email:""
     });
     // 2) deconstruction of the object
-    const {username,password, email,phoneNumber,photoUrl}=user;
+    const {username,password, email}=user;
+
 
     //note : (e) = event
     // set all the user attributes to the values entered in the form
@@ -76,32 +75,32 @@ function Register(){
                                 onChange={(e)=>onInputChange(e)}
                             />
                         </div>
-                        <div div className="mb-3">
-                            <label htmlFor="phoneNumber" className="form-label">
-                                Numéro de téléphone
-                            </label>
-                            <input
-                                type={"tel"}
-                                className="form-control"
-                                placeholder="Entrez votre numéro de téléphone (optionnel)"
-                                name="phoneNumber"
-                                value={phoneNumber}
-                                onChange={(e)=>onInputChange(e)}
-                            />
-                        </div>
-                        <div div className="mb-3">
-                            <label htmlFor="photoUrl" className="form-label">
-                                Photo de profil
-                            </label>
-                            <input
-                                type={"url"}
-                                className="form-control"
-                                placeholder="URL vers votre photo de profil (optionnel)"
-                                name="photoUrl"
-                                value={photoUrl}
-                                onChange={(e)=>onInputChange(e)}
-                            />
-                        </div>
+                        {/*<div div className="mb-3">*/}
+                        {/*    <label htmlFor="phoneNumber" className="form-label">*/}
+                        {/*        Numéro de téléphone*/}
+                        {/*    </label>*/}
+                        {/*    <input*/}
+                        {/*        type={"tel"}*/}
+                        {/*        className="form-control"*/}
+                        {/*        placeholder="Entrez votre numéro de téléphone (optionnel)"*/}
+                        {/*        name="phoneNumber"*/}
+                        {/*        value={phoneNumber}*/}
+                        {/*        onChange={(e)=>onInputChange(e)}*/}
+                        {/*    />*/}
+                        {/*</div>*/}
+                        {/*<div div className="mb-3">*/}
+                        {/*    <label htmlFor="photoUrl" className="form-label">*/}
+                        {/*        Photo de profil*/}
+                        {/*    </label>*/}
+                        {/*    <input*/}
+                        {/*        type={"url"}*/}
+                        {/*        className="form-control"*/}
+                        {/*        placeholder="URL vers votre photo de profil (optionnel)"*/}
+                        {/*        name="photoUrl"*/}
+                        {/*        value={photoUrl}*/}
+                        {/*        onChange={(e)=>onInputChange(e)}*/}
+                        {/*    />*/}
+                        {/*</div>*/}
                         <div className="fa-pull-right">
                             <button type="submit" className="btn  btn-outline-warning mx-2">Annuler</button>
                         </div>
