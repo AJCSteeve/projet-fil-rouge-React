@@ -7,37 +7,37 @@ import payimg from '../../assets/pay.jpeg';
 
 const Footer = () => {
     return (
-        <div className={"footer"}>
-            <div className="footerin1">
-                <div className="footerLists">
-                    <u className={"footerList"}>
-                        <li className={"footerListItem"}><h3>A propos</h3></li>
-                        <li className={"footerListItem"}>Conditions générales d'utilisation</li>
-                        <li className={"footerListItem"}>Mentions légales</li>
-                    </u>
-                    <u className={"footerList"}>
-                        <li className={"footerListItem"}><h3>Informations</h3></li>
-                        <li className={"footerListItem"}>Contact</li>
-                        <li className={"footerListItem"}>Aide</li>
-                    </u>
-                    <u className={"footerList"}>
-                        <li className={"footerListItem"}><h3>Suivez-nous</h3></li>
-                        <li className={"socialImg"}><FontAwesomeIcon icon={faFacebook} size="2x" color={"blue"}/></li>
-                        <li className={"socialImg"}><FontAwesomeIcon icon={faTwitter} size="2x" color={"blue"} /></li>
-                    </u>
-                    <u className={"footerList"}>
-                        <li className={"footerListItem"}><h3>Versions du site</h3></li>
-                        <li className={"footerListItem"}><FontAwesomeIcon icon={faFlag} className={"england-flag"} /><span> English</span></li>
-                        <li className={"footerListItem"}><FontAwesomeIcon icon={faFlag} className={"spain-flag"} /><span> Espagnol</span></li>
-                        <li className={"footerListItem"}><FontAwesomeIcon icon={faFlag} className={"germany-flag"} /><span> Deutsch</span></li>
-                    </u>
+        <div className="footer">
+            <div className="footer-in-1">
+                <div className="footer-lists">
+                    <ul className="footer-list">
+                        <li className="footerListItem"><h3>A propos</h3></li>
+                        <li className="footerListItem">Conditions générales d'utilisation</li>
+                        <li className="footerListItem">Mentions légales</li>
+                    </ul>
+                    <ul className="footer-list">
+                        <li className="footerListItem"><h3>Informations</h3></li>
+                        <li className="footerListItem">Contact</li>
+                        <li className="footerListItem">Aide</li>
+                    </ul>
+                    <ul className="footer-list">
+                        <li className="footerListItem"><h3>Suivez-nous</h3></li>
+                        <li className="social-img"><FontAwesomeIcon icon={faFacebook} size="2x" color={"blue"}/></li>
+                        <li className="social-img"><FontAwesomeIcon icon={faTwitter} size="2x" color={"blue"} /></li>
+                    </ul>
+                    <ul className="footer-list">
+                        <li className="footerListItem"><h3>Versions du site</h3></li>
+                        <li className="footerListItem"><FontAwesomeIcon icon={faFlag} className="england-flag" /><span> English</span></li>
+                        <li className="footerListItem"><FontAwesomeIcon icon={faFlag} className="spain-flag" /><span> Espagnol</span></li>
+                        <li className="footerListItem"><FontAwesomeIcon icon={faFlag} className="germany-flag" /><span> Deutsch</span></li>
+                    </ul>
                 </div>
             </div>
-            <div className="footerin2">
-                <div className="paymentImg">
+            <div className="footer-in-2">
+                <div className="payment-img">
                     <img src={payimg} alt="payment" />
                 </div>
-                <div className="footerText">
+                <div className="footer-text">
                     <h3>Tous droits réservés - My Ticket - 2023</h3>
                 </div>
             </div>

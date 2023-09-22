@@ -1,5 +1,5 @@
 .navbar {
-    height: 100%;
+    width: 100%;
     background-color:darkred;
     display: flex;
     justify-content: center;
@@ -12,6 +12,7 @@
     color: white;
     align-items: center;
     justify-content: space-between;
+    padding: 10px;
 }
 
 .logo {

@@ -12,7 +12,6 @@ const Cards = () => {
                          className={"eventImg"}></img>
                     <div className="eventTitle">
                         <h1>Théâtre</h1>
-                        <h3>Description</h3>
                     </div>
                 </div>
                 <div className="eventItem">
@@ -21,7 +20,6 @@ const Cards = () => {
                          className={"eventImg"}></img>
                     <div className="eventTitle">
                         <h1>Concert</h1>
-                        <h3>Description</h3>
                     </div>
                 </div>
                 <div className="eventItem">
@@ -30,7 +28,6 @@ const Cards = () => {
                          className={"eventImg"}></img>
                     <div className="eventTitle">
                         <h1>Spectacle</h1>
-                        <h3>Description</h3>
                     </div>
                 </div>
             </div>
@@ -41,7 +38,6 @@ const Cards = () => {
                          className={"eventImg"}></img>
                     <div className="eventTitle">
                         <h1>Festival</h1>
-                        <h3>Description</h3>
                     </div>
                 </div>
                 <div className="eventItem">
@@ -50,7 +46,6 @@ const Cards = () => {
                          className={"eventImg"}></img>
                     <div className="eventTitle">
                         <h1>Match</h1>
-                        <h3>Description</h3>
                     </div>
                 </div>
                 <div className="eventItem">
@@ -59,7 +54,6 @@ const Cards = () => {
                          className={"eventImg"}></img>
                     <div className="eventTitle">
                         <h1>Parc d'attractions</h1>
-                        <h3>Description</h3>
                     </div>
                 </div>
             </div>
