@@ -1,8 +1,46 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./login.css"
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
+    let navigate = useNavigate()
+
+    const [login,setLogin]= useState({
+        username:"",
+        password:""
+    });
+
+    const{username, password}=login;
+
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const handleUsernameChange = (e) => {
+        setLogin({ ...login, username: e.target.value });
+    };
+
+    const handlePasswordChange = (e) => {
+        setLogin({ ...login, password: e.target.value });
+    };
+
+    const handleLogin = async (ev) => {
+        ev.preventDefault();
+        try {
+            const response = await axios.post("http://localhost:8080/api/auth/login", login);
+            if (response.status === 200) {
+                const { token } = response.data;
+                localStorage.setItem('jwtToken', token);
+                navigate("/");
+            } else {
+                throw new Error('Authentication failed');
+            }
+        } catch (error) {
+            console.error('Error:', error.message);
+            // Affichez un message d'erreur à l'utilisateur
+            setErrorMessage("Mot de passe ou nom d'utilisateur incorrect");
+        }
+    };
+
     return (
         <div className="login">
             <div className="login-card">
@@ -20,11 +58,19 @@ const Login = () => {
                 </div>
                 <div className="login-right">
                     <h1>Connexion</h1>
-                    <form>
-                        <input type="text" placeholder="Identifiant" />
-                        <input type="password" placeholder="Mot de passe" />
+                    <form className="login-form">
+                        <input type="username"
+                               id="username"
+                               value={username}
+                               onChange={handleUsernameChange}
+                               placeholder="Identifiant" />
+                        <input type="password"
+                               id="password"
+                               value={password}
+                               onChange={handlePasswordChange}
+                               placeholder="Mot de passe" />
                         <Link to="/">
-                            <button className="login-btn">Se connecter</button>
+                            <button className="login-btn" onClick={handleLogin}>Se connecter</button>
                         </Link>
                     </form>
                 </div>
