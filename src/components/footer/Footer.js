@@ -4,7 +4,6 @@ import {faFlag, faIceCream} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFacebook, faTwitter} from "@fortawesome/free-brands-svg-icons";
 import payimg from '../../assets/pay.jpeg';
-import social from '../../assets/social.png';
 
 const Footer = () => {
     return (

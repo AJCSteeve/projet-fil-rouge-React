@@ -1,6 +1,5 @@
 import React from 'react';
 import "./home.css"
-import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/Header";
 import Cards from "../../components/cards/Cards";
 import MailList from "../../components/mailList/MailList";
@@ -13,8 +12,8 @@ const Home = () => {
             <div className="homeContainer">
                 <Cards />
                 <MailList />
+                <Footer/>
             </div>
-            <Footer />
         </div>
     );
 };
