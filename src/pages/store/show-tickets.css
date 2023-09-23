@@ -1,0 +1,45 @@
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-custom {
+    width: 15rem;
+    height: 90%;
+    border-radius: 1rem;
+    box-shadow: 0 10px 8px #999;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: blanchedalmond;
+    border: 1px solid #ccc;
+    margin: 1rem;
+}
+
+.card-img {
+    width: 100%;
+    height: 60%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card-title,
+.card-descr,
+.card-person {
+    margin: 0.5rem 5%;
+}
+
+.card-btn {
+    text-align: center;
+    background-color: firebrick;
+    width: 80%;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+    margin: 0.5rem;
+}
+.card-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}

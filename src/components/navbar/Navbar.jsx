@@ -4,11 +4,12 @@ import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTheaterMasks, faTicket} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
+import {Container, Navbar as NavbarBs} from "react-bootstrap"
 
 const Navbar = () => {
     return (
-        <div className="navbar">
-            <div className="navContainer">
+        <NavbarBs sticky="top" className="navbar">
+            <Container className="navContainer">
                 <span className="logo">MyTicket
                     <FontAwesomeIcon icon={faTicket} /></span>
                 <div className="navItems">
@@ -20,8 +21,8 @@ const Navbar = () => {
                         ))}
                     </ul>
                 </div>
-            </div>
-        </div>
+            </Container>
+        </NavbarBs>
     );
 };
 export default Navbar;

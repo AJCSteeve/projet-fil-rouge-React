@@ -1,13 +1,14 @@
 .mail {
     width: 100%;
+    max-width: 1280px;
     background-color: coral;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding-bottom: 20px;
-    padding-top:20px;
+    padding: 20px;
+    border-radius: 10px;
 }
 .mail-descr {
     margin-bottom: 5px;
