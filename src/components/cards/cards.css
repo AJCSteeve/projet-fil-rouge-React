@@ -8,6 +8,7 @@
     background-color: burlywood;
     padding: 40px;
     border-radius: 30px;
+    box-shadow: 20px 20px 20px #999;
 }
 
 .eventItem {
@@ -15,11 +16,25 @@
     color: white;
     border-radius: 30px;
     overflow: hidden;
+    box-shadow: 0 10px 8px #999;
 }
 .eventTitle {
     position: absolute;
     bottom: 5px;
     left: 20px;
+}
+.event-btn {
+    text-align: center;
+    background-color: dodgerblue;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease; /* Transition de couleur de fond au survol */
+}
+
+.event-btn:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
 }
 
 .eventImg {

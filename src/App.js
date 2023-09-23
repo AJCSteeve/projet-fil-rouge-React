@@ -15,7 +15,7 @@ import CheckSellingHistory from "./components/transaction/CheckSellingHistory";
 import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory";
 import Navbar from "./components/navbar/Navbar";
 import TicketDetails from "./pages/store/TicketDetails";
-import ShowTickets from "./pages/store/ShowTickets";
+import ShowTicketsList from "./pages/store/ShowTicketsList";
 import {Container} from "react-bootstrap";
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
                     <Route path="/profile/update" element={<UpdateProfile/>}/>
                     <Route path="/profile/verify" element={<VerifyProfile/>}/>
 
-                    <Route path="/show" element={<ShowTickets/>}/>
+                    <Route path="/store" element={<ShowTicketsList/>}/>
                     <Route path='/product/:id' element={<TicketDetails />} />
 
                     {/* Routes about transactions :

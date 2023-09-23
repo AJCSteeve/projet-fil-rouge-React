@@ -16,12 +16,12 @@ export const MenuItems = [
     },
     {
         Title: "Store",
-        url: "/show",
+        url: "/store",
         cName: "menu-tickets",
     },
     {
         Title: "Transaction",
-        cName: "menu-transaction",
         url: "/tickets/purchase",
+        cName: "menu-transaction",
     },
 ];
