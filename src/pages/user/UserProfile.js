@@ -6,13 +6,13 @@ import AccountSettings from "../../components/userProfile/AccountSettings";
 import "./UserProfile.css";
 import ChangePassword from "../../components/userProfile/ChangePassword";
 import Orders from "../../components/userProfile/Orders";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 
 export default function UserProfile() {
 
-const{activepage} = useParams()
-
-
+    const{activepage} = useParams()
 
 
     // alert(activepage)
