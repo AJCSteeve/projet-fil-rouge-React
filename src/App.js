@@ -14,15 +14,16 @@ import TransactionRating from "./components/transaction/TransactionRating";
 import CheckSellingHistory from "./components/transaction/CheckSellingHistory";
 import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory";
 import Navbar from "./components/navbar/Navbar";
-import TicketDetails from "./pages/shop/TicketDetails";
+import TicketDetails from "./pages/store/TicketDetails";
+import ShowTickets from "./pages/store/ShowTickets";
 import {Container} from "react-bootstrap";
-import SearchTickets from "./pages/shop/SearchTickets";
 
 function App() {
     return (
-        <Container className="App mb-3">
+        <Container className="App mb-1">
             <div>
-                <><Navbar/></>
+                <>
+                    <Navbar/>
                 <Routes>
                     <Route path="/" index element={<Home />} />
                     <Route path="/register" element={<Register/>}/>
@@ -31,7 +32,7 @@ function App() {
                     <Route path="/profile/update" element={<UpdateProfile/>}/>
                     <Route path="/profile/verify" element={<VerifyProfile/>}/>
 
-                    <Route path="/search" element={<SearchTickets/>}/>
+                    <Route path="/show" element={<ShowTickets/>}/>
                     <Route path='/product/:id' element={<TicketDetails />} />
 
                     {/* Routes about transactions :
@@ -48,6 +49,7 @@ function App() {
                 </Routes>
                 {/*fixme the background image isn't displayed, while the picture URL is right.*/}
                 <div className='bg-image p-5 text-center shadow-1-strong rounded mb-5 text-light'></div>
+                </>
             </div>
         </Container>
     );
