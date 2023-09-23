@@ -1,0 +1,32 @@
+.store-container {
+    background-color: darksalmon;
+    color: white;
+    margin: 10px;
+    padding: 15px;
+    width: 95%;
+    border-radius: 10px;
+}
+.store-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-title {
+    margin: 0;
+}
+
+.search-input {
+    background-color: white;
+    color: black;
+    width: 500px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: 100px;
+}
+
+.cart-icon {
+    margin-left: 200px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}

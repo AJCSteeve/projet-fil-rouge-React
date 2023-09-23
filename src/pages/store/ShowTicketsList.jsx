@@ -3,6 +3,8 @@ import ShowTickets from './ShowTickets';
 import './show-tickets.css';
 import itemsData from '../../assets/items';
 import {formatCurrency} from "../../utilities/formatCurrency";
+import Header from "../../components/header/Header";
+import HeaderStore from "../../components/header/HeaderStore";
 
 const ShowTicketsList = () => {
     const [items, setItems] = useState([]);
@@ -19,6 +21,11 @@ const ShowTicketsList = () => {
     }
 
     return (
+        <>
+            <div>
+                <HeaderStore/>
+            </div>
+
         <div>
             {chunkedItems.map((row, rowIndex) => (
                 <div className="card-row" key={rowIndex}>
@@ -35,6 +42,7 @@ const ShowTicketsList = () => {
                 </div>
             ))}
         </div>
+        </>
     );
 };
 
