@@ -15,6 +15,7 @@ import Navbar from "./components/navbar/Navbar";
 import HomeTheatre from "./pages/home/HomeTheatre";
 import TicketDetails from "./pages/details/TicketDetails";
 import UpdateProfile from "./pages/update/UpdateProfile";
+import UserProfile from "./pages/user/UserProfile";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
 
                     <Route path="/register" element={<Register/>}/>
                     <Route path="/login" element={<Login/>}/>
+                    <Route path="/user/:activepage" element={<UserProfile/>}/>
                     <Route path="/update" element={<UpdateProfile/>}/>
                     <Route path="/profile/verify" element={<VerifyProfile/>}/>
                     {/* Routes about transactions :
