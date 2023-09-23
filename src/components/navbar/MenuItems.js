@@ -15,13 +15,18 @@ export const MenuItems = [
         cName: "menu-login",
     },
     {
+        Title: "Modifier son profil",
+        url: "/update",
+        cName: "menu-update",
+    },
+    {
         Title: "Ticket",
         url: "/tickets",
         cName: "menu-tickets",
     },
     {
         Title: "Transaction",
-        cName: "menu-transaction",
         url: "/tickets/purchase",
+        cName: "menu-transaction",
     },
 ];

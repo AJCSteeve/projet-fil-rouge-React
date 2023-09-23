@@ -7,7 +7,6 @@ import Register from "./pages/register/Register";
 import SearchTickets from "./components/transaction/SearchTickets";
 import SellingTickets from "./components/transaction/SellingTickets";
 import PurchaseTickets from "./components/transaction/PurchaseTickets";
-import UpdateProfile from "./pages/crud/UpdateProfile";
 import VerifyProfile from "./pages/crud/VerifyProfile";
 import TransactionRating from "./components/transaction/TransactionRating";
 import CheckSellingHistory from "./components/transaction/CheckSellingHistory";
@@ -15,6 +14,7 @@ import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory"
 import Navbar from "./components/navbar/Navbar";
 import HomeTheatre from "./pages/home/HomeTheatre";
 import TicketDetails from "./pages/details/TicketDetails";
+import UpdateProfile from "./pages/update/UpdateProfile";
 
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
 
                     <Route path="/register" element={<Register/>}/>
                     <Route path="/login" element={<Login/>}/>
-                    <Route path="/profile/update" element={<UpdateProfile/>}/>
+                    <Route path="/update" element={<UpdateProfile/>}/>
                     <Route path="/profile/verify" element={<VerifyProfile/>}/>
                     {/* Routes about transactions :
                 - search, selling, purchase of tickets,
