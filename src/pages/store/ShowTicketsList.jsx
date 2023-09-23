@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import ShowTickets from './ShowTickets'; // Assurez-vous d'importer le composant ShowTickets
+import ShowTickets from './ShowTickets';
 import './show-tickets.css';
 import itemsData from '../../assets/items';
+import {formatCurrency} from "../../utilities/formatCurrency";
 
 const ShowTicketsList = () => {
     const [items, setItems] = useState([]);
@@ -10,7 +11,7 @@ const ShowTicketsList = () => {
         setItems(itemsData);
     }, []);
 
-    // Divisez le tableau en sous-tableaux de trois éléments chacun
+    // Affichage 3 items par ligne
     const chunkedItems = [];
 
     for (let i = 0; i < items.length; i += 3) {
@@ -26,7 +27,9 @@ const ShowTicketsList = () => {
                             key={item.id}
                             imgSrc={item.imgUrl}
                             title={item.eventName}
-                            descr={item.price}
+                            date={item.date}
+                            person={item.person}
+                            descr={formatCurrency(item.price)}
                         />
                     ))}
                 </div>
