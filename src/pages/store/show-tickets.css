@@ -24,13 +24,18 @@
 
 .card-title,
 .card-descr,
-.card-person {
-    margin: 0.5rem 5%;
+.card-details {
+    margin: 0.4rem 5%;
+}
+
+.card-descr,
+.card-details {
+    font-size: 13px;
 }
 
 .card-btn {
     text-align: center;
-    background-color: firebrick;
+    background-color: coral;
     width: 80%;
     border-radius: 5px;
     padding: 0.5rem 1rem;
@@ -42,4 +47,5 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
+    font-size: 14px;
 }

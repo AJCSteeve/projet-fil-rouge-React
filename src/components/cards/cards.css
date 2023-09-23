@@ -20,12 +20,12 @@
 }
 .eventTitle {
     position: absolute;
-    bottom: 5px;
+    bottom: 35px;
     left: 20px;
 }
 .event-btn {
     text-align: center;
-    background-color: dodgerblue;
+    background-color: coral;
     border-radius: 5px;
     color: white;
     text-decoration: none;

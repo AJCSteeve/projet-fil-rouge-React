@@ -1,6 +1,6 @@
 import React from 'react';
 import "./cards.css"
-import * as events from "events";
+import {Link} from "react-router-dom";
 
 const Cards = () => {
     return (
@@ -21,7 +21,7 @@ const Cards = () => {
                          className={"eventImg"}></img>
                     <div className="eventTitle">
                         <h1>Concert</h1>
-                        <a href="concertPage" className="event-btn">Recherche</a>
+                        <Link to="/concerts" className="event-btn">Recherche</Link>
                     </div>
                 </div>
                 <div className="eventItem">
@@ -30,7 +30,7 @@ const Cards = () => {
                          className={"eventImg"}></img>
                     <div className="eventTitle">
                         <h1>Spectacle</h1>
-                        <a href="spectaclePage" className="event-btn">Recherche</a>
+                        <Link to="/spectacles" className="event-btn">Recherche</Link>
                     </div>
                 </div>
             </div>

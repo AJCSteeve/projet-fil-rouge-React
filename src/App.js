@@ -1,6 +1,7 @@
 import './App.css';
 import React from "react";
 import {Route, Routes} from "react-router-dom";
+import {Container} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap-grid.min.css"
 
 import Home from "./pages/home/Home";
@@ -15,8 +16,9 @@ import CheckSellingHistory from "./components/transaction/CheckSellingHistory";
 import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory";
 import Navbar from "./components/navbar/Navbar";
 import TicketDetails from "./pages/store/TicketDetails";
-import ShowTicketsList from "./pages/store/ShowTicketsList";
-import {Container} from "react-bootstrap";
+import FetchTicketsAll from "./pages/store/FetchTicketsAll";
+import FetchTicketsSpectacle from "./pages/store/FetchTicketsSpectacle";
+import FetchTicketsConcert from "./pages/store/FetchTicketsConcert";
 
 function App() {
     return (
@@ -32,7 +34,9 @@ function App() {
                     <Route path="/profile/update" element={<UpdateProfile/>}/>
                     <Route path="/profile/verify" element={<VerifyProfile/>}/>
 
-                    <Route path="/store" element={<ShowTicketsList/>}/>
+                    <Route path="/store" element={<FetchTicketsAll/>}/>
+                    <Route path="/concerts" element={<FetchTicketsConcert/>}/>
+                    <Route path="/spectacles" element={<FetchTicketsSpectacle/>}/>
                     <Route path='/product/:id' element={<TicketDetails />} />
 
                     {/* Routes about transactions :

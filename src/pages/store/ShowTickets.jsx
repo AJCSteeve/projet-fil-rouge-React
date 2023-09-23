@@ -1,22 +1,23 @@
 import React from 'react';
 import "./show-tickets.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faMoneyBill, faMoneyBills, faPerson} from "@fortawesome/free-solid-svg-icons";
+import {faCalendar, faLocationPin, faMoneyBills} from "@fortawesome/free-solid-svg-icons";
 
 
 const ShowTickets = ({
-                         imgSrc,
-                         title, date, person,
-                         descr,
-                     }) => {
+                          imgSrc,
+                          type, descr,
+                          city, date, price,
+                      }) => {
     return (
         <div className="card-container">
             <div className="card-custom">
                 {imgSrc && (<img src={imgSrc} alt="photo" className="card-img"/>
                 )}
-                {title && <h3 className="card-title">{title}</h3>}
-                {descr && <p className="card-descr"> <FontAwesomeIcon icon={faMoneyBills} /> {descr} - {date}</p>}
-                {descr && <p className="card-person"> <FontAwesomeIcon icon={faPerson} /> {person}</p>}
+                {type && <h3 className="card-title">{type}</h3>}
+                {descr && <p className="card-descr"> {descr}</p>}
+                {price && city && <p className="card-details"> <FontAwesomeIcon icon={faMoneyBills} /> {price} <FontAwesomeIcon icon={faLocationPin} /> {city}</p>}
+                {date && <p className="card-details"> <FontAwesomeIcon icon={faCalendar} /> {date}</p>}
                 <a href="/panier" className="card-btn">Acheter</a>
             </div>
         </div>
