@@ -63,6 +63,7 @@ const HeaderStore = () => {
         const searchUrl = `/search?${queryString}`;
 
         // Navigate to the search results page
+        // TODO TROUVER SOLUTION SANS navigate() pour transférer infos à FetchTicketsAll & faire la requête !!!
         navigate(searchUrl); // Use navigate instead of history.push
     };
 
@@ -82,12 +83,22 @@ const HeaderStore = () => {
                 <Col xs="auto">
                     <div className="search-input-container">
                         <div>
-                            <FormControl className="search-input" placeholder="Pour quel événement ?" />
+                            <FormControl
+                                className="search-input"
+                                placeholder="Pour quel événement ?"
+                                value={eventName}
+                                onChange={(e) => setEventName(e.target.value)}
+                            />
                         </div>
                         <div>
-                            <FormControl className="search-input" placeholder="Dans quelle ville ?" />
+                            <FormControl
+                                className="search-input"
+                                placeholder="Dans quelle ville ?"
+                                value={eventCity}
+                                onChange={(e) => setEventCity(e.target.value)}
+                            />
                         </div>
-                        <Button className="btn">
+                        <Button className="btn" onClick={handleSearch}>
                             <h3 className="header-title">Rechercher</h3>
                         </Button>
                     </div>
