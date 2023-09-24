@@ -1,7 +1,7 @@
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
-import {useCallback, useEffect, useState} from "react";
-import {Button, Card, NavLink} from "react-bootstrap";
+import { useEffect, useState} from "react";
+import {Button, Card} from "react-bootstrap";
 
 
 export default function AccountSettings() {
@@ -61,7 +61,7 @@ export default function AccountSettings() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
         loadUser();
-    }, []);
+    }, [loadUser]);
 
     return (
         <div className="orders">
@@ -78,6 +78,13 @@ export default function AccountSettings() {
                 <Card.Body>
                     <Card.Title>Photo</Card.Title>
                     <Card.Text>{userData.photoUrl}</Card.Text>
+                    {
+                        userData.photoUrl ? (
+                        <img src={userData.photoUrl}
+                             alt="Photo de profil"
+                             className="user-photo" />) : (<div className="user-photo-placeholder">
+                            <p>Aucune photo de profil</p></div>)
+                    }
                 </Card.Body>
                 <Card.Body>
                     <Card.Title>Email</Card.Title>
