@@ -2,15 +2,19 @@
 const items = [
     {
         "id": 1,
-        "eventName": "Spectacle 1",
-        "price": 10.99,
+        "eventName": "One-man show au Théâtre Mogador.",
+        "eventType": "Spectacle",
+        "eventCity": "Paris",
         "date": "10/12/2023",
+        "price": 10.99,
         "person": "par Claire",
         "imgUrl": "https://images.pexels.com/photos/1581906/pexels-photo-1581906.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
         "id": 2,
-        "eventName": "Spectacle 2",
+        "eventName": "One-man show au Théâtre Mogador.",
+        "eventType": "Spectacle",
+        "eventCity": "Paris",
         "price": 11.99,
         "date": "10/12/2023",
         "person": "par Anne",
@@ -18,7 +22,9 @@ const items = [
     },
     {
         "id": 3,
-        "eventName": "Spectacle 3",
+        "eventName": "One-man show au Théâtre Mogador.",
+        "eventType": "Spectacle",
+        "eventCity": "Paris",
         "price": 1.05,
         "date": "10/12/2023",
         "person": "par Clément",
@@ -26,7 +32,9 @@ const items = [
     },
     {
         "id": 4,
-        "eventName": "Spectacle 4",
+        "eventName": "One-man show au Théâtre Mogador.",
+        "eventType": "Spectacle",
+        "eventCity": "Paris",
         "price": 140,
         "date": "10/12/2023",
         "person": "par Momo",
@@ -34,7 +42,9 @@ const items = [
     },
     {
         "id": 5,
-        "eventName": "Spectacle 5",
+        "eventName": "One-man show au Théâtre Mogador.",
+        "eventType": "Spectacle",
+        "eventCity": "Paris",
         "price": 10,
         "date": "10/12/2023",
         "person": "par Yann",
@@ -42,7 +52,9 @@ const items = [
     },
     {
         "id": 6,
-        "eventName": "Spectacle 6",
+        "eventName": "One-man show au Théâtre Mogador.",
+        "eventType": "Spectacle",
+        "eventCity": "Paris",
         "price": 52,
         "date": "10/12/2023",
         "person": "par Khadija",
@@ -50,37 +62,61 @@ const items = [
     },
     {
         "id": 1,
-        "eventName": "Concert 1",
+        "eventName": "Concert du groupe U2 à l'Olympia.",
+        "eventType": "Concert",
+        "eventCity": "Paris",
+        "date": "10/12/2023",
+        "person": "par Eric",
         "price": 10.99,
         "imgUrl": "https://images.pexels.com/photos/593345/pexels-photo-593345.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
         "id": 2,
-        "eventName": "Concert 2",
+        "eventName": "Concert du groupe U2 à l'Olympia.",
+        "eventType": "Concert",
+        "eventCity": "Paris",
+        "date": "10/12/2023",
+        "person": "par Christine",
         "price": 11.99,
         "imgUrl": "https://images.pexels.com/photos/2417726/pexels-photo-2417726.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
         "id": 3,
-        "eventName": "Concert 3",
+        "eventName": "Concert du groupe U2 à l'Olympia.",
+        "eventType": "Concert",
+        "eventCity": "Paris",
+        "date": "10/12/2023",
+        "person": "par Leslie",
         "price": 1.05,
         "imgUrl": "https://images.pexels.com/photos/1763067/pexels-photo-1763067.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
         "id": 4,
-        "eventName": "Concert 4",
+        "eventName": "Concert du groupe U2 à l'Olympia.",
+        "eventType": "Concert",
+        "eventCity": "Paris",
+        "date": "10/12/2023",
+        "person": "par Adam",
         "price": 140,
         "imgUrl": "https://images.pexels.com/photos/167491/pexels-photo-167491.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
         "id": 5,
-        "eventName": "Concert 5",
+        "eventName": "Concert du groupe U2 à l'Olympia.",
+        "eventType": "Concert",
+        "eventCity": "Paris",
+        "date": "10/12/2023",
+        "person": "par Eric",
         "price": 10,
         "imgUrl": "https://images.pexels.com/photos/9010066/pexels-photo-9010066.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
         "id": 6,
-        "eventName": "Concert 6",
+        "eventName": "Concert du groupe U2 à l'Olympia.",
+        "eventType": "Concert",
+        "eventCity": "Paris",
+        "date": "10/12/2023",
+        "person": "par Isa",
         "price": 52,
         "imgUrl": "https://images.pexels.com/photos/186176/pexels-photo-186176.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
