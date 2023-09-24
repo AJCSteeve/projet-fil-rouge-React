@@ -26,13 +26,17 @@ export default function ChangePassword(){
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [user,setUser]= useState({
-        password:""
+        newpassword:"",
+        confirmpassword:"",
     });
 
-    const{password}=user;
+    const{ newpassword, confirmPassword }=user;
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [passwordChanged, setPasswordChanged] = useState(false); // Suivre le changement de mot de passe
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [error, setError] = useState(null);
 
     const onInputChange = (event) => {
         const { name, value } = event.target;
@@ -46,35 +50,63 @@ export default function ChangePassword(){
 
     const onSubmit=async (ev)=>{
         ev.preventDefault();
-        await axiosInstance.put(`/users/${idAsNumber}`,user);
-        setPasswordChanged(true);
 
+        if (newpassword !== confirmPassword) {
+            setError("Les mots de passe ne correspondent pas.");
+            return;
+        }
+        try {
+            await axiosInstance.put(`/users/${idAsNumber}`,
+                {password: newpassword,});
+            setPasswordChanged(true);
+            setError(null);
+        }
+        catch (error){
+            console.error("Erreur:", error.message);
+            setError("Une erreur s'est produite lors de la modification du mot de passe.");
+        }
     };
 
     const loadUser = async ()=>{
-        const result=await axiosInstance.get(`/users/${idAsNumber}`)
-        setUser(result.data)
+        const result=await axiosInstance.get(`/users/${idAsNumber}`);
+        setUser(result.data);
     };
 
 
     return(
         <div className="changepassword">
             <h1 className="mainhead1">Changer le mot de passe</h1>
-            {passwordChanged && <div className="success-message">Mot de passe changé avec succès !</div>}
+            {passwordChanged &&
+                (<div className="success-message">Mot de passe changé avec succès !</div>)}
+            {error && <div className="error-message">{error}</div>}
             <form onSubmit={(ev) => onSubmit(ev)}>
                 <div className="form-group">
                     <label htmlFor="newpassword" className="form-label">Nouveau mot de passe <span>*</span></label>
-                    <input  type='password'
-                            id="newpassword"
-                            className="form-control"
-                            placeholder="Nouveau mot de passe svp"
-                            name="newpassword"
-                            onChange={(event) => onInputChange(event)}
-                    />
+                    <input
+                        type="password"
+                        id="newpassword"
+                        className="form-control"
+                        placeholder="Nouveau mot de passe svp"
+                        name="newpassword"
+                        value={newpassword}
+                        onChange={(event) => onInputChange(event)}/>
                 </div>
-                <button type="submit" className="mainbutton1">Modifier</button>
+                <div className="form-group">
+                    <label htmlFor="confirmPassword" className="form-label">Confirmer le mot de passe <span>*</span></label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        className="form-control"
+                        placeholder="Confirmer le mot de passe svp"
+                        name="confirmPassword"
+                        value={confirmPassword}
+                        onChange={(event) => onInputChange(event)}/>
+                </div>
+                <button type="submit" className="mainbutton1">
+                    Modifier
+                </button>
                 <button className="btn btn-outline-danger mx-2" onClick={() => navigate("/user/:activepage")}>Annuler</button>
             </form>
         </div>
-    )
+    );
 }

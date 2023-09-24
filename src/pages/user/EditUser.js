@@ -47,8 +47,9 @@ export default function EditUser(){
 
     const onSubmit=async (ev)=>{
         ev.preventDefault();
+        console.log("Formulaire soumis");
         await axiosInstance.put(`/users/${idAsNumber}`,user);
-        navigate("/user");
+        navigate("/user:activepage");
     };
 
     const loadUser = async ()=>{
@@ -59,7 +60,7 @@ export default function EditUser(){
     return(
         <div className="edituser">
             <h1 className="mainhead1">Informations utilisateur</h1>
-            <div className='form'onSubmit={(ev) => onSubmit(ev)}>
+            <form onSubmit={(ev) => onSubmit(ev)}>
                 <div className="form-group">
                     <label htmlFor="username" className="form-label">Identifiant <span>*</span></label>
                     <input type='text'
@@ -100,9 +101,9 @@ export default function EditUser(){
                            value={email || ""}
                            onChange={(event)=>onInputChange(event)}/>
                 </div>
-            </div>
             <button type="submit" className="mainbutton1">Envoyer</button>
             <button className="btn btn-outline-danger mx-2" onClick={() => navigate("/user/:activepage")}>Annuler</button>
+        </form>
         </div>
-    )
+    );
 }
