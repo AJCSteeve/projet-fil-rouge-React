@@ -1,14 +1,31 @@
 import "./AccountSettings.css"
-import {useEffect, useState} from "react";
 import axios from "axios";
 import {useNavigate, useParams} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 
 export default function EditUser(){
 
-    let navigate=useNavigate()
-    const {id}=useParams()
+    const axiosInstance = axios.create({
+        baseURL: 'http://localhost:8080/api',
+        headers: {
+            'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`, // Récupère le token JWT du stockage local
+            'Content-Type': 'application/json'
+        },
+    });
 
+    let navigate=useNavigate()
+
+    const idAsString = localStorage.getItem('userId'); // Récupère l'userId du stockage local et converti en entier
+    const idAsNumber = parseInt(idAsString, 10);
+
+    // Vérifier si la conversion a réussi (n'est pas NaN) et que l'ID est valide
+    if (isNaN(idAsNumber) || idAsNumber <= 0) {
+        console.error("L'ID n'est pas un nombre valide ou est manquant.");
+        return null;
+    }
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [user,setUser]= useState({
         username:"",
         phoneNumber:"",
@@ -23,18 +40,19 @@ export default function EditUser(){
         setUser({ ...user, [name]: value });
     };
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=>{
         loadUser();
     },[]);
 
     const onSubmit=async (ev)=>{
         ev.preventDefault();
-        await axios.put(`http://localhost:8080/api/users/${id}`,user);
+        await axiosInstance.put(`/users/${idAsNumber}`,user);
         navigate("/user/:activepage");
     };
 
     const loadUser = async ()=>{
-        const result=await axios.get(`http://localhost:8080/api/users/id/${id}`)
+        const result=await axiosInstance.get(`/users/${idAsNumber}`);
         setUser(result.data)
     };
 

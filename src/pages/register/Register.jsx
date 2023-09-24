@@ -1,8 +1,36 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./register.css";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import axios from "axios";
 
 const Register = () => {
+
+    let navigate=useNavigate();
+
+    // store form content into a state :
+    // 1) initialize user object
+    const [user, setUser]=useState({
+        username:"",
+        password:"",
+        email:""
+    });
+    // 2) deconstruction of the object
+    const {username,password, email}=user;
+
+
+    //note : (e) = event
+    // set all the user attributes to the values entered in the form
+    const onInputChange=(e)=>{
+        setUser({ ...user, [e.target.name]:e.target.value})
+    };
+
+    const onSubmit=async (e)=>{
+        e.preventDefault();
+        await axios.post("http://localhost:8080/api/auth/register", user) // note : url pas nécessairement le même que url partie
+        navigate("/"); //navigate to home after submitting form
+
+    };
+
     return (
         <div className="register">
             <div className="register-card">

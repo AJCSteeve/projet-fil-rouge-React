@@ -1,63 +1,84 @@
-import "./AccountSettings.css"
-import {useCallback, useEffect, useState} from "react";
 import axios from "axios";
-import {useNavigate, useParams} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import {useCallback, useEffect, useState} from "react";
 import {NavLink} from "react-bootstrap";
 
 
-export default function AccountSettings(){
-
-    const [user,setUser]= useState({
-        username:"",
-        phoneNumber:"",
-        photoUrl:"",
-        email:""
+export default function AccountSettings() {
+    const axiosInstance = axios.create({
+        baseURL: "http://localhost:8080/api",
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem("jwtToken")}`, // Récupère le token JWT du stockage local
+            "Content-Type": "application/json",
+        },
     });
 
-    const {id}=useParams()
+    let navigate = useNavigate();
 
-    useEffect(()=>{
-        loadUser();
-    },[]);
+    const idAsString = localStorage.getItem('userId'); // Récupère l'userId du stockage local et converti en entier
+    const idAsNumber = parseInt(idAsString, 10);
 
-    const loadUser = async ()=>{
-        const result=await axios.get(`http://localhost:8080/api/users/${id}`)
-        setUser(result.data)
-    };
+    // Vérifier si la conversion a réussi (n'est pas NaN) et que l'ID est valide
+    if (isNaN(idAsNumber) || idAsNumber <= 0) {
+        console.error("L'ID n'est pas un nombre valide ou est manquant.");
+        return null;
+    }
 
-    const deleteUser = useCallback(async (id) => {
-        await axios.delete(`http://localhost:8080/api/users/${id}`);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [userData, setUserData] = useState({
+        username: "",
+        phoneNumber: "",
+        photoUrl: "",
+        email: "",
+    });
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const loadUser = useCallback(async () => {
+        try {
+            const response = await axiosInstance.get(`/users/${idAsNumber}`);
+            setUserData(response.data);
+        } catch (error) {
+            console.error("Erreur", error.message);
+        }
+    }, [axiosInstance, idAsNumber]);
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const deleteUser = useCallback(async () => {
+        try {
+            await axiosInstance.delete(`/users/${idAsNumber}`);
+            navigate("/user/:activepage");
+        } catch (error) {
+            console.error("Erreur:", error.message);
+        }
+    }, [axiosInstance, idAsNumber]);
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
         loadUser();
     }, [loadUser]);
 
-
-
-    const{username, phoneNumber,photoUrl, email}=user;
-
-
-    return(
+    return (
         <div className="orders">
             <h1 className="mainhead1">Informations utilisateur</h1>
-           <div className='form'>
-               <div className="form-group">
-                   <label htmlFor="username" className="form-label">Identifiant <span>*</span></label>
-                   <input value={user.username}/>
-               </div>
-               <div className="form-group">
-                   <label htmlFor="phoneNumber" className="form-label">Téléphone <span>*</span></label>
-                   <input value={user.phoneNumber}/>
-               </div>
-               <div className="form-group">
-                   <label htmlFor="photoUrl" className="form-label">Photo <span>*</span></label>
-                   <input value={user.photoUrl}/>
-               </div>
-               <div className="form-group">
-                   <label htmlFor="email" className="form-label">Email <span>*</span></label>
-                   <input value={user.email}/>
-               </div>
-           </div>
-            <NavLink className="btn btn-outline-primary mx-2"to={`/edituser/${user.id}`}>Modifier</NavLink>
-            <button className="btn btn-danger mx-2" onClick={()=>deleteUser(user.id)}>Supprimer</button>
+            <div className="form">
+                <div className="form-group">
+                    <label htmlFor="username" className="form-label">Identifiant <span>*</span></label>
+                    <input value={userData.username} readOnly />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="phoneNumber" className="form-label">Téléphone <span>*</span></label>
+                    <input value={userData.phoneNumber} readOnly />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="photoUrl" className="form-label">Photo <span>*</span></label>
+                    <input value={userData.photoUrl} readOnly />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="email" className="form-label">Email <span>*</span></label>
+                    <input value={userData.email} readOnly />
+                </div>
+            </div>
+            <button className="btn btn-danger mx-2" onClick={deleteUser}>Supprimer</button>
         </div>
-    )
+    );
 }

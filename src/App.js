@@ -37,7 +37,6 @@ function App() {
                     <Route path="/register" element={<Register/>}/>
                     <Route path="/login" element={<Login/>}/>
                     <Route path="/user/:activepage" element={<UserProfile/>}/>
-                    <Route path="/update" element={<UpdateProfile/>}/>
                     <Route path="/profile/verify" element={<VerifyProfile/>}/>
                     {/* Routes about transactions :
                 - search, selling, purchase of tickets,

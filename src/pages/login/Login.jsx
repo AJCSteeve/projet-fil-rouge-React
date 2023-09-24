@@ -28,8 +28,9 @@ const Login = () => {
         try {
             const response = await axios.post("http://localhost:8080/api/auth/login", login);
             if (response.status === 200) {
-                const { token } = response.data;
+                const { token, userId } = response.data;
                 localStorage.setItem('jwtToken', token);
+                localStorage.setItem('userId',userId);
                 navigate("/user/:activepage");
             } else {
                 throw new Error('Authentication failed');
