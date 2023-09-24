@@ -5,13 +5,13 @@ import './show-tickets.css';
 import HeaderStore from '../../components/header/HeaderStore';
 import { formatCurrency } from '../../utilities/formatCurrency';
 import axios from 'axios';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom'; // Import useLocation
 
 const FetchTicketsAll = () => {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const location = useLocation();
+    const location = useLocation(); // Use useLocation to access query parameters
 
     useEffect(() => {
         const queryParams = new URLSearchParams(location.search);
@@ -40,7 +40,6 @@ const FetchTicketsAll = () => {
                 setLoading(false);
             });
     }, [location.search]);
-
 
 // import {useEffect, useState} from 'react';
 // import React from 'react';

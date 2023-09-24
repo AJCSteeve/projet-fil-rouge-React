@@ -60,7 +60,7 @@ const HeaderStore = () => {
 
         // Construct the URL with the query parameters
         const queryString = queryParams.join('&');
-        const searchUrl = `/search?${queryString}`;
+        const searchUrl = `/store?${queryString}`;
 
         // Navigate to the search results page
         // TODO TROUVER SOLUTION SANS navigate() pour transférer infos à FetchTicketsAll & faire la requête !!!
