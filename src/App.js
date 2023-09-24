@@ -14,7 +14,6 @@ import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory"
 import Navbar from "./components/navbar/Navbar";
 import HomeTheatre from "./pages/home/HomeTheatre";
 import TicketDetails from "./pages/details/TicketDetails";
-import UpdateProfile from "./pages/update/UpdateProfile";
 import UserProfile from "./pages/user/UserProfile";
 
 
