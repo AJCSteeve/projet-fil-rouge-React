@@ -3,10 +3,10 @@
     max-width: 1024px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     margin-bottom: 30px;
     background-color: burlywood;
-    padding: 40px;
+    padding: 50px;
     border-radius: 30px;
     box-shadow: 20px 20px 20px #999;
 }
@@ -30,11 +30,11 @@
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    transition: background-color 0.3s ease; /* Transition de couleur de fond au survol */
+    transition: background-color 0.3s ease;
 }
 
 .event-btn:hover {
-    background-color: #0056b3; /* Couleur de fond au survol */
+    background-color: #0056b3;
 }
 
 .eventImg {
@@ -47,5 +47,5 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 40px;
 }
