@@ -19,7 +19,7 @@
 .register-left {
     display: flex;
     flex: 1;
-    background: url("https://images.pexels.com/photos/17286885/pexels-photo-17286885/free-photo-of-gens-femme-musique-fumer.jpeg?auto=compress&cs=tinysrgb&w=600") center;
+    background: url("https://images.pexels.com/photos/3018061/pexels-photo-3018061.jpeg?auto=compress&cs=tinysrgb&w=600") center;
     background-size: cover;
     padding: 50px;
     flex-direction: column;
@@ -32,6 +32,7 @@
 }
 
 .register-left>p {
+    font-weight: bold;
     font-size: 14px;
 }
 .register-left-btn {

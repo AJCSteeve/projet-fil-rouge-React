@@ -1,8 +1,9 @@
 .header {
-    background-color: coral;
+    background-color: lightsalmon;
     color: white;
     display : flex;
     justify-content: center;
+    border-radius: 10px;
 }
 
 .headerContainer {

@@ -1,6 +1,6 @@
 import React from 'react';
 import "./cards.css"
-import * as events from "events";
+import {Link} from "react-router-dom";
 
 const Cards = () => {
     return (
@@ -12,6 +12,7 @@ const Cards = () => {
                          className={"eventImg"}></img>
                     <div className="eventTitle">
                         <h1>Théâtre</h1>
+                        <a href="theatrePage" className="event-btn">Recherche</a>
                     </div>
                 </div>
                 <div className="eventItem">
@@ -20,6 +21,7 @@ const Cards = () => {
                          className={"eventImg"}></img>
                     <div className="eventTitle">
                         <h1>Concert</h1>
+                        <Link to="/concerts" className="event-btn">Recherche</Link>
                     </div>
                 </div>
                 <div className="eventItem">
@@ -28,6 +30,7 @@ const Cards = () => {
                          className={"eventImg"}></img>
                     <div className="eventTitle">
                         <h1>Spectacle</h1>
+                        <Link to="/spectacles" className="event-btn">Recherche</Link>
                     </div>
                 </div>
             </div>
@@ -38,6 +41,7 @@ const Cards = () => {
                          className={"eventImg"}></img>
                     <div className="eventTitle">
                         <h1>Festival</h1>
+                        <a href="festivalPage" className="event-btn">Recherche</a>
                     </div>
                 </div>
                 <div className="eventItem">
@@ -46,6 +50,7 @@ const Cards = () => {
                          className={"eventImg"}></img>
                     <div className="eventTitle">
                         <h1>Match</h1>
+                        <a href="matchPage" className="event-btn">Recherche</a>
                     </div>
                 </div>
                 <div className="eventItem">
@@ -54,6 +59,7 @@ const Cards = () => {
                          className={"eventImg"}></img>
                     <div className="eventTitle">
                         <h1>Parc d'attractions</h1>
+                        <a href="parcPage" className="event-btn">Recherche</a>
                     </div>
                 </div>
             </div>

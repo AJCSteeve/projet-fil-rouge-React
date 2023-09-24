@@ -48,12 +48,32 @@ const Register = () => {
                 </div>
                 <div className="register-right">
                     <h1>Créer un compte</h1>
-                    <form>
-                        <input type="text" placeholder="Identifiant" />
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Mot de passe" />
+                    <form onSubmit={(e)=>onSubmit((e))}>
+                        <input type="text"
+                               name="username"
+                               value={username}
+                               placeholder="Identifiant"
+                               required
+                               onChange={(e)=>onInputChange(e)}
+                        />
+
+
+                        <input type="email"
+                               name="email"
+                               value={email}
+                               placeholder="Email"
+                               required
+                               onChange={(e)=>onInputChange(e)}
+                        />
+                        <input type="password"
+                               name="password"
+                               value={password}
+                               placeholder="Mot de passe"
+                               required
+                               onChange={(e)=>onInputChange(e)}
+                        />
                         <Link to="/">
-                            <button className="register-btn">S'inscrire</button>
+                            <button type="submit" className="register-btn">S'inscrire</button>
                         </Link>
                     </form>
                 </div>

@@ -20,18 +20,21 @@ export const MenuItems = [
     //     cName: "menu-update",
     // },
     {
-        Title: "Ticket",
-        url: "/tickets",
+        Title: "Store",
+        url: "/store",
         cName: "menu-tickets",
     },
     {
         Title: "Transaction",
         url: "/tickets/purchase",
         cName: "menu-transaction",
+<<<<<<< HEAD
     },
     {
         Title: "Mon profil",
         url: "/user/accountsettings",
         cName: "menu-utilisateur",
+=======
+>>>>>>> develop
     },
 ];
