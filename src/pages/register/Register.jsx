@@ -48,11 +48,12 @@ const Register = () => {
                 </div>
                 <div className="register-right">
                     <h1>Créer un compte</h1>
-                    <form>
+                    <form onSubmit={(e)=>onSubmit((e))}>
                         <input type="text"
                                name="username"
                                value={username}
                                placeholder="Identifiant"
+                               required
                                onChange={(e)=>onInputChange(e)}
                         />
 
@@ -61,12 +62,14 @@ const Register = () => {
                                name="email"
                                value={email}
                                placeholder="Email"
+                               required
                                onChange={(e)=>onInputChange(e)}
                         />
                         <input type="password"
                                name="password"
                                value={password}
                                placeholder="Mot de passe"
+                               required
                                onChange={(e)=>onInputChange(e)}
                         />
                         <Link to="/">
