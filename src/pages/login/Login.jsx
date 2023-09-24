@@ -30,7 +30,7 @@ const Login = () => {
             if (response.status === 200) {
                 const { token } = response.data;
                 localStorage.setItem('jwtToken', token);
-                navigate("/");
+                navigate("/user/:activepage");
             } else {
                 throw new Error('Authentication failed');
             }

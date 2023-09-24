@@ -1,13 +1,12 @@
 import {useParams} from "react-router-dom";
 import {Navbar} from "react-bootstrap";
 import Footer from "../../components/footer/Footer";
-import UserSideBar from "../../components/userProfile/UserSideBar";
-import AccountSettings from "../../components/userProfile/AccountSettings";
+import UserSideBar from "./UserSideBar";
+import AccountSettings from "./AccountSettings";
 import "./UserProfile.css";
-import ChangePassword from "../../components/userProfile/ChangePassword";
-import Orders from "../../components/userProfile/Orders";
-import {useEffect, useState} from "react";
-import axios from "axios";
+import ChangePassword from "./ChangePassword";
+import Orders from "./Orders";
+import EditUser from "./EditUser";
 
 
 export default function UserProfile() {
@@ -22,9 +21,10 @@ export default function UserProfile() {
             <div className="userprofilein">
                 <div className="left"><UserSideBar activepage={activepage}/></div>
                 <div className="right">
-                    {activepage === 'accountsettings' && <AccountSettings/>}
-                    {activepage === 'changepassword' && <ChangePassword/>}
-                    {activepage === 'orders' && <Orders/>}
+                    {activepage === 'compte' && <AccountSettings/>}
+                    {activepage === 'modifier' && <EditUser/>}
+                    {activepage === 'modifier mot de passe' && <ChangePassword/>}
+                    {activepage === 'achats' && <Orders/>}
                 </div>
             </div>
             <Footer/>
