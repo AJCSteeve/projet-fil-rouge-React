@@ -65,6 +65,7 @@ export default function ChangePassword(){
                 <div className="form-group">
                     <label htmlFor="newpassword" className="form-label">Nouveau mot de passe <span>*</span></label>
                     <input  type='password'
+                            id="newpassword"
                             className="form-control"
                             placeholder="Nouveau mot de passe svp"
                             name="newpassword"

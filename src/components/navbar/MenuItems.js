@@ -14,11 +14,6 @@ export const MenuItems = [
         url: "/login",
         cName: "menu-login",
     },
-    // {
-    //     Title: "Modifier son profil",
-    //     url: "/update",
-    //     cName: "menu-update",
-    // },
     {
         Title: "Store",
         url: "/store",
@@ -28,13 +23,10 @@ export const MenuItems = [
         Title: "Transaction",
         url: "/tickets/purchase",
         cName: "menu-transaction",
-<<<<<<< HEAD
     },
     {
         Title: "Mon profil",
         url: "/user/accountsettings",
         cName: "menu-utilisateur",
-=======
->>>>>>> develop
     },
 ];

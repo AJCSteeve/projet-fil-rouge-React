@@ -1,7 +1,7 @@
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import {useCallback, useEffect, useState} from "react";
-import {NavLink} from "react-bootstrap";
+import {Button, Card, NavLink} from "react-bootstrap";
 
 
 export default function AccountSettings() {
@@ -33,52 +33,59 @@ export default function AccountSettings() {
     });
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const loadUser = useCallback(async () => {
+    const loadUser = async () => {
         try {
             const response = await axiosInstance.get(`/users/${idAsNumber}`);
             setUserData(response.data);
         } catch (error) {
             console.error("Erreur", error.message);
         }
-    }, [axiosInstance, idAsNumber]);
+    };
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const deleteUser = useCallback(async () => {
+    const deleteUser = async () => {
         try {
             await axiosInstance.delete(`/users/${idAsNumber}`);
             navigate("/user/:activepage");
         } catch (error) {
             console.error("Erreur:", error.message);
         }
-    }, [axiosInstance, idAsNumber]);
+    };
+
+    const handleLogout = () => {
+        localStorage.removeItem("jwtToken");  // Effacez les données d'authentification du stockage local
+        localStorage.removeItem("userId");
+        navigate("/login");
+    };
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
         loadUser();
-    }, [loadUser]);
+    }, []);
 
     return (
         <div className="orders">
             <h1 className="mainhead1">Informations utilisateur</h1>
-            <div className="form">
-                <div className="form-group">
-                    <label htmlFor="username" className="form-label">Identifiant <span>*</span></label>
-                    <input value={userData.username} readOnly />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="phoneNumber" className="form-label">Téléphone <span>*</span></label>
-                    <input value={userData.phoneNumber} readOnly />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="photoUrl" className="form-label">Photo <span>*</span></label>
-                    <input value={userData.photoUrl} readOnly />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="email" className="form-label">Email <span>*</span></label>
-                    <input value={userData.email} readOnly />
-                </div>
-            </div>
-            <button className="btn btn-danger mx-2" onClick={deleteUser}>Supprimer</button>
+            <Card style={{ width: '18rem' }}>
+                <Card.Body>
+                    <Card.Title>Identifiant</Card.Title>
+                    <Card.Text>{userData.username}</Card.Text>
+                </Card.Body>
+                <Card.Body>
+                    <Card.Title>Téléphone</Card.Title>
+                    <Card.Text>{userData.phoneNumber}</Card.Text>
+                </Card.Body>
+                <Card.Body>
+                    <Card.Title>Photo</Card.Title>
+                    <Card.Text>{userData.photoUrl}</Card.Text>
+                </Card.Body>
+                <Card.Body>
+                    <Card.Title>Email</Card.Title>
+                    <Card.Text>{userData.email}</Card.Text>
+                </Card.Body>
+            </Card>
+            <Button className="btn btn-secondary mx-2" onClick={handleLogout}>Déconnexion</Button>
+            <Button className="btn btn-danger mx-2" onClick={deleteUser}>Supprimer mon profil</Button>
         </div>
     );
 }

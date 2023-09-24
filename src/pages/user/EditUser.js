@@ -48,7 +48,7 @@ export default function EditUser(){
     const onSubmit=async (ev)=>{
         ev.preventDefault();
         await axiosInstance.put(`/users/${idAsNumber}`,user);
-        navigate("/user/:activepage");
+        navigate("/user");
     };
 
     const loadUser = async ()=>{
@@ -62,7 +62,8 @@ export default function EditUser(){
             <div className='form'onSubmit={(ev) => onSubmit(ev)}>
                 <div className="form-group">
                     <label htmlFor="username" className="form-label">Identifiant <span>*</span></label>
-                    <input type={"text"}
+                    <input type='text'
+                           id="username"
                            className="form-control"
                            placeholder="Veuillez entrer votre identifinat svp"
                            name="username"
@@ -72,28 +73,31 @@ export default function EditUser(){
                 <div className="form-group">
                     <label htmlFor="phoneNumber" className="form-label">Téléphone <span>*</span></label>
                     <input type='text'
+                           id="phoneNumber"
                            className="form-control"
                            placeholder="Veuillez entrer votre numéro de téléphone svp"
                            name="phoneNumber"
-                           value={phoneNumber}
+                           value={phoneNumber || ""}
                            onChange={(event)=>onInputChange(event)}/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="photoUrl" className="form-label">Photo <span>*</span></label>
                     <input type='text'
+                           id="photoUrl"
                            className="form-control"
                            placeholder="Veuillez entrer un Url photo svp"
                            name="photoUrl"
-                           value={photoUrl}
+                           value={photoUrl || ""}
                            onChange={(event)=>onInputChange(event)}/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="email" className="form-label">Email <span>*</span></label>
                     <input type='text'
+                           id="email"
                            className="form-control"
                            placeholder="Veuillez entrer votre email svp"
                            name="email"
-                           value={email}
+                           value={email || ""}
                            onChange={(event)=>onInputChange(event)}/>
                 </div>
             </div>

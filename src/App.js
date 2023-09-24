@@ -1,11 +1,9 @@
 import './App.css';
 import React from "react";
 import {Route, Routes} from "react-router-dom";
-import {Container, Navbar} from "react-bootstrap";
+import {Container} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap-grid.min.css"
 import Home from "./pages/home/Home";
-import Register from "./pages/crud/Register";
-import Login from "./pages/crud/Login";
 import UserProfile from "./pages/user/UserProfile";
 import VerifyProfile from "./pages/crud/VerifyProfile";
 import FetchTicketsAll from "./pages/store/FetchTicketsAll";
@@ -17,6 +15,9 @@ import PurchaseTickets from "./components/transaction/PurchaseTickets";
 import TransactionRating from "./components/transaction/TransactionRating";
 import CheckSellingHistory from "./components/transaction/CheckSellingHistory";
 import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory";
+import Navbar from "./components/navbar/Navbar";
+import Register from "./pages/register/Register";
+import Login from "./pages/login/Login";
 
 
 function App() {
