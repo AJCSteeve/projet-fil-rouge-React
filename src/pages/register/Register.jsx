@@ -25,19 +25,13 @@ const Register = () => {
 
     const onSubmit=async (e)=>{
         e.preventDefault();
-<<<<<<< HEAD
-        await axios.post("http://localhost:8080/api/users/register", user) // note : url pas nécessairement le même que url partie
-        navigate("/"); //navigate to home after submitting form
-
-=======
         try {
-            const response = await axios.post("http://localhost:8080/api/auth/register", user);
+            const response = await axios.post("http://localhost:8080/api/users/register", user);
             console.log(response);
             navigate("/");
         } catch (error) {
             console.error('Error:', error);
         }
->>>>>>> 37cca4a9da739a4c0dc48543c241d1d6eb5f1967
     };
 
 
