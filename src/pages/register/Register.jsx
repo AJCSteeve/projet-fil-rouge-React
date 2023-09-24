@@ -25,9 +25,13 @@ const Register = () => {
 
     const onSubmit=async (e)=>{
         e.preventDefault();
-        await axios.post("http://localhost:8080/api/auth/register", user) // note : url pas nécessairement le même que url partie
-        navigate("/"); //navigate to home after submitting form
-
+        try {
+            const response = await axios.post("http://localhost:8080/api/auth/register", user);
+            console.log(response);
+            navigate("/");
+        } catch (error) {
+            console.error('Error:', error);
+        }
     };
 
 
@@ -72,9 +76,9 @@ const Register = () => {
                                required
                                onChange={(e)=>onInputChange(e)}
                         />
-                        <Link to="/">
+                        <div>
                             <button type="submit" className="register-btn">S'inscrire</button>
-                        </Link>
+                        </div>
                     </form>
                 </div>
             </div>
