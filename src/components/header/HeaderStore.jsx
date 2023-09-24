@@ -69,28 +69,30 @@ const HeaderStore = () => {
     return (
         <Container className="store-container">
 
-                         <Row className="store-row">
-                             <Col xs="auto">
-                                 <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" />
-                             </Col>
+            <Row className="store-row">
+                <Col xs="auto">
+                    <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" />
+                </Col>
 
-                             <Col xs="auto">
-                                 <div className="text-center">
-                                     <h3 className="header-title">Consultez nos tickets en vente</h3>
-                                 </div>
-                             </Col>
-                             <Col xs="auto">
-                                 <div>
-                                     <FormControl className="search-input" placeholder="Pour quel événement ?" />
-                                 </div>
-                                 <div>
-                                     <FormControl className="search-input" placeholder="Dans quelle ville ?" />
-                                 </div>
-                                 <Button className="btn">
-                                     <h3 className="header-title">Rechercher</h3>
-                                 </Button>
-                             </Col>
-                         </Row>
+                <Col xs="auto">
+                    <div className="text-center">
+                        <h3 className="header-title">Consultez nos tickets en vente</h3>
+                    </div>
+                </Col>
+                <Col xs="auto">
+                    <div className="search-input-container">
+                        <div>
+                            <FormControl className="search-input" placeholder="Pour quel événement ?" />
+                        </div>
+                        <div>
+                            <FormControl className="search-input" placeholder="Dans quelle ville ?" />
+                        </div>
+                        <Button className="btn">
+                            <h3 className="header-title">Rechercher</h3>
+                        </Button>
+                    </div>
+                </Col>
+            </Row>
 
 
 
