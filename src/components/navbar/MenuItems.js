@@ -24,4 +24,9 @@ export const MenuItems = [
         url: "/tickets/purchase",
         cName: "menu-transaction",
     },
+    {
+        Title: "Mon profil",
+        url: "/user/accountsettings",
+        cName: "menu-utilisateur",
+    },
 ];

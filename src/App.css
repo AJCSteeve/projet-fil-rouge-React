@@ -1,3 +1,76 @@
 .App {
     background-color: antiquewhite;
 }
+
+.stylenone{
+    text-decoration: none;
+    color: inherit;
+}
+
+.mainhead1{
+    color: brown;
+    font-size: 30px;
+    font-weight: 300;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+.mainbutton1{
+    background: none;
+    border: 1px solid ;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 1rem;
+    cursor: pointer;
+    color: brown;
+}
+
+.mainbutton1:hover{
+    background-color: #ffcc29;
+    color: white;
+    transform: scale(1.1);
+    transition: all 0.6s ease-in-out;
+}
+/*
+.my-custom-bg {
+  background-color: #b86227;
+  padding: 20px;
+}
+
+.my-card-bg {
+  background-color: #70370f;
+  padding: 20px;
+}
+.btn-actions {
+  text-align: center;
+}
+
+.td-btn {
+  width: 5%;
+}
+.btn-size {
+  width: 105px;
+  height: 50px;
+}
+.bg-image {
+  background-image: url('https://mdbootstrap.com/img/Photos/Others/images/68.jpg');
+  background-size: 1000px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: relative;
+  background-attachment: fixed;
+  padding: 20px;
+  width: 100%;
+  min-height: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there
+  background-color: #70370f;
+}*/

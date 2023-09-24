@@ -1,0 +1,43 @@
+.edituser{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.cedituser h1{
+    padding: 10px 20px;
+}
+
+.edituser.form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.edituser.form.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 10px;
+}
+
+.edituser.form.form-group label{
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.edituser.form.form-group input{
+    padding: 10px 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    outline: none;
+}
+
+.edituser.form.form-group input:focus{
+    border: 1px solid green;
+}

@@ -4,6 +4,7 @@ import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 
 const Register = () => {
+
     let navigate=useNavigate();
 
     // store form content into a state :
@@ -33,7 +34,6 @@ const Register = () => {
             console.error('Error:', error);
         }
     };
-
 
     return (
         <div className="register">

@@ -3,22 +3,22 @@ import React from "react";
 import {Route, Routes} from "react-router-dom";
 import {Container} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap-grid.min.css"
-
 import Home from "./pages/home/Home";
-import Login from "./pages/login/Login";
-import Register from "./pages/register/Register";
-import SellingTickets from "./components/transaction/SellingTickets";
-import PurchaseTickets from "./components/transaction/PurchaseTickets";
-import UpdateProfile from "./pages/crud/UpdateProfile";
+import UserProfile from "./pages/user/UserProfile";
 import VerifyProfile from "./pages/crud/VerifyProfile";
+import FetchTicketsAll from "./pages/store/FetchTicketsAll";
+import SellingTickets from "./components/transaction/SellingTickets";
+import FetchTicketsConcert from "./pages/store/FetchTicketsConcert";
+import FetchTicketsSpectacle from "./pages/store/FetchTicketsSpectacle";
+import TicketDetails from "./pages/store/TicketDetails";
+import PurchaseTickets from "./components/transaction/PurchaseTickets";
 import TransactionRating from "./components/transaction/TransactionRating";
 import CheckSellingHistory from "./components/transaction/CheckSellingHistory";
 import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory";
 import Navbar from "./components/navbar/Navbar";
-import TicketDetails from "./pages/store/TicketDetails";
-import FetchTicketsAll from "./pages/store/FetchTicketsAll";
-import FetchTicketsSpectacle from "./pages/store/FetchTicketsSpectacle";
-import FetchTicketsConcert from "./pages/store/FetchTicketsConcert";
+import Register from "./pages/register/Register";
+import Login from "./pages/login/Login";
+
 
 function App() {
     return (
@@ -31,7 +31,7 @@ function App() {
                     <Route path="/register" element={<Register/>}/>
                     <Route path="/login" element={<Login/>}/>
 
-                    <Route path="/profile/update" element={<UpdateProfile/>}/>
+                    <Route path="/user/:activepage" element={<UserProfile/>}/>
                     <Route path="/profile/verify" element={<VerifyProfile/>}/>
 
                     <Route path="/store" element={<FetchTicketsAll/>}/>
