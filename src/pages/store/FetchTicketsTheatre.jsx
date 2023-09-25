@@ -19,7 +19,7 @@ const FetchTicketsAll = () => {
         // Get query parameters for event name and event city
         const eventName = queryParams.get('eventName');
         const eventCity = queryParams.get('eventCity');
-        const eventType = 'Concert';
+        const eventType = 'Théâtre';
 
         // Create the API URL with optional query parameters
         const apiUrl = 'http://localhost:8080/api/tickets/search';
