@@ -29,12 +29,14 @@ const FetchTicketsAll = () => {
         // Get query parameters for event name and event city
         const eventName = queryParams.get('eventName');
         const eventCity = queryParams.get('eventCity');
+        const eventType =  "Parc d'attractions";
 
         // Create the API URL with optional query parameters
         const apiUrl = 'http://localhost:8080/api/tickets/search';
         const queryParamsString = new URLSearchParams({
             eventName: eventName || '',
             eventCity: eventCity || '',
+            eventType: eventType || '',
         }).toString();
         const fullApiUrl = `${apiUrl}?${queryParamsString}`;
 
@@ -50,39 +52,6 @@ const FetchTicketsAll = () => {
                 setLoading(false);
             });
     }, [location.search]);
-
-// import {useEffect, useState} from 'react';
-// import React from 'react';
-// import ShowTickets from './ShowTickets';
-// import './show-tickets.css';
-// import HeaderStore from "../../components/header/HeaderStore";
-// import itemsData from '../../assets/items';
-// import {formatCurrency} from "../../utilities/formatCurrency";
-// import axios from 'axios';
-//
-// const FetchTicketsAll = () => {
-//     const [items, setItems] = useState([]);
-//     const [loading, setLoading] = useState(true);
-//     const [error, setError] = useState(null);
-//
-//     // // TEST VERSION
-//     // useEffect(() => {
-//     //     setItems(itemsData);
-//     // }, []);
-//
-//
-//     useEffect(() => {
-//         axios.get('http://localhost:8080/api/tickets/search')
-//             .then((response) => {
-//                 setItems(response.data);
-//                 setLoading(false); // Set loading to false when data is fetched
-//             })
-//             .catch((error) => {
-//                 console.error('Error fetching data:', error);
-//                 setError(error); // Set error state when an error occurs
-//                 setLoading(false); // Set loading to false even if there's an error
-//             });
-//     }, []);
 
     // Render loading state
     if (loading) {
@@ -125,7 +94,7 @@ const FetchTicketsAll = () => {
                         <FontAwesomeIcon icon={faFutbolBall} />
                         <span>Match</span>
                     </Button>
-                    <Button className="headerListItem" href="/parc">
+                    <Button className="headerListItem active" href="/parc">
                         <FontAwesomeIcon icon={faIceCream} />
                         <span>Parc d'attractions</span>
                     </Button>

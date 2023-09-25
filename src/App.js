@@ -9,6 +9,10 @@ import VerifyProfile from "./pages/crud/VerifyProfile";
 import FetchTicketsAll from "./pages/store/FetchTicketsAll";
 import FetchTicketsConcert from "./pages/store/FetchTicketsConcert";
 import FetchTicketsSpectacle from "./pages/store/FetchTicketsSpectacle";
+import FetchTicketsTheatre from "./pages/store/FetchTicketsTheatre";
+import FetchTicketsFestival from "./pages/store/FetchTicketsFestival";
+import FetchTicketsMatch from "./pages/store/FetchTicketsMatch";
+import FetchTicketsParcAttractions from "./pages/store/FetchTicketsParcAttractions";
 import TicketDetails from "./pages/store/TicketDetails";
 import PurchaseTickets from "./components/transaction/PurchaseTickets";
 import TransactionRating from "./components/transaction/TransactionRating";
@@ -35,8 +39,12 @@ function App() {
                     <Route path="/profile/verify" element={<VerifyProfile/>}/>
 
                     <Route path="/store" element={<FetchTicketsAll/>}/>
-                    <Route path="/concerts" element={<FetchTicketsConcert/>}/>
-                    <Route path="/spectacles" element={<FetchTicketsSpectacle/>}/>
+                    <Route path="/theatre" element={<FetchTicketsTheatre/>}/>
+                    <Route path="/concert" element={<FetchTicketsConcert/>}/>
+                    <Route path="/spectacle" element={<FetchTicketsSpectacle/>}/>
+                    <Route path="/festival" element={<FetchTicketsFestival/>}/>
+                    <Route path="/match" element={<FetchTicketsMatch/>}/>
+                    <Route path="/parc" element={<FetchTicketsParcAttractions/>}/>
                     <Route path='/product/:id' element={<TicketDetails />} />
 
                     {/* Routes about transactions :
