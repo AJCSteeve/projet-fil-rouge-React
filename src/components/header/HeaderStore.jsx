@@ -4,27 +4,22 @@ import { Container, Navbar, FormControl, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-const HeaderStore = () => {
+const HeaderStore = ({ setShowCart, size }) => {
     return (
-        <Container className="store-container">
-            <Row className="store-row">
-                <Col>
-                    <div className="text-center">
-                        <h3 className="header-title">Consultez nos tickets en vente</h3>
-                    </div>
-                </Col>
-                <Col xs="auto">
-                    <div>
-                        <FormControl className="search-input" placeholder="Recherchez un ticket" />
-                    </div>
-                </Col>
-                <Col>
-                    <div>
-                        <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" />
-                    </div>
-                </Col>
-            </Row>
-        </Container>
+        <nav className="store-container">
+            <div className="store-box">
+                <button className="store-btn" onClick={() => setShowCart(true)}>
+                    Consultez nos tickets en vente
+                </button>
+                <input type="text" className="search-input" placeholder="Recherchez un ticket" />
+                <div className="cart-icon" onClick={() => setShowCart(false)}>
+                    <span>
+                        <FontAwesomeIcon icon={faShoppingCart} />
+                    </span>
+                    <span>{size}</span>
+                </div>
+            </div>
+        </nav>
     );
 };
 

@@ -1,5 +1,5 @@
 import './App.css';
-import React from "react";
+import React, {useState} from "react";
 import {Route, Routes} from "react-router-dom";
 import {Container} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap-grid.min.css"
@@ -15,29 +15,28 @@ import TransactionRating from "./components/transaction/TransactionRating";
 import CheckSellingHistory from "./components/transaction/CheckSellingHistory";
 import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory";
 import Navbar from "./components/navbar/Navbar";
-import TicketDetails from "./pages/store/TicketDetails";
-import FetchTicketsAll from "./pages/store/FetchTicketsAll";
-import FetchTicketsSpectacle from "./pages/store/FetchTicketsSpectacle";
-import FetchTicketsConcert from "./pages/store/FetchTicketsConcert";
+import FetchTicketsAll from "./components/fetch/FetchTicketsAll";
+import FetchTicketsSpectacle from "./components/fetch/FetchTicketsSpectacle";
+import FetchTicketsConcert from "./components/fetch/FetchTicketsConcert";
+import ShowAllTickets from "./pages/store/ShowAllTickets";
 
 function App() {
     return (
-        <Container className="App mb-1">
+        <div className="App mb-1">
             <div>
                 <>
-                    <Navbar/>
-                <Routes>
-                    <Route path="/" index element={<Home />} />
-                    <Route path="/register" element={<Register/>}/>
-                    <Route path="/login" element={<Login/>}/>
+                    <Navbar />
+                    <Routes>
+                        <Route path="/" index element={<Home />} />
+                        <Route path="/register" element={<Register/>}/>
+                        <Route path="/login" element={<Login/>}/>
 
-                    <Route path="/profile/update" element={<UpdateProfile/>}/>
-                    <Route path="/profile/verify" element={<VerifyProfile/>}/>
+                        <Route path="/profile/update" element={<UpdateProfile/>}/>
+                        <Route path="/profile/verify" element={<VerifyProfile/>}/>
 
-                    <Route path="/store" element={<FetchTicketsAll/>}/>
-                    <Route path="/concerts" element={<FetchTicketsConcert/>}/>
-                    <Route path="/spectacles" element={<FetchTicketsSpectacle/>}/>
-                    <Route path='/product/:id' element={<TicketDetails />} />
+                        <Route path="/store" element={<ShowAllTickets/>}/>
+                        <Route path="/concerts" element={<FetchTicketsConcert/>}/>
+                        <Route path="/spectacles" element={<FetchTicketsSpectacle/>}/>
 
                     {/* Routes about transactions :
                 - search, selling, purchase of tickets,
@@ -55,7 +54,7 @@ function App() {
                 <div className='bg-image p-5 text-center shadow-1-strong rounded mb-5 text-light'></div>
                 </>
             </div>
-        </Container>
+        </div>
     );
 }
 

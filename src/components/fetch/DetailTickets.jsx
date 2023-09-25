@@ -1,14 +1,14 @@
 import React from 'react';
-import "./show-tickets.css"
+import "./fetch-tickets.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCalendar, faLocationPin, faMoneyBills} from "@fortawesome/free-solid-svg-icons";
 
 
-const ShowTickets = ({
-                          imgSrc,
-                          type, descr,
-                          city, date, price,
-                      }) => {
+const DetailTickets = ({ imgSrc, type, descr, city, date, price, handleClick }) => {
+    if (!imgSrc) {
+        return <div>Aucun ticket trouvé.</div>;
+    }
+
     return (
         <div className="card-container">
             <div className="card-custom">
@@ -18,10 +18,10 @@ const ShowTickets = ({
                 {descr && <p className="card-descr"> {descr}</p>}
                 {price && city && <p className="card-details"> <FontAwesomeIcon icon={faMoneyBills} /> {price} <FontAwesomeIcon icon={faLocationPin} /> {city}</p>}
                 {date && <p className="card-details"> <FontAwesomeIcon icon={faCalendar} /> {date}</p>}
-                <a href="/panier" className="card-btn">Acheter</a>
+                <button onClick={() => handleClick({ imgSrc, type, descr, city, date, price })} className="card-btn">Acheter</button>
             </div>
         </div>
     );
 };
 
-export default ShowTickets;
+export default DetailTickets;

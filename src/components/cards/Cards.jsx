@@ -1,10 +1,11 @@
 import React from 'react';
 import "./cards.css"
 import {Link} from "react-router-dom";
+import {Container} from "react-bootstrap";
 
 const Cards = () => {
     return (
-        <div className="events">
+        <Container className="events">
             <div className={"top-section"}>
                 <div className="eventItem">
                     <img src="https://media.istockphoto.com/id/1295114854/fr/photo/fauteuils-rouges-vides-dun-th%C3%A9%C3%A2tre-pr%C3%AAt-pour-un-spectacle.webp?b=1&s=612x612&w=0&k=20&c=hk45uQ_ZKNJ8xbD4bt-eJ52IoQAurlvkfMBNCQNxi-g="
@@ -63,7 +64,7 @@ const Cards = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Container>
     );
 };
 
