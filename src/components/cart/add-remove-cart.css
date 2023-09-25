@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: antiquewhite;
+}
+
 .card-row {
     width: 80%;
     margin-bottom: 5%;
@@ -10,11 +18,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
 }
-.card-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 .card-custom {
     width: 15rem;
     height: 90%;
@@ -56,4 +60,27 @@
     text-decoration: none;
     margin: 0.5rem 1.5rem;
     cursor: pointer;
+}
+.clear-btn {
+    text-align: center;
+    background-color: #c60b1e;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.total-amount {
+    background-color: green;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
 }

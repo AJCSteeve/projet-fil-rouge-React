@@ -1,14 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import DetailTickets from './DetailTickets';
 import './fetch-tickets.css';
-import HeaderStore from "../header/HeaderStore";
 import itemsData from "../../assets/items";
 import {formatCurrency} from "../../utilities/formatCurrency";
-import Cart from '../cart/Cart';
 
 
 const FetchTicketsAll = ({handleClick}) => {
     const [items, setItems] = useState([]);
+    const itemsWithAmount = itemsData.map((item) => ({
+        ...item,
+        amount: 1, // La quantité par défaut
+    }));
 
     useEffect(() => {
         setItems(itemsData);
@@ -25,7 +27,7 @@ const FetchTicketsAll = ({handleClick}) => {
                         descr={item.eventName}
                         city={item.eventCity}
                         date={item.date}
-                        price={formatCurrency(item.price)}
+                        price={item.price}
                         handleClick={handleClick}
                     />
                 )}

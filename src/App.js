@@ -15,10 +15,9 @@ import TransactionRating from "./components/transaction/TransactionRating";
 import CheckSellingHistory from "./components/transaction/CheckSellingHistory";
 import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory";
 import Navbar from "./components/navbar/Navbar";
-import FetchTicketsAll from "./components/fetch/FetchTicketsAll";
 import FetchTicketsSpectacle from "./components/fetch/FetchTicketsSpectacle";
 import FetchTicketsConcert from "./components/fetch/FetchTicketsConcert";
-import ShowAllTickets from "./pages/store/ShowAllTickets";
+import ShowCartContent from "./components/cart/ShowCartContent";
 
 function App() {
     return (
@@ -34,7 +33,7 @@ function App() {
                         <Route path="/profile/update" element={<UpdateProfile/>}/>
                         <Route path="/profile/verify" element={<VerifyProfile/>}/>
 
-                        <Route path="/store" element={<ShowAllTickets/>}/>
+                        <Route path="/store" element={<ShowCartContent/>}/>
                         <Route path="/concerts" element={<FetchTicketsConcert/>}/>
                         <Route path="/spectacles" element={<FetchTicketsSpectacle/>}/>
 

@@ -5,10 +5,6 @@ import {faCalendar, faLocationPin, faMoneyBills} from "@fortawesome/free-solid-s
 
 
 const DetailTickets = ({ imgSrc, type, descr, city, date, price, handleClick }) => {
-    if (!imgSrc) {
-        return <div>Aucun ticket trouvé.</div>;
-    }
-
     return (
         <div className="card-container">
             <div className="card-custom">
