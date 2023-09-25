@@ -4,6 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCalendar, faLocationPin, faMoneyBills, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import "./add-remove-cart.css"
 import "../header/header-store.css"
+import PaymentButton from "../payment/PaymentButton";
 
 const PAGE_PRODUCTS = 'products';
 const PAGE_CART = 'cart';
@@ -107,6 +108,9 @@ const AddRemoveCart = () => {
                     )}
                 </section>
                 <div className={"total-amount"}>Montant total : €{getTotalSum()}</div>
+                <div className={"payment-btn"}>
+                    <PaymentButton />
+                </div>
             </>
         </div>
     )

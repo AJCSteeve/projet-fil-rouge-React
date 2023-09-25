@@ -5,12 +5,8 @@ import itemsData from "../../assets/items";
 import {formatCurrency} from "../../utilities/formatCurrency";
 
 
-const FetchTicketsAll = ({handleClick}) => {
+const FetchTicketsAll = () => {
     const [items, setItems] = useState([]);
-    const itemsWithAmount = itemsData.map((item) => ({
-        ...item,
-        amount: 1, // La quantité par défaut
-    }));
 
     useEffect(() => {
         setItems(itemsData);
@@ -28,7 +24,6 @@ const FetchTicketsAll = ({handleClick}) => {
                         city={item.eventCity}
                         date={item.date}
                         price={item.price}
-                        handleClick={handleClick}
                     />
                 )}
             </section>

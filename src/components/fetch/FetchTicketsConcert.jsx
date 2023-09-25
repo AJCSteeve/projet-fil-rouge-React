@@ -27,7 +27,7 @@ const FetchTicketsConcert = () => {
                         city={item.eventCity}
                         date={item.date}
                         person={item.person}
-                        price={formatCurrency(item.price)}
+                        price={(item.price)}
                     />
                 )}
             </section>

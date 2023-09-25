@@ -1,9 +1,9 @@
 import React from 'react';
 import "../../App.css"
-import "../../pages/home/home.css"
-import MailList from "../mailList/MailList";
-import Footer from "../footer/Footer";
-import AddRemoveCart from "./AddRemoveCart";
+import "../home/home.css"
+import MailList from "../../components/mailList/MailList";
+import Footer from "../../components/footer/Footer";
+import AddRemoveCart from "../../components/cart/AddRemoveCart";
 
 
 const ShowCartContent = () => {

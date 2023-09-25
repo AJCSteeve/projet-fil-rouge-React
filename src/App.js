@@ -17,7 +17,8 @@ import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory"
 import Navbar from "./components/navbar/Navbar";
 import FetchTicketsSpectacle from "./components/fetch/FetchTicketsSpectacle";
 import FetchTicketsConcert from "./components/fetch/FetchTicketsConcert";
-import ShowCartContent from "./components/cart/ShowCartContent";
+import ShowCartContent from "./pages/store/ShowCartContent";
+import Payment from "./pages/store/Payment";
 
 function App() {
     return (
@@ -34,6 +35,7 @@ function App() {
                         <Route path="/profile/verify" element={<VerifyProfile/>}/>
 
                         <Route path="/store" element={<ShowCartContent/>}/>
+                        <Route path="/paiement" element={<Payment/>}/>
                         <Route path="/concerts" element={<FetchTicketsConcert/>}/>
                         <Route path="/spectacles" element={<FetchTicketsSpectacle/>}/>
 

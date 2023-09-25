@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCalendar, faLocationPin, faMoneyBills} from "@fortawesome/free-solid-svg-icons";
 
 
-const DetailTickets = ({ imgSrc, type, descr, city, date, price, handleClick }) => {
+const DetailTickets = ({ imgSrc, type, descr, city, date, price }) => {
     return (
         <div className="card-container">
             <div className="card-custom">
@@ -12,9 +12,9 @@ const DetailTickets = ({ imgSrc, type, descr, city, date, price, handleClick }) 
                 )}
                 {type && <h3 className="card-title">{type}</h3>}
                 {descr && <p className="card-descr"> {descr}</p>}
-                {price && city && <p className="card-details"> <FontAwesomeIcon icon={faMoneyBills} /> {price} <FontAwesomeIcon icon={faLocationPin} /> {city}</p>}
+                {price && city && <p className="card-details"> <FontAwesomeIcon icon={faMoneyBills} /> {price}€ <FontAwesomeIcon icon={faLocationPin} /> {city}</p>}
                 {date && <p className="card-details"> <FontAwesomeIcon icon={faCalendar} /> {date}</p>}
-                <button onClick={() => handleClick({ imgSrc, type, descr, city, date, price })} className="card-btn">Acheter</button>
+                <button className="card-btn">Acheter</button>
             </div>
         </div>
     );
