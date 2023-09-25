@@ -5,7 +5,17 @@ import './show-tickets.css';
 import HeaderStore from '../../components/header/HeaderStore';
 import { formatCurrency } from '../../utilities/formatCurrency';
 import axios from 'axios';
-import { useLocation } from 'react-router-dom'; // Import useLocation
+import { useLocation } from 'react-router-dom';
+import {Button, Container} from "react-bootstrap";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {
+    faFutbolBall,
+    faGuitar,
+    faIceCream,
+    faMicrophone,
+    faTents,
+    faTheaterMasks
+} from "@fortawesome/free-solid-svg-icons"; // Import useLocation
 
 const FetchTicketsAll = () => {
     const [items, setItems] = useState([]);
@@ -62,6 +72,34 @@ const FetchTicketsAll = () => {
 
     return (
         <>
+            <Container className="store-container d-flex justify-content-around">
+                <div className="headerList">
+                    <Button className="headerListItem" href="/theatre">
+                        <FontAwesomeIcon icon={faTheaterMasks} />
+                        <span>Théâtre</span>
+                    </Button>
+                    <Button className="headerListItem" href="/concert">
+                        <FontAwesomeIcon icon={faGuitar} />
+                        <span>Concert</span>
+                    </Button>
+                    <Button className="headerListItem" href="/spectacle">
+                        <FontAwesomeIcon icon={faMicrophone} />
+                        <span>Spectacle</span>
+                    </Button>
+                    <Button className="headerListItem" href="/festival">
+                        <FontAwesomeIcon icon={faTents} />
+                        <span>Festival</span>
+                    </Button>
+                    <Button className="headerListItem" href="/match">
+                        <FontAwesomeIcon icon={faFutbolBall} />
+                        <span>Match</span>
+                    </Button>
+                    <Button className="headerListItem active" href="/parc">
+                        <FontAwesomeIcon icon={faIceCream} />
+                        <span>Parc d'attractions</span>
+                    </Button>
+                </div>
+            </Container>
             <div>
                 <HeaderStore/>
             </div>
