@@ -7,7 +7,6 @@ import Home from "./pages/home/Home";
 import UserProfile from "./pages/user/UserProfile";
 import VerifyProfile from "./pages/crud/VerifyProfile";
 import FetchTicketsAll from "./pages/store/FetchTicketsAll";
-import SellingTickets from "./components/transaction/SellingTickets";
 import FetchTicketsConcert from "./pages/store/FetchTicketsConcert";
 import FetchTicketsSpectacle from "./pages/store/FetchTicketsSpectacle";
 import TicketDetails from "./pages/store/TicketDetails";
@@ -18,6 +17,7 @@ import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory"
 import Navbar from "./components/navbar/Navbar";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
+import Selling from "./pages/tickets/Selling";
 
 
 function App() {
@@ -45,7 +45,7 @@ function App() {
                 - consulting transaction history (sellings & purchases)
                 */}
 
-                    <Route path="/tickets/selling" element={<SellingTickets/>}/>
+                    <Route path="/tickets/selling" element={<Selling/>}/>
                     <Route path="/tickets/purchase" element={<PurchaseTickets/>}/>
                     <Route path="/transaction/rating" element={<TransactionRating/>}/>
                     <Route path="/transaction/history/selling" element={<CheckSellingHistory/>}/>

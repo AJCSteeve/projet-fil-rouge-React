@@ -23,8 +23,8 @@ export default function UserProfile() {
                 <div className="right">
                     {activepage === 'compte' && <AccountSettings/>}
                     {activepage === 'modifier' && <EditUser/>}
-                    {activepage === 'modifier mot de passe' && <ChangePassword/>}
-                    {activepage === 'achats' && <Orders/>}
+                    {activepage === 'modifierMotDePasse' && <ChangePassword/>}
+                    {activepage === 'transactions' && <Orders/>}
                 </div>
             </div>
             <Footer/>

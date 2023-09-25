@@ -29,4 +29,9 @@ export const MenuItems = [
         url: "/user/accountsettings",
         cName: "menu-utilisateur",
     },
+    {
+        Title: "Vendre",
+        url: "/tickets/selling",
+        cName: "menu-vente",
+    },
 ];
