@@ -86,7 +86,7 @@ const FetchTicketsAll = () => {
                         <FontAwesomeIcon icon={faMicrophone} />
                         <span>Spectacle</span>
                     </Button>
-                    <Button className="headerListItem active" href="/festival">
+                    <Button className="headerListItem" href="/festival">
                         <FontAwesomeIcon icon={faTents} />
                         <span>Festival</span>
                     </Button>
