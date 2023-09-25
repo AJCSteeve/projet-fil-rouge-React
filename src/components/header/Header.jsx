@@ -19,23 +19,23 @@ const Header = () => {
                         <FontAwesomeIcon icon={faTheaterMasks} />
                         <span>Théâtre</span>
                     </div>
-                    <div className="headerListItem">
+                    <div className="headerListItem active">
                         <FontAwesomeIcon icon={faGuitar} />
                         <span>Concert</span>
                     </div>
-                    <div className="headerListItem">
+                    <div className="headerListItem active">
                         <FontAwesomeIcon icon={faMicrophone} />
                         <span>Spectacle</span>
                     </div>
-                    <div className="headerListItem">
+                    <div className="headerListItem active">
                         <FontAwesomeIcon icon={faTents} />
                         <span>Festival</span>
                     </div>
-                    <div className="headerListItem">
+                    <div className="headerListItem active">
                         <FontAwesomeIcon icon={faFutbolBall} />
                         <span>Match</span>
                     </div>
-                    <div className="headerListItem">
+                    <div className="headerListItem active">
                         <FontAwesomeIcon icon={faIceCream} />
                         <span>Parc d'attractions</span>
                     </div>
