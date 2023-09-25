@@ -77,7 +77,7 @@ export default function AccountSettings() {
                 </Card.Body>
                 <Card.Body>
                     <Card.Title>Photo</Card.Title>
-                    <Card.Text>{userData.photoUrl}</Card.Text>
+                    {/*<Card.Text>{userData.photoUrl}</Card.Text>*/}
                     {
                         userData.photoUrl ? (
                         <img src={userData.photoUrl}

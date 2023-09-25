@@ -1,9 +1,8 @@
-import {useNavigate} from "react-router-dom";
-import React, {useEffect, useState} from "react";
+import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function Selling(){
-
+export default function Selling() {
     const axiosInstance = axios.create({
         baseURL: "http://localhost:8080/api",
         headers: {
@@ -21,63 +20,61 @@ export default function Selling(){
         return null;
     }
 
-    const loadUser = async () => {
-        try {
-            const response = await axiosInstance.get(`/users/${idAsNumber}`);
-            setUserData(response.data);
-        } catch (error) {
-            console.error("Erreur", error.message);
-        }
-    };
-
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useEffect(() => {
-        loadUser();
-    }, [idAsNumber]);
-
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [userData, setUserData] = useState({
         username: ""
     });
 
-    const {username}=userData;
-
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    let navigate=useNavigate();
+    let navigate = useNavigate();
 
     // store form content into a state :
     // 1) initialize ticket object
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [ticket, setTicket]=useState({
-        date:"",
-        eventName:"",
-        eventType:"",
-        eventCity:"",
-        price:""
+    const [ticket, setTicket] = useState({
+        date: "",
+        eventName: "",
+        eventType: "",
+        eventCity: "",
+        price: ""
     });
 
-    // 2) deconstruction of the object
-    const {date,eventName, eventType,eventCity,price}=ticket;
-    //note : (e) = event
+    // 2) deconstruction
+    const { date, eventName, eventType, eventCity, price } = ticket;
+
     // set all the user attributes to the values entered in the form
-    const onInputChange=(e)=>{
-        setTicket({ ...ticket, [e.target.name]:e.target.value})
+    const onInputChange = (e) => {
+        setTicket({ ...ticket, [e.target.name]: e.target.value })
     };
 
-    const onSubmit=async (e)=>{
+    const onSubmit = async (e) => {
         e.preventDefault();
         try {
             const response = await axiosInstance.post("/tickets", ticket);
             console.log(response);
+            console.log(localStorage.getItem("jwtToken"))
             navigate("/");
         } catch (error) {
             console.error('Error:', error);
         }
     };
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
+        const loadUser = async () => {
+            try {
+                const response = await axiosInstance.get(`/users/${idAsNumber}`);
+                setUserData(response.data);
+            } catch (error) {
+                console.error("Erreur", error.message);
+            }
+        };
 
-    return(
+        loadUser();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [idAsNumber]);
 
+    return (
         <div className="selling">
             <div className="selling-card">
                 <div className="selling-left">
@@ -90,53 +87,52 @@ export default function Selling(){
                 </div>
                 <div className="selling-right">
                     <h1>Créer un ticket</h1>
-                    <form onSubmit={(e)=>onSubmit((e))}>
-                        <input type="datetime-local"
-                               name="date"
-                               value={date}
-                               placeholder="Date de l'événement"
-                               required
-                               onChange={(e)=>onInputChange(e)}
+                    <form onSubmit={(e) => onSubmit(e)}>
+                        <input
+                            type="date"
+                            name="date"
+                            value={date}
+                            placeholder="Date de l'événement"
+                            required
+                            onChange={(e) => onInputChange(e)}
                         />
-                        <input type="text"
-                               name="eventName"
-                               value={eventName}
-                               placeholder="Nom de l'événement"
-                               required
-                               onChange={(e)=>onInputChange(e)}
+                        <input
+                            type="text"
+                            name="eventName"
+                            value={eventName}
+                            placeholder="Nom de l'événement"
+                            required
+                            onChange={(e) => onInputChange(e)}
                         />
-                        <input type="text"
-                               name="eventType"
-                               value={eventType}
-                               placeholder="Type d'événement"
-                               required
-                               onChange={(e)=>onInputChange(e)}
+                        <input
+                            type="text"
+                            name="eventType"
+                            value={eventType}
+                            placeholder="Type d'événement"
+                            required
+                            onChange={(e) => onInputChange(e)}
                         />
-                        <input type="text"
-                               name="eventCity"
-                               value={eventCity}
-                               placeholder="Lieu de l'événement"
-                               required
-                               onChange={(e)=>onInputChange(e)}
+                        <input
+                            type="text"
+                            name="eventCity"
+                            value={eventCity}
+                            placeholder="Lieu de l'événement"
+                            required
+                            onChange={(e) => onInputChange(e)}
                         />
-                        <input type="float"
-                               name="price"
-                               value={price}
-                               placeholder="Prix"
-                               required
-                               onChange={(e)=>onInputChange(e)}
+                        <input
+                            type="number"
+                            name="price"
+                            value={price}
+                            placeholder="Prix"
+                            required
+                            onChange={(e) => onInputChange(e)}
                         />
-                        <input type="username"
-                               name="price"
-                               value={price}
-                               placeholder="Prix"
-                               required
-                               onChange={(e)=>onInputChange(e)}
-                        />
-                        <input type="text"
-                               name="username"
-                               value={username} readOnly
-                               required
+                        <input
+                            type="text"
+                            name="username"
+                            value={userData.username} readOnly
+                            required
                         />
                         <div>
                             <button type="submit" className="selling-btn">Soumettre</button>
