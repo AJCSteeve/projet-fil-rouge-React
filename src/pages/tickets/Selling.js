@@ -1,7 +1,6 @@
-import {Link, useNavigate} from "react-router-dom";
-import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
-
 
 export default function Selling(){
 
@@ -32,11 +31,16 @@ export default function Selling(){
     };
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
+        loadUser();
+    }, [idAsNumber]);
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [userData, setUserData] = useState({
         username: ""
     });
 
-    const {username}=username;
+    const {username}=userData;
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     let navigate=useNavigate();

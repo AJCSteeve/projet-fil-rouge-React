@@ -1,43 +1,43 @@
-.orders{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-}
+/*.orders{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    width: 100%;*/
+/*    align-items: center;*/
+/*}*/
 
-.orders h1{
-    padding: 10px 20px;
-}
+/*.orders h1{*/
+/*    padding: 10px 20px;*/
+/*}*/
 
-.orders.form{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px 20px;
-}
+/*.orders.form{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: space-between;*/
+/*    width: 100%;*/
+/*    padding: 10px 20px;*/
+/*}*/
 
-.orders.form.form-group {
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    margin: 10px;
-}
+/*.orders.form.form-group {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    width: 45%;*/
+/*    margin: 10px;*/
+/*}*/
 
-.orders.form.form-group label{
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-bottom: 5px;
-}
+/*.orders.form.form-group label{*/
+/*    font-size: 1.2rem;*/
+/*    font-weight: 300;*/
+/*    margin-bottom: 5px;*/
+/*}*/
 
-.orders.form.form-group input{
-    padding: 10px 20px;
-    border: 1px solid grey;
-    border-radius: 5px;
-    outline: none;
-}
+/*.orders.form.form-group input{*/
+/*    padding: 10px 20px;*/
+/*    border: 1px solid grey;*/
+/*    border-radius: 5px;*/
+/*    outline: none;*/
+/*}*/
 
-.orders.form.form-group input:focus{
-    border: 1px solid green;
-}
+/*.orders.form.form-group input:focus{*/
+/*    border: 1px solid green;*/
+/*}*/
