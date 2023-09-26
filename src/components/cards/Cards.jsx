@@ -1,17 +1,18 @@
 import React from 'react';
 import "./cards.css"
 import {Link} from "react-router-dom";
+import {Container} from "react-bootstrap";
 
 const Cards = () => {
     return (
-        <div className="events">
+        <Container className="events">
             <div className={"top-section"}>
                 <div className="eventItem">
                     <img src="https://media.istockphoto.com/id/1295114854/fr/photo/fauteuils-rouges-vides-dun-th%C3%A9%C3%A2tre-pr%C3%AAt-pour-un-spectacle.webp?b=1&s=612x612&w=0&k=20&c=hk45uQ_ZKNJ8xbD4bt-eJ52IoQAurlvkfMBNCQNxi-g="
                          alt={"theatre"}
                          className={"eventImg"}></img>
                     <div className="eventTitle">
-                        <h1>Théâtre</h1>
+                        <h1 className="event-title">Théâtre</h1>
                         <Link to="/theatre" className="event-btn">Recherche</Link>
                     </div>
                 </div>
@@ -20,7 +21,7 @@ const Cards = () => {
                          alt={"concert"}
                          className={"eventImg"}></img>
                     <div className="eventTitle">
-                        <h1>Concert</h1>
+                        <h1 className="event-title">Concert</h1>
                         <Link to="/concert" className="event-btn">Recherche</Link>
                     </div>
                 </div>
@@ -29,7 +30,7 @@ const Cards = () => {
                          alt={"spectacle"}
                          className={"eventImg"}></img>
                     <div className="eventTitle">
-                        <h1>Spectacle</h1>
+                        <h1 className="event-title">Spectacle</h1>
                         <Link to="/spectacle" className="event-btn">Recherche</Link>
                     </div>
                 </div>
@@ -40,7 +41,7 @@ const Cards = () => {
                          alt={"festival"}
                          className={"eventImg"}></img>
                     <div className="eventTitle">
-                        <h1>Festival</h1>
+                        <h1 className="event-title">Festival</h1>
                         <Link to="/festival" className="event-btn">Recherche</Link>
                     </div>
                 </div>
@@ -49,7 +50,7 @@ const Cards = () => {
                          alt={"match"}
                          className={"eventImg"}></img>
                     <div className="eventTitle">
-                        <h1>Match</h1>
+                        <h1 className="event-title">Match</h1>
                         <a href="match" className="event-btn">Recherche</a>
                     </div>
                 </div>
@@ -58,12 +59,12 @@ const Cards = () => {
                          alt={"parc d'attractions"}
                          className={"eventImg"}></img>
                     <div className="eventTitle">
-                        <h1>Parc d'attractions</h1>
+                        <h1 className="event-title">Parc d'attractions</h1>
                         <a href="parc" className="event-btn">Recherche</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </Container>
     );
 };
 

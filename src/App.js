@@ -23,10 +23,15 @@ import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import Selling from "./pages/tickets/Selling";
 
+import FetchTicketsAll from "./components/fetch/FetchTicketsAll";
+import FetchTicketsSpectacle from "./components/fetch/FetchTicketsSpectacle";
+import FetchTicketsConcert from "./components/fetch/FetchTicketsConcert";
+import ShowCartContent from "./pages/store/ShowCartContent";
+import Payment from "./pages/store/Payment";
 
 function App() {
     return (
-        <Container className="App mb-1">
+        <div className="App mb-1">
             <div>
                 <>
                     <Navbar/>
@@ -38,8 +43,8 @@ function App() {
                     <Route path="/user/:activepage" element={<UserProfile/>}/>
                     <Route path="/profile/verify" element={<VerifyProfile/>}/>
 
-                    <Route path="/store" element={<FetchTicketsAll/>}/>
-                    <Route path="/theatre" element={<FetchTicketsTheatre/>}/>
+                    <Route path="/search" element={<FetchTicketsAll/>}/>
+                    <Route path="/store" element={<ShowCartContent/>}/>
                     <Route path="/concert" element={<FetchTicketsConcert/>}/>
                     <Route path="/spectacle" element={<FetchTicketsSpectacle/>}/>
                     <Route path="/festival" element={<FetchTicketsFestival/>}/>
@@ -47,11 +52,7 @@ function App() {
                     <Route path="/parc" element={<FetchTicketsParcAttractions/>}/>
                     <Route path='/product/:id' element={<TicketDetails />} />
 
-                    {/* Routes about transactions :
-                - search, selling, purchase of tickets,
-                - rating of a transaction,
-                - consulting transaction history (sellings & purchases)
-                */}
+                    <Route path="/paiement" element={<Payment/>}/>
 
                     <Route path="/tickets/selling" element={<Selling/>}/>
                     <Route path="/tickets/purchase" element={<PurchaseTickets/>}/>
@@ -63,7 +64,7 @@ function App() {
                 <div className='bg-image p-5 text-center shadow-1-strong rounded mb-5 text-light'></div>
                 </>
             </div>
-        </Container>
+        </div>
     );
 }
 

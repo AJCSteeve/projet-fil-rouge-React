@@ -8,6 +8,7 @@ const ShowTickets = ({
                          type, descr,
                          city, date, price,
                      }) => {
+
     return (
         <div className="card-container">
             <div className="card-custom">
