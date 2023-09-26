@@ -85,7 +85,7 @@ export default function Selling() {
             <div className="selling-card">
                 <div className="selling-left"></div>
                 <div className="selling-right">
-                    <h1>Créer un ticket</h1>
+                    <h1>Revendre un billet en toute sécurité sur MyTicket.</h1>
                     <form onSubmit={(e) => onSubmit(e)}>
                         <input
                             type="date"
