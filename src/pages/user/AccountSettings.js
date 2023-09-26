@@ -1,24 +1,22 @@
 import axios from "axios";
-import {useNavigate} from "react-router-dom";
-import { useEffect, useState} from "react";
-import {Button, Card} from "react-bootstrap";
-
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState, useCallback } from "react";
+import { Button, Card } from "react-bootstrap";
 
 export default function AccountSettings() {
     const axiosInstance = axios.create({
         baseURL: "http://localhost:8080/api",
         headers: {
-            Authorization: `Bearer ${localStorage.getItem("jwtToken")}`, // Récupère le token JWT du stockage local
+            Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
             "Content-Type": "application/json",
         },
     });
 
     let navigate = useNavigate();
 
-    const idAsString = localStorage.getItem('userId'); // Récupère l'userId du stockage local et converti en entier
+    const idAsString = localStorage.getItem("userId");
     const idAsNumber = parseInt(idAsString, 10);
 
-    // Vérifier si la conversion a réussi (n'est pas NaN) et que l'ID est valide
     if (isNaN(idAsNumber) || idAsNumber <= 0) {
         console.error("L'ID n'est pas un nombre valide ou est manquant.");
         return null;
@@ -33,16 +31,26 @@ export default function AccountSettings() {
     });
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const loadUser = async () => {
+    const loadUser = useCallback(async () => {
         try {
             const response = await axiosInstance.get(`/users/${idAsNumber}`);
             setUserData(response.data);
         } catch (error) {
             console.error("Erreur", error.message);
         }
-    };
+    }, [axiosInstance, idAsNumber]);
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [confirmationVisible, setConfirmationVisible] = useState(false);
+
+    const showConfirmation = () => {
+        setConfirmationVisible(true);
+    };
+
+    const hideConfirmation = () => {
+        setConfirmationVisible(false);
+    };
+
     const deleteUser = async () => {
         try {
             await axiosInstance.delete(`/users/${idAsNumber}`);
@@ -53,7 +61,7 @@ export default function AccountSettings() {
     };
 
     const handleLogout = () => {
-        localStorage.removeItem("jwtToken");  // Effacez les données d'authentification du stockage local
+        localStorage.removeItem("jwtToken");
         localStorage.removeItem("userId");
         navigate("/login");
     };
@@ -66,7 +74,7 @@ export default function AccountSettings() {
     return (
         <div className="orders">
             <h1 className="mainhead1">Informations utilisateur</h1>
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: "18rem" }}>
                 <Card.Body>
                     <Card.Title>Identifiant</Card.Title>
                     <Card.Text>{userData.username}</Card.Text>
@@ -77,22 +85,37 @@ export default function AccountSettings() {
                 </Card.Body>
                 <Card.Body>
                     <Card.Title>Photo</Card.Title>
-                    {/*<Card.Text>{userData.photoUrl}</Card.Text>*/}
-                    {
-                        userData.photoUrl ? (
-                        <img src={userData.photoUrl}
-                             alt="Photo de profil"
-                             className="user-photo" />) : (<div className="user-photo-placeholder">
-                            <p>Aucune photo de profil</p></div>)
-                    }
+                    {userData.photoUrl ? (
+                        <img
+                            src={userData.photoUrl}
+                            alt="Photo de profil"
+                            className="user-photo"
+                        />
+                    ) : (
+                        <div className="user-photo-placeholder">
+                            <p>Aucune photo de profil</p>
+                        </div>
+                    )}
                 </Card.Body>
                 <Card.Body>
                     <Card.Title>Email</Card.Title>
                     <Card.Text>{userData.email}</Card.Text>
                 </Card.Body>
             </Card>
-            <Button className="btn btn-secondary mx-2" onClick={handleLogout}>Déconnexion</Button>
-            <Button className="btn btn-danger mx-2" onClick={deleteUser}>Supprimer mon profil</Button>
+            <Button className="btn btn-secondary mx-2" onClick={handleLogout}>
+                Déconnexion
+            </Button>
+            <Button className="btn btn-danger mx-2" onClick={showConfirmation}>
+                Supprimer mon profil
+            </Button>
+
+            {confirmationVisible && (
+                <div className="confirmation-dialog">
+                    <p>Êtes-vous sûr de vouloir supprimer votre profil ?</p>
+                    <button onClick={deleteUser}>Confirmer</button>
+                    <button onClick={hideConfirmation}>Annuler</button>
+                </div>
+            )}
         </div>
     );
 }
