@@ -1,50 +1,69 @@
-/*.accountsettings{*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    width: 100%;*/
-/*    align-items: center;*/
-/*}*/
+.orders-main {
+    padding: 20px;
+    background-color: navajowhite;
+}
 
-/*.accountsettings h1{*/
-/*    padding: 10px 20px;*/
-/*}*/
+.orders-title {
+    font-size: 24px;
+    color: salmon;
+    margin-bottom: 20px;
+}
 
-/*.accountsettings.form{*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    flex-wrap: wrap;*/
-/*    justify-content: space-between;*/
-/*    width: 100%;*/
-/*    padding: 10px 20px;*/
-/*}*/
+.orders-card {
+    width: 18rem;
+    background-color: bisque;
+    margin-bottom: 20px;
+}
 
-/*.accountsettings.form.form-group {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    width: 45%;*/
-/*    margin: 10px;*/
-/*}*/
+.Card.Title {
+    font-size: 18px;
+    font-weight: bold;
+    color: coral;
+}
 
-/*.accountsettings.form.form-group label{*/
-/*    font-size: 1.2rem;*/
-/*    font-weight: 300;*/
-/*    margin-bottom: 5px;*/
-/*}*/
-
-/*.accountsettings.form.form-group input{*/
-/*    padding: 10px 20px;*/
-/*    border: 1px solid grey;*/
-/*    border-radius: 5px;*/
-/*    outline: none;*/
-/*}*/
-
-/*.accountsettings.form.form-group input:focus{*/
-/*    border: 1px solid green;*/
-/*}*/
+.Card.Text {
+    font-size: 16px;
+    color: #333;
+}
 
 .user-photo {
-    width: 100px; /* Définissez la largeur souhaitée pour la photo */
-    height: 100px; /* Définissez la hauteur souhaitée pour la photo */
-    object-fit: cover; /* Ajustez la photo pour couvrir l'espace tout en préservant son ratio */
-    border-radius: 50%; /* Ajoutez des coins arrondis pour un aspect de cercle */
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.user-photo-placeholder {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+    color: #333;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    background-color: salmon;
+    color: bisque;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: coral;
+}
+
+.btn-danger {
+    background-color: #ff6b6b;
+    color: bisque;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #ff4040;
 }
