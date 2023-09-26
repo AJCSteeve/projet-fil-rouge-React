@@ -7,6 +7,10 @@ import "./UserProfile.css";
 import ChangePassword from "./ChangePassword";
 import Orders from "./Orders";
 import EditUser from "./EditUser";
+import Header from "../../components/header/Header";
+import Cards from "../../components/cards/Cards";
+import MailList from "../../components/mailList/MailList";
+import React from "react";
 
 
 export default function UserProfile() {
@@ -16,18 +20,20 @@ export default function UserProfile() {
 
     // alert(activepage)
     return(
-        <div className="userprofile">
+        <div className="user-profile">
             <Navbar/>
-            <div className="userprofilein">
-                <div className="left"><UserSideBar activepage={activepage}/></div>
-                <div className="right">
-                    {activepage === 'compte' && <AccountSettings/>}
-                    {activepage === 'modifier' && <EditUser/>}
-                    {activepage === 'modifierMotDePasse' && <ChangePassword/>}
-                    {activepage === 'transactions' && <Orders/>}
+            <div className="home-container">
+                <div className="user-profile-in">
+                    <div className="user-profile-left"><UserSideBar activepage={activepage}/></div>
+                    <div className="user-profile-right">
+                        {activepage === 'compte' && <AccountSettings/>}
+                        {activepage === 'modifier' && <EditUser/>}
+                        {activepage === 'modifierMotDePasse' && <ChangePassword/>}
+                        {activepage === 'transactions' && <Orders/>}
+                    </div>
                 </div>
+                <Footer/>
             </div>
-            <Footer/>
         </div>
     );
 

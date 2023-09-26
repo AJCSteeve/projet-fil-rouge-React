@@ -2,6 +2,7 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import { useEffect, useState} from "react";
 import {Button, Card} from "react-bootstrap";
+import './AccountSettings.css';
 
 
 export default function AccountSettings() {
@@ -64,9 +65,9 @@ export default function AccountSettings() {
     }, [loadUser]);
 
     return (
-        <div className="orders">
-            <h1 className="mainhead1">Informations utilisateur</h1>
-            <Card style={{ width: '18rem' }}>
+        <div className="orders-main">
+            <h1 className="orders-title">Informations utilisateur</h1>
+            <Card className={"orders-card"}>
                 <Card.Body>
                     <Card.Title>Identifiant</Card.Title>
                     <Card.Text>{userData.username}</Card.Text>
@@ -80,10 +81,12 @@ export default function AccountSettings() {
                     {/*<Card.Text>{userData.photoUrl}</Card.Text>*/}
                     {
                         userData.photoUrl ? (
-                        <img src={userData.photoUrl}
-                             alt="Photo de profil"
-                             className="user-photo" />) : (<div className="user-photo-placeholder">
-                            <p>Aucune photo de profil</p></div>)
+                                <img src={userData.photoUrl}
+                                     alt="Photo de profil"
+                                     className="user-photo" />) :
+                            (<div className="user-photo-placeholder">
+                                <p>Aucune photo de profil</p>
+                            </div>)
                     }
                 </Card.Body>
                 <Card.Body>
