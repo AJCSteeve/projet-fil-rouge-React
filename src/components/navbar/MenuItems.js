@@ -20,6 +20,11 @@ export const MenuItems = [
         cName: "menu-tickets",
     },
     {
+        Title: "Search",
+        url: "/search",
+        cName: "menu-search",
+    },
+    {
         Title: "Transaction",
         url: "/tickets/purchase",
         cName: "menu-transaction",

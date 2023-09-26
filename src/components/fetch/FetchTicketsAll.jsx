@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import ShowTickets from './ShowTickets';
 import './fetch-tickets.css';
 import itemsData from "../../assets/items";
-import {formatCurrency} from "../../utilities/formatCurrency";
 
 
 const FetchTicketsAll = () => {
