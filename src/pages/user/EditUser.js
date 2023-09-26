@@ -1,4 +1,4 @@
-import "./AccountSettings.css"
+import "./edit-user.css"
 import axios from "axios";
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
@@ -58,51 +58,51 @@ export default function EditUser(){
     };
 
     return(
-        <div className="edituser">
-            <h1 className="mainhead1">Informations utilisateur</h1>
+        <div className="edit-user">
+            <h1 className="edit-user-title">Informations utilisateur</h1>
             <form onSubmit={(ev) => onSubmit(ev)}>
-                <div className="form-group">
-                    <label htmlFor="username" className="form-label">Identifiant <span>*</span></label>
+                <div className="edit-user-form-group">
+                    <label htmlFor="username" className="edit-user-form-label">Identifiant <span>*</span></label>
                     <input type='text'
                            id="username"
-                           className="form-control"
-                           placeholder="Veuillez entrer votre identifinat svp"
+                           className="edit-user-form-control"
+                           placeholder="Veuillez entrer votre identifiant svp"
                            name="username"
                            value={username}
                            onChange={(event)=>onInputChange(event)}/>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="phoneNumber" className="form-label">Téléphone <span>*</span></label>
+                <div className="edit-user-form-group">
+                    <label htmlFor="phoneNumber" className="edit-user-form-label">Téléphone <span>*</span></label>
                     <input type='text'
                            id="phoneNumber"
-                           className="form-control"
+                           className="edit-user-form-control"
                            placeholder="Veuillez entrer votre numéro de téléphone svp"
                            name="phoneNumber"
                            value={phoneNumber || ""}
                            onChange={(event)=>onInputChange(event)}/>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="photoUrl" className="form-label">Photo <span>*</span></label>
+                <div className="edit-user-form-group">
+                    <label htmlFor="photoUrl" className="edit-user-form-label">Photo <span>*</span></label>
                     <input type='text'
                            id="photoUrl"
-                           className="form-control"
+                           className="edit-user-form-control"
                            placeholder="Veuillez entrer un Url photo svp"
                            name="photoUrl"
                            value={photoUrl || ""}
                            onChange={(event)=>onInputChange(event)}/>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="email" className="form-label">Email <span>*</span></label>
+                <div className="edit-user-form-group">
+                    <label htmlFor="email" className="edit-user-form-label">Email <span>*</span></label>
                     <input type='text'
                            id="email"
-                           className="form-control"
+                           className="edit-user-form-control"
                            placeholder="Veuillez entrer votre email svp"
                            name="email"
                            value={email || ""}
                            onChange={(event)=>onInputChange(event)}/>
                 </div>
-            <button type="submit" className="mainbutton1">Envoyer</button>
-            <button className="btn btn-outline-danger mx-2" onClick={() => navigate("/user/:activepage")}>Annuler</button>
+            <button type="submit" className="edit-user-btn-envoyer">Envoyer</button>
+            <button className="edit-user-btn-annuler" onClick={() => navigate("/user/:activepage")}>Annuler</button>
         </form>
         </div>
     );

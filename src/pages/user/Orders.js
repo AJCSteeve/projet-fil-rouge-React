@@ -1,3 +1,5 @@
+import "./orders.css"
+
 // import axios from "axios";
 // import {useNavigate} from "react-router-dom";
 // import {useEffect, useState} from "react";
@@ -92,6 +94,6 @@
 
 export default function Orders() {
     return(
-        <h1>Historique de transactions</h1>
+        <h1 className={"orders-title"}>Historique de transactions</h1>
     )
 }

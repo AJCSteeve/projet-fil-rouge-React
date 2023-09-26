@@ -1,0 +1,71 @@
+.edit-user {
+    padding: 30px;
+    background-color: lightsalmon;
+    border-radius: 10px;
+}
+
+.edit-user-title {
+    font-size: 24px;
+    color: firebrick;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.edit-user-form-group {
+    margin-bottom: 20px;
+}
+
+.edit-user-form-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+.edit-user-form-control {
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.edit-user-form-control:focus {
+    border-color: coral;
+    outline: none;
+}
+
+.edit-user-btn-envoyer {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #c60b1e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.edit-user-btn-envoyer:hover {
+    background-color: coral;
+}
+
+.edit-user-btn-annuler {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #c60b1e;
+    color: #c60b1e;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.edit-user-btn-annuler:hover {
+    background-color: #c60b1e;
+    color: white;
+}

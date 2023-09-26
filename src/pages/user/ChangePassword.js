@@ -1,7 +1,7 @@
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import axios from "axios";
-
+import "./change-password.css"
 
 export default function ChangePassword(){
 
@@ -74,38 +74,38 @@ export default function ChangePassword(){
 
 
     return(
-        <div className="changepassword">
-            <h1 className="mainhead1">Changer le mot de passe</h1>
+        <div className="change-password">
+            <h1 className="change-pwd-title">Changer le mot de passe</h1>
             {passwordChanged &&
                 (<div className="success-message">Mot de passe changé avec succès !</div>)}
             {error && <div className="error-message">{error}</div>}
             <form onSubmit={(ev) => onSubmit(ev)}>
-                <div className="form-group">
-                    <label htmlFor="newpassword" className="form-label">Nouveau mot de passe <span>*</span></label>
+                <div className="change-pwd-form-control">
+                    <label htmlFor="newpassword" className="change-pwd-form-label">Nouveau mot de passe <span>*</span></label>
                     <input
                         type="password"
                         id="newpassword"
-                        className="form-control"
+                        className="change-pwd-form-control"
                         placeholder="Nouveau mot de passe svp"
                         name="newpassword"
                         value={newpassword}
                         onChange={(event) => onInputChange(event)}/>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="confirmPassword" className="form-label">Confirmer le mot de passe <span>*</span></label>
+                <div className="change-pwd-form-control">
+                    <label htmlFor="confirmPassword" className="change-pwd-form-label">Confirmer le mot de passe <span>*</span></label>
                     <input
                         type="password"
                         id="confirmPassword"
-                        className="form-control"
+                        className="change-pwd-form-control"
                         placeholder="Confirmer le mot de passe svp"
                         name="confirmPassword"
                         value={confirmPassword}
                         onChange={(event) => onInputChange(event)}/>
                 </div>
-                <button type="submit" className="mainbutton1">
+                <button type="submit" className="change-pwd-btn-modif">
                     Modifier
                 </button>
-                <button className="btn btn-outline-danger mx-2" onClick={() => navigate("/user/:activepage")}>Annuler</button>
+                <button className="change-pwd-btn-annul" onClick={() => navigate("/user/:activepage")}>Annuler</button>
             </form>
         </div>
     );

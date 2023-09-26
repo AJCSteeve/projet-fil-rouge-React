@@ -3,7 +3,7 @@ import {Navbar} from "react-bootstrap";
 import Footer from "../../components/footer/Footer";
 import UserSideBar from "./UserSideBar";
 import AccountSettings from "./AccountSettings";
-import "./UserProfile.css";
+import "./user-profile.css";
 import ChangePassword from "./ChangePassword";
 import Orders from "./Orders";
 import EditUser from "./EditUser";

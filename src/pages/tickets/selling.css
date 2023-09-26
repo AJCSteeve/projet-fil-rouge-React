@@ -19,7 +19,7 @@
 .selling-left {
     display: flex;
     flex: 1;
-    background: url("https://images.pexels.com/photos/3018061/pexels-photo-3018061.jpeg?auto=compress&cs=tinysrgb&w=600") center;
+    background: url("https://images.pexels.com/photos/3271989/pexels-photo-3271989.jpeg?auto=compress&cs=tinysrgb&w=600") center;
     background-size: cover;
     padding: 50px;
     flex-direction: column;
@@ -61,6 +61,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    border:none;
 }
 
 .selling-right>form>input {
