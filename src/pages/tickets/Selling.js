@@ -1,14 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "./Selling.css";
 
 export default function Selling() {
     const axiosInstance = axios.create({
         baseURL: "http://localhost:8080/api",
-        headers: {
-            Authorization: `Bearer ${localStorage.getItem("jwtToken")}`, // Récupère le token JWT du stockage local
-            "Content-Type": "application/json",
-        },
+        headers:
+            {
+                Authorization: `Bearer ${localStorage.getItem("jwtToken")}`, // Récupère le token JWT du stockage local
+                "Content-Type": "application/json",
+            },
     });
 
     const idAsString = localStorage.getItem('userId'); // Récupère l'userId du stockage local et converti en entier
@@ -44,7 +46,11 @@ export default function Selling() {
 
     // set all the user attributes to the values entered in the form
     const onInputChange = (e) => {
-        setTicket({ ...ticket, [e.target.name]: e.target.value })
+        if (e.target.name === 'eventType') {
+            setTicket({ ...ticket, eventType: e.target.value });
+        } else {
+            setTicket({ ...ticket, [e.target.name]: e.target.value });
+        }
     };
 
     const onSubmit = async (e) => {
@@ -104,14 +110,23 @@ export default function Selling() {
                             required
                             onChange={(e) => onInputChange(e)}
                         />
-                        <input
-                            type="text"
+                        <select
                             name="eventType"
                             value={eventType}
                             placeholder="Type d'événement"
-                            required
                             onChange={(e) => onInputChange(e)}
-                        />
+                            required
+                        >
+                            <option value="">Sélectionnez le type d'événement</option>
+                            <option value="Théâtre">Théâtre</option>
+                            <option value="Concert">Concert</option>
+                            <option value="Spectacle">Spectacle</option>
+                            <option value="Festival">Festival</option>
+                            <option value="Match">Match</option>
+                            <option value="Parc d'attractions">Parc d'attractions</option>
+
+                            {/* Ajoutez d'autres options au besoin */}
+                        </select>
                         <input
                             type="text"
                             name="eventCity"

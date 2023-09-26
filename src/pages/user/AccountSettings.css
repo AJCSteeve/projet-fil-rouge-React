@@ -48,3 +48,39 @@
     object-fit: cover; /* Ajustez la photo pour couvrir l'espace tout en préservant son ratio */
     border-radius: 50%; /* Ajoutez des coins arrondis pour un aspect de cercle */
 }
+
+/* Style pour la boîte de dialogue de confirmation */
+.confirmation-dialog {
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Style pour le bouton de confirmation */
+.confirmation-dialog button {
+    margin: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Style pour le bouton d'annulation */
+.confirmation-dialog button.cancel {
+    background-color: #337ab7;
+}
+
+/* Style pour le texte de la boîte de dialogue */
+.confirmation-dialog p {
+    margin-bottom: 10px;
+}
