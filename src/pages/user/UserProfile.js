@@ -24,7 +24,9 @@ export default function UserProfile() {
             <Navbar/>
             <div className="home-container">
                 <div className="user-profile-in">
-                    <div className="user-profile-left"><UserSideBar activepage={activepage}/></div>
+                    <div className="user-profile-left">
+                        <UserSideBar activepage={activepage}/>
+                    </div>
                     <div className="user-profile-right">
                         {activepage === 'compte' && <AccountSettings/>}
                         {activepage === 'modifier' && <EditUser/>}
@@ -32,6 +34,7 @@ export default function UserProfile() {
                         {activepage === 'transactions' && <Orders/>}
                     </div>
                 </div>
+                <MailList/>
                 <Footer/>
             </div>
         </div>

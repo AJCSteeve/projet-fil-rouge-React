@@ -1,27 +1,30 @@
-.orders-main {
+.account-main {
     padding: 20px;
-    background-color: navajowhite;
+    background-color: lightsalmon;
+    border-radius: 10px;
 }
 
-.orders-title {
+.account-title-main {
     font-size: 24px;
-    color: salmon;
+    color: firebrick;
     margin-bottom: 20px;
 }
 
-.orders-card {
-    width: 18rem;
+.account-card {
+    width: 50rem;
     background-color: bisque;
     margin-bottom: 20px;
+    padding: 30px;
+    border-radius : 10px;
 }
 
-.Card.Title {
+.account-title {
     font-size: 18px;
     font-weight: bold;
-    color: coral;
+    color: black;
 }
 
-.Card.Text {
+.account-text {
     font-size: 16px;
     color: #333;
 }
@@ -42,28 +45,32 @@
     color: #333;
 }
 
-.btn {
+.account-btn {
     font-size: 16px;
     font-weight: bold;
+    width: 25%;
+    padding: 10px;
     margin-top: 20px;
+    margin-left: 60px;
+    border-radius: 10px;
 }
 
-.btn-secondary {
-    background-color: salmon;
-    color: bisque;
+.btn-deconnect {
+    background-color: #c60b1e;
+    color: white;
     border: none;
 }
 
-.btn-secondary:hover {
+.btn-deconnect:hover {
     background-color: coral;
 }
 
-.btn-danger {
-    background-color: #ff6b6b;
-    color: bisque;
+.btn-delete {
+    background-color: #333333;
+    color: white;
     border: none;
 }
 
-.btn-danger:hover {
-    background-color: #ff4040;
+.btn-delete:hover {
+    background-color: coral;
 }
