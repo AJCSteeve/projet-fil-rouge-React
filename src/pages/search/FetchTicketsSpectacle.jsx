@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import ShowTickets from './ShowTickets';
-import './fetch-tickets.css';
-import HeaderStore from '../header/HeaderStore';
-import {concertEvents } from '../../assets/eventsData';
-import {formatCurrency} from "../../utilities/formatCurrency";
+import './show-tickets.css';
+import HeaderStore from '../../components/header/HeaderStore';
+import { spectacleEvents } from '../../assets/eventsData';
 
-const FetchTicketsConcert = () => {
+const FetchTicketsSpectacle = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        setItems(concertEvents);
+        setItems(spectacleEvents);
     }, []);
+
 
     return (
         <>
@@ -35,4 +35,4 @@ const FetchTicketsConcert = () => {
     );
 };
 
-export default FetchTicketsConcert;
+export default FetchTicketsSpectacle;
