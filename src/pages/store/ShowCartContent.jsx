@@ -8,13 +8,13 @@ import AddRemoveCart from "../../components/cart/AddRemoveCart";
 
 const ShowCartContent = () => {
     return (
-            <React.Fragment>
+            <div>
                 <AddRemoveCart />
-                {/*<div className="home-container">
+                {/*<Container className="home-container">
                     <MailList />
                     <Footer />
-                </div>*/}
-            </React.Fragment>
+                </Container>*/}
+            </div>
     );
 };
 

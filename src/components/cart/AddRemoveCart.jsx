@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import "../../App.css"
 import itemsData from "../../assets/items";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCalendar, faLocationPin, faMoneyBills, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
