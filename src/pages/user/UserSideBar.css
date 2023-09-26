@@ -1,7 +1,16 @@
+.home-container {
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .user-sidebar {
-    background-color: bisque;
+    background-color: navajowhite;
     width: 250px;
     padding: 20px;
+    border-radius: 20px;
+    border: 5px solid coral;
 }
 
 .user-section{

@@ -16,27 +16,27 @@ const Header = () => {
         <div className="header">
             <div className="headerContainer">
                 <div className="headerList">
-                    <Button className="headerListItem" href="/theatre">
+                    <Button className="item-btn headerListItem" href="/theatre">
                         <FontAwesomeIcon icon={faTheaterMasks} />
                         <span>Théâtre</span>
                     </Button>
-                    <Button className="headerListItem" href="/concert">
+                    <Button className="item-btn headerListItem" href="/concert">
                         <FontAwesomeIcon icon={faGuitar} />
                         <span>Concert</span>
                     </Button>
-                    <Button className="headerListItem" href="/spectacle">
+                    <Button className="item-btn headerListItem" href="/spectacle">
                         <FontAwesomeIcon icon={faMicrophone} />
                         <span>Spectacle</span>
                     </Button>
-                    <Button className="headerListItem" href="/festival">
+                    <Button className="item-btn headerListItem" href="/festival">
                         <FontAwesomeIcon icon={faTents} />
                         <span>Festival</span>
                     </Button>
-                    <Button className="headerListItem" href="/match">
+                    <Button className="item-btn headerListItem" href="/match">
                         <FontAwesomeIcon icon={faFutbolBall} />
                         <span>Match</span>
                     </Button>
-                    <Button className="headerListItem" href="/parc">
+                    <Button className="item-btn headerListItem" href="/parc">
                         <FontAwesomeIcon icon={faIceCream} />
                         <span>Parc d'attractions</span>
                     </Button>

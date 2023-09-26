@@ -98,7 +98,7 @@ const HeaderStore = () => {
                                 onChange={(e) => setEventCity(e.target.value)}
                             />
                         </div>
-                        <Button className="btn" onClick={handleSearch}>
+                        <Button className="search-btn" onClick={handleSearch}>
                             <h3 className="header-title">Rechercher</h3>
                         </Button>
                     </div>
