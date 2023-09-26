@@ -3,7 +3,6 @@ import React from 'react';
 import ShowTickets from './ShowTickets';
 import './show-tickets.css';
 import HeaderStore from '../../components/header/HeaderStore';
-import { formatCurrency } from '../../utilities/formatCurrency';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import {Button, Container} from "react-bootstrap";
@@ -29,7 +28,7 @@ const FetchTicketsAll = () => {
         // Get query parameters for event name and event city
         const eventName = queryParams.get('eventName');
         const eventCity = queryParams.get('eventCity');
-        const eventType =  "Parc d'attractions";
+        const eventType = 'Match';
 
         // Create the API URL with optional query parameters
         const apiUrl = 'http://localhost:8080/api/tickets/search';
@@ -90,11 +89,11 @@ const FetchTicketsAll = () => {
                         <FontAwesomeIcon icon={faTents} />
                         <span>Festival</span>
                     </Button>
-                    <Button className="headerListItem" href="/match">
+                    <Button className="headerListItem active" href="/match">
                         <FontAwesomeIcon icon={faFutbolBall} />
                         <span>Match</span>
                     </Button>
-                    <Button className="headerListItem active" href="/parc">
+                    <Button className="headerListItem" href="/parc">
                         <FontAwesomeIcon icon={faIceCream} />
                         <span>Parc d'attractions</span>
                     </Button>
@@ -115,8 +114,7 @@ const FetchTicketsAll = () => {
                                 descr={item.eventName}
                                 city={item.eventCity}
                                 date={item.date}
-                                // person={item.person}
-                                price={formatCurrency(item.price)}
+                                price={(item.price)}
                             />
                         ))}
                     </div>

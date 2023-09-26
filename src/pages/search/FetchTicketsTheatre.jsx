@@ -3,7 +3,6 @@ import React from 'react';
 import ShowTickets from './ShowTickets';
 import './show-tickets.css';
 import HeaderStore from '../../components/header/HeaderStore';
-import { formatCurrency } from '../../utilities/formatCurrency';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import {Button, Container} from "react-bootstrap";
@@ -29,7 +28,7 @@ const FetchTicketsAll = () => {
         // Get query parameters for event name and event city
         const eventName = queryParams.get('eventName');
         const eventCity = queryParams.get('eventCity');
-        const eventType = 'Festival';
+        const eventType = 'Théâtre';
 
         // Create the API URL with optional query parameters
         const apiUrl = 'http://localhost:8080/api/tickets/search';
@@ -74,7 +73,7 @@ const FetchTicketsAll = () => {
         <>
             <Container className="store-container d-flex justify-content-around">
                 <div className="headerList">
-                    <Button className="headerListItem" href="/theatre">
+                    <Button className="headerListItem active" href="/theatre">
                         <FontAwesomeIcon icon={faTheaterMasks} />
                         <span>Théâtre</span>
                     </Button>
@@ -86,7 +85,7 @@ const FetchTicketsAll = () => {
                         <FontAwesomeIcon icon={faMicrophone} />
                         <span>Spectacle</span>
                     </Button>
-                    <Button className="headerListItem active" href="/festival">
+                    <Button className="headerListItem" href="/festival">
                         <FontAwesomeIcon icon={faTents} />
                         <span>Festival</span>
                     </Button>
@@ -115,8 +114,7 @@ const FetchTicketsAll = () => {
                                 descr={item.eventName}
                                 city={item.eventCity}
                                 date={item.date}
-                                // person={item.person}
-                                price={formatCurrency(item.price)}
+                                price={(item.price)}
                             />
                         ))}
                     </div>
