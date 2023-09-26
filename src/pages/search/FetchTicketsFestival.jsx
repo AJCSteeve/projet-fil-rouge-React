@@ -16,7 +16,7 @@ import {
     faTheaterMasks
 } from "@fortawesome/free-solid-svg-icons";
 
-const FetchTicketsAll = () => {
+const FetchTicketsFestival = () => {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -124,4 +124,4 @@ const FetchTicketsAll = () => {
     );
 };
 
-export default FetchTicketsAll;
+export default FetchTicketsFestival;

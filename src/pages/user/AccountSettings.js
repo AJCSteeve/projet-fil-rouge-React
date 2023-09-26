@@ -12,7 +12,8 @@ export default function AccountSettings() {
         },
     });
 
-    let navigate = useNavigate();
+
+        let navigate = useNavigate();
 
     const idAsString = localStorage.getItem("userId");
     const idAsNumber = parseInt(idAsString, 10);

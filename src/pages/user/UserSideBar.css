@@ -1,33 +1,45 @@
-.usersidebar{
-    width: 100%;
-    height: 100%;
+.home-container {
+    margin: 60px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.usersidebar.s1, .usersidebar.s2{
+.user-sidebar {
+    background-color: navajowhite;
+    width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 5px solid coral;
+}
+
+.user-section{
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 20px;
-}
-
-.usersidebar svg{
-    width: 30px;
-    height: 30px;
-    color: gray;
-}
-
-.usersidebar.s1:hover{
-    background-color: lightgray;
+    margin-bottom: 15px;
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    color: grey;
+    transition: background-color 0.3s ease;
 }
 
-.usersidebar.s2:hover{
-    background-color: lightgray;
-    border-radius: 5px;
-    cursor: pointer;
-    color: grey;
+.user-section:hover {
+    background-color: coral;
+    color: bisque;
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+.user-account-span {
+    font-size: 16px;
+    color: firebrick;
+    font-weight: bold;
+}
+
+.link-style {
+    text-decoration: none;
+    color: inherit;
 }
