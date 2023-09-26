@@ -60,7 +60,7 @@ const HeaderStore = () => {
 
         // Construct the URL with the query parameters
         const queryString = queryParams.join('&');
-        const searchUrl = `/store?${queryString}`;
+        const searchUrl = `/search?${queryString}`;
 
         // Navigate to the search results page
         // TODO TROUVER SOLUTION SANS navigate() pour transférer infos à FetchTicketsAll & faire la requête !!!
@@ -68,62 +68,47 @@ const HeaderStore = () => {
     };
 
     return (
-        <Container className="store-container">
+        <div className="container-search">
 
-            <Row className="store-row">
-                <Col xs="auto">
+            <div className="store-row">
+                <div>
                     <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" />
-                </Col>
+                </div>
 
-                <Col xs="auto">
+                <div>
                     <div className="text-center">
                         <h3 className="header-title">Consultez nos tickets en vente</h3>
                     </div>
-                </Col>
-                <Col xs="auto">
-                    <div className="search-input-container">
-                        <div>
-                            <FormControl
-                                className="search-input"
-                                placeholder="Pour quel événement ?"
-                                value={eventName}
-                                onChange={(e) => setEventName(e.target.value)}
-                            />
-                        </div>
-                        <div>
-                            <FormControl
-                                className="search-input"
-                                placeholder="Dans quelle ville ?"
-                                value={eventCity}
-                                onChange={(e) => setEventCity(e.target.value)}
-                            />
-                        </div>
-                        <Button className="search-btn" onClick={handleSearch}>
-                            <h3 className="header-title">Rechercher</h3>
-                        </Button>
+                </div>
+                <div>
+                    {/*<div className="search-input-container">*/}
+                    <div>
+                        <input
+                            type="text"
+                            className="search-input"
+                            placeholder="Pour quel événement ?"
+                            value={eventName}
+                            onChange={(e) => setEventName(e.target.value)}
+                        />
                     </div>
-                </Col>
-            </Row>
+                    <div>
+                        <input
+                            type="text"
+                            className="search-input"
+                            placeholder="Dans quelle ville ?"
+                            value={eventCity}
+                            onChange={(e) => setEventCity(e.target.value)}
+                        />
+                    </div>
+                    <button className="search-btn" onClick={handleSearch}>
+                        Rechercher
+                    </button>
 
+                    {/*</div>*/}
+                </div>
+            </div>
 
-
-            {/*/!* ... other components *!/*/}
-            {/*<FormControl*/}
-            {/*    className="search-input"*/}
-            {/*    placeholder="Pour quel événement ?"*/}
-            {/*    value={eventName}*/}
-            {/*    onChange={(e) => setEventName(e.target.value)}*/}
-            {/*/>*/}
-            {/*<FormControl*/}
-            {/*    className="search-input"*/}
-            {/*    placeholder="Dans quelle ville ?"*/}
-            {/*    value={eventCity}*/}
-            {/*    onChange={(e) => setEventCity(e.target.value)}*/}
-            {/*/>*/}
-            {/*<Button variant="primary" onClick={handleSearch}>*/}
-            {/*    Rechercher*/}
-            {/*</Button>*/}
-        </Container>
+        </div>
     );
 };
 

@@ -1,32 +1,42 @@
-.store-container {
-    background-color: coral;
+.container-search {
+    background-color: lightsalmon;
     color: white;
     margin: 10px;
     padding: 15px;
     width: 95%;
     border-radius: 10px;
+    height:20vh;
+
 }
+
+.search-input-container{
+    background-color : black;
+    height : 25vh;
+}
+
 .store-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap:20vw;
 }
 .header-title {
     margin: 0;
 }
 
-.search-input {
+
+.input {
     background-color: white;
     color: black;
-    width: 500px;
-    padding: 15px;
-    border-radius: 10px;
-    margin-left: 100px;
+    width: 100%;
+    /*padding: 15px;*/
+    /*border-radius: 10px;*/
+    /*margin-left: 100px;*/
 }
 
 .cart-icon {
-    margin-left: 200px;
+    /*margin-left: 200px;*/
     color: white;
-    font-size: 30px;
+    font-size: 50px;
     cursor: pointer;
 }
