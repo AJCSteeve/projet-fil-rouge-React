@@ -16,7 +16,7 @@ import {
     faTheaterMasks
 } from "@fortawesome/free-solid-svg-icons"; // Import useLocation
 
-const FetchTicketsAll = () => {
+const FetchTicketsParcAttractions = () => {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -124,4 +124,4 @@ const FetchTicketsAll = () => {
     );
 };
 
-export default FetchTicketsAll;
+export default FetchTicketsParcAttractions;
