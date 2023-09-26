@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./Selling.css";
+import "./selling.css";
 
 export default function Selling() {
     const axiosInstance = axios.create({
@@ -83,14 +83,7 @@ export default function Selling() {
     return (
         <div className="selling">
             <div className="selling-card">
-                <div className="selling-left">
-                    <h1>MyTicket</h1>
-                    <p>1ère communauté sur la revente de billets.</p>
-                    <p>Merci d'avoir choisi notre plateforme,
-                        celle-ci vous permet de vendre vos tickets en un clin d'œil.
-                        Partagez l'expérience avec d'autres amateurs passionnés.
-                    </p>
-                </div>
+                <div className="selling-left"></div>
                 <div className="selling-right">
                     <h1>Créer un ticket</h1>
                     <form onSubmit={(e) => onSubmit(e)}>

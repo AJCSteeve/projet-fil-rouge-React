@@ -1,7 +1,9 @@
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { useEffect, useState, useCallback } from "react";
-import { Button, Card } from "react-bootstrap";
+    import axios from "axios";
+    import {useNavigate} from "react-router-dom";
+    import { useEffect, useState, useCallback} from "react";
+    import {Button, Card, Row, Col} from "react-bootstrap";
+    import './account-settings.css';
+
 
 export default function AccountSettings() {
     const axiosInstance = axios.create({
@@ -72,51 +74,70 @@ export default function AccountSettings() {
         loadUser();
     }, [loadUser]);
 
-    return (
-        <div className="orders">
-            <h1 className="mainhead1">Informations utilisateur</h1>
-            <Card style={{ width: "18rem" }}>
-                <Card.Body>
-                    <Card.Title>Identifiant</Card.Title>
-                    <Card.Text>{userData.username}</Card.Text>
-                </Card.Body>
-                <Card.Body>
-                    <Card.Title>Téléphone</Card.Title>
-                    <Card.Text>{userData.phoneNumber}</Card.Text>
-                </Card.Body>
-                <Card.Body>
-                    <Card.Title>Photo</Card.Title>
-                    {userData.photoUrl ? (
-                        <img
-                            src={userData.photoUrl}
-                            alt="Photo de profil"
-                            className="user-photo"
-                        />
-                    ) : (
-                        <div className="user-photo-placeholder">
-                            <p>Aucune photo de profil</p>
-                        </div>
-                    )}
-                </Card.Body>
-                <Card.Body>
-                    <Card.Title>Email</Card.Title>
-                    <Card.Text>{userData.email}</Card.Text>
-                </Card.Body>
-            </Card>
-            <Button className="btn btn-secondary mx-2" onClick={handleLogout}>
-                Déconnexion
-            </Button>
-            <Button className="btn btn-danger mx-2" onClick={showConfirmation}>
-                Supprimer mon profil
-            </Button>
+        return (
+            <div className="account-main">
+                <h1 className="account-title-main">Informations utilisateur</h1>
+                <Card className={"account-card"}>
+                    <Card.Body>
+                        <Row>
+                            <Col xs={6}>
+                                <Card.Title className={"account-title"}>Identifiant</Card.Title>
+                            </Col>
+                            <Col xs={6}>
+                                <Card.Text className={"account-text"}>{userData.username}</Card.Text>
+                            </Col>
+                        </Row>
+                    </Card.Body>
+                    <Card.Body>
+                        <Row>
+                            <Col xs={6}>
+                                <Card.Title className={"account-title"}>Téléphone</Card.Title>
+                            </Col>
+                            <Col xs={6}>
+                                <Card.Text className={"account-text"}>{userData.phoneNumber}</Card.Text>
+                            </Col>
+                        </Row>
+                    </Card.Body>
+                    <Card.Body>
+                        <Row>
+                            <Col xs={6}>
+                                <Card.Title className={"account-title"}>Email</Card.Title>
+                            </Col>
+                            <Col xs={6}>
+                                <Card.Text className={"account-text"}>{userData.email}</Card.Text>
+                            </Col>
+                        </Row>
+                    </Card.Body>
+                    <Card.Body>
+                        <Row>
+                            <Col xs={6}>
+                                <Card.Title className={"account-title"}>Photo</Card.Title>
+                            </Col>
+                            <Col xs={6}>
+                                {/* <Card.Text className={"account-text"}>{userData.photoUrl}</Card.Text>*/}
+                                {
+                                    userData.photoUrl ? (
+                                            <img src={userData.photoUrl}
+                                                 alt="Photo de profil" className="user-photo" />) :
+                                        (<div className="user-photo-placeholder">
+                                            <p>Photo de l'utilisateur</p>
+                                        </div>)
+                                }
+                            </Col>
+                        </Row>
+                    </Card.Body>
 
-            {confirmationVisible && (
-                <div className="confirmation-dialog">
-                    <p>Êtes-vous sûr de vouloir supprimer votre profil ?</p>
-                    <button onClick={deleteUser}>Confirmer</button>
-                    <button onClick={hideConfirmation}>Annuler</button>
-                </div>
-            )}
-        </div>
-    );
-}
+                </Card>
+                <Button className="account-btn btn-deconnect" onClick={handleLogout}>Déconnexion</Button>
+                <Button className="account-btn btn-delete " onClick={showConfirmation}>Supprimer mon profil</Button>
+
+                {confirmationVisible && (
+                    <div className="confirmation-dialog">
+                        <p>Êtes-vous sûr de vouloir supprimer votre profil ?</p>
+                        <button onClick={deleteUser}>Confirmer</button>
+                        <button onClick={hideConfirmation}>Annuler</button>
+                    </div>
+                )}
+            </div>
+        );
+    }
