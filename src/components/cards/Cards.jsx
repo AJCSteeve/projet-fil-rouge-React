@@ -12,7 +12,7 @@ const Cards = () => {
                          alt={"theatre"}
                          className={"eventImg"}></img>
                     <div className="eventTitle">
-                        <h1>Théâtre</h1>
+                        <h1 className="event-title">Théâtre</h1>
                         <a href="theatrePage" className="event-btn">Recherche</a>
                     </div>
                 </div>
@@ -21,7 +21,7 @@ const Cards = () => {
                          alt={"concert"}
                          className={"eventImg"}></img>
                     <div className="eventTitle">
-                        <h1>Concert</h1>
+                        <h1 className="event-title">Concert</h1>
                         <Link to="/concerts" className="event-btn">Recherche</Link>
                     </div>
                 </div>
@@ -30,7 +30,7 @@ const Cards = () => {
                          alt={"spectacle"}
                          className={"eventImg"}></img>
                     <div className="eventTitle">
-                        <h1>Spectacle</h1>
+                        <h1 className="event-title">Spectacle</h1>
                         <Link to="/spectacles" className="event-btn">Recherche</Link>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ const Cards = () => {
                          alt={"festival"}
                          className={"eventImg"}></img>
                     <div className="eventTitle">
-                        <h1>Festival</h1>
+                        <h1 className="event-title">Festival</h1>
                         <a href="festivalPage" className="event-btn">Recherche</a>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ const Cards = () => {
                          alt={"match"}
                          className={"eventImg"}></img>
                     <div className="eventTitle">
-                        <h1>Match</h1>
+                        <h1 className="event-title">Match</h1>
                         <a href="matchPage" className="event-btn">Recherche</a>
                     </div>
                 </div>
@@ -59,7 +59,7 @@ const Cards = () => {
                          alt={"parc d'attractions"}
                          className={"eventImg"}></img>
                     <div className="eventTitle">
-                        <h1>Parc d'attractions</h1>
+                        <h1 className="event-title">Parc d'attractions</h1>
                         <a href="parcPage" className="event-btn">Recherche</a>
                     </div>
                 </div>

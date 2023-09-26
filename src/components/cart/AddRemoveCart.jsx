@@ -13,6 +13,21 @@ const AddRemoveCart = () => {
     const [cart, setCart] = useState([]);
     const [page, setPage] = useState(PAGE_PRODUCTS);
 
+    {/*
+        const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:8080/api/tickets')
+            .then((response) => response.json())
+            .then((data) => {
+                setProducts(data);
+            })
+            .catch((error) => {
+                console.error('Erreur lors de la récupération des produits :', error);
+            });
+    }, []);
+    */}
+
     const navigateTo = (nextPage) => {
         setPage(nextPage);
     };
