@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCalendar, faLocationPin, faMoneyBills} from "@fortawesome/free-solid-svg-icons";
 
 
-const DetailTickets = ({ imgSrc, type, descr, city, date, price }) => {
+const ShowTickets = ({ imgSrc, type, descr, city, date, price }) => {
     return (
         <div className="card-container">
             <div className="card-custom">
@@ -20,4 +20,4 @@ const DetailTickets = ({ imgSrc, type, descr, city, date, price }) => {
     );
 };
 
-export default DetailTickets;
+export default ShowTickets;

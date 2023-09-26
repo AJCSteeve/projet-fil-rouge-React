@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import DetailTickets from './DetailTickets';
+import ShowTickets from './ShowTickets';
 import './fetch-tickets.css';
 import itemsData from "../../assets/items";
 import {formatCurrency} from "../../utilities/formatCurrency";
@@ -16,7 +16,7 @@ const FetchTicketsAll = () => {
         <>
             <section className={"card-row"}>
                 {items.map((item) =>
-                    <DetailTickets
+                    <ShowTickets
                         key={item.id}
                         imgSrc={item.imgUrl}
                         type={item.eventType}

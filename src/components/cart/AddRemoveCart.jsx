@@ -97,7 +97,7 @@ const AddRemoveCart = () => {
                             <p className="card-details"> <FontAwesomeIcon icon={faMoneyBills} /> {product.price}€ <FontAwesomeIcon icon={faLocationPin} /> {product.eventCity}</p>
                             <p className="card-details"> <FontAwesomeIcon icon={faCalendar} /> {product.date}</p>
                             <button className={"card-btn"} onClick={() => addToCart(product)}>
-                                Add to Cart
+                                Acheter
                             </button>
                         </div>
                     )}

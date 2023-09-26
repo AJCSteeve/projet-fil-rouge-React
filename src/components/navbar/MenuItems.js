@@ -15,7 +15,7 @@ export const MenuItems = [
         cName: "menu-login",
     },
     {
-        Title: "Store",
+        Title: "Tickets",
         url: "/store",
         cName: "menu-tickets",
     },

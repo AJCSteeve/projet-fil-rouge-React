@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import DetailTickets from './DetailTickets';
+import ShowTickets from './ShowTickets';
 import './fetch-tickets.css';
 import HeaderStore from '../header/HeaderStore';
 import {concertEvents } from '../../assets/eventsData';
@@ -19,7 +19,7 @@ const FetchTicketsConcert = () => {
             </div>
             <section className={"card-row"}>
                 {items.map((item) =>
-                    <DetailTickets
+                    <ShowTickets
                         key={item.id}
                         imgSrc={item.imgUrl}
                         type={item.eventType}
