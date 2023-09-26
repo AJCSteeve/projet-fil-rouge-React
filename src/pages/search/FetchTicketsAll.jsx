@@ -110,6 +110,7 @@ const FetchTicketsAll = () => {
                             <ShowTickets
                                 key={item.id}
                                 // imgSrc={item.imgUrl}
+                                id={item.id} // Pass the id prop for purchase request on click
                                 type={item.eventType}
                                 descr={item.eventName}
                                 city={item.eventCity}
