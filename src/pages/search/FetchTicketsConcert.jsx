@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import React from 'react';
 import ShowTickets from './ShowTickets';
 import './show-tickets.css';
-import HeaderStore from '../../components/header/HeaderStore';
+import HeaderStore from '../../components/header/HeaderSearch';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import {Button, Container} from "react-bootstrap";

@@ -16,7 +16,7 @@ const ShowTickets = ({
                 {descr && <p className="card-descr"> {descr}</p>}
                 {price && city && <p className="card-details"> <FontAwesomeIcon icon={faMoneyBills} /> {price}€ <FontAwesomeIcon icon={faLocationPin} /> {city}</p>}
                 {date && <p className="card-details"> <FontAwesomeIcon icon={faCalendar} /> {date}</p>}
-                <a href="/panier" className="card-btn">Acheter</a>
+                <a href="#" className="card-btn">Acheter</a>
             </div>
         </div>
     );
