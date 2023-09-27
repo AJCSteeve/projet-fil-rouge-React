@@ -8,6 +8,7 @@ import VerifyProfile from "./pages/crud/VerifyProfile";
 import FetchTicketsAll from "./pages/search/FetchTicketsAll";
 import FetchTicketsSpectacle from "./pages/search/FetchTicketsSpectacle";
 import FetchTicketsConcert from "./pages/search/FetchTicketsConcert";
+import FetchTicketsTheatre from "./pages/search/FetchTicketsTheatre";
 import FetchTicketsFestival from "./pages/search/FetchTicketsFestival";
 import FetchTicketsMatch from "./pages/search/FetchTicketsMatch";
 import FetchTicketsParcAttractions from "./pages/search/FetchTicketsParcAttractions";
@@ -36,6 +37,7 @@ function App() {
 
                         <Route path="/search" element={<FetchTicketsAll/>}/>
                         <Route path="/store" element={<ShowCartContent/>}/>
+                        <Route path="/theatre" element={<FetchTicketsTheatre/>}/>
                         <Route path="/concert" element={<FetchTicketsConcert/>}/>
                         <Route path="/spectacle" element={<FetchTicketsSpectacle/>}/>
                         <Route path="/festival" element={<FetchTicketsFestival/>}/>
