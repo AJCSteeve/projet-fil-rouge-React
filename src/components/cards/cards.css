@@ -1,12 +1,12 @@
 .events {
     width: 100%;
-    max-width: 1024px;
+    max-width: 1080px;
     display: flex;
     flex-direction: column;
     gap: 50px;
     margin-bottom: 30px;
     background-color: burlywood;
-    padding: 50px;
+    padding: 70px;
     border-radius: 30px;
     box-shadow: 20px 20px 20px #999;
 }
@@ -25,7 +25,7 @@
 }
 
 .event-title {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .event-btn {
     text-align: center;
@@ -53,5 +53,5 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 30px;
 }

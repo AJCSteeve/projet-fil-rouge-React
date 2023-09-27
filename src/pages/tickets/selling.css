@@ -1,5 +1,5 @@
 .selling{
-    height: 100vh;
+    height: 120vh;
     background-color: lightsalmon;
     display: flex;
     justify-content: center;
@@ -7,11 +7,11 @@
 }
 
 .selling-card {
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: row-reverse;
     background-color: wheat;
-    min-height: 500px;
+    min-height: 300px;
     border-radius: 10px;
     border: none;
     overflow: hidden;
@@ -21,9 +21,9 @@
     flex: 1;
     background: url("https://images.pexels.com/photos/3271989/pexels-photo-3271989.jpeg?auto=compress&cs=tinysrgb&w=600") center;
     background-size: cover;
-    padding: 50px;
+    padding: 30px;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
     color: white;
 }
 .selling-left>h1 {
@@ -46,7 +46,7 @@
 }
 .selling-right {
     flex: 1;
-    padding: 50px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     gap: 50px;
