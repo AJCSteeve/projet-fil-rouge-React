@@ -11,10 +11,10 @@ const ShowCartContent = () => {
     return (
             <div>
                 <PurchaseCart />
-                {/*<Container className="home-container">
+                <Container className="home-container">
                     <MailList />
                     <Footer />
-                </Container>*/}
+                </Container>
             </div>
     );
 };

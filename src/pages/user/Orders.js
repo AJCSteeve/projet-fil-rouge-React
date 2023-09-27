@@ -119,7 +119,7 @@ export default function Orders() {
 //     }, []);
     return(
 
-        <h2>Historique de transactions</h2>
+        <h2 className={"orders-title"}>Historique de transactions</h2>
 
     )
 }
