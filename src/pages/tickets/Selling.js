@@ -136,12 +136,7 @@ export default function Selling() {
                             required
                             onChange={(e) => onInputChange(e)}
                         />
-                        <input
-                            type="text"
-                            name="username"
-                            value={userData.username} readOnly
-                            required
-                        />
+                        <p>{userData.username} required</p>
                         <div>
                             <button type="submit" className="selling-btn">Soumettre</button>
                         </div>

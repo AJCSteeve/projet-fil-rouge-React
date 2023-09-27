@@ -28,7 +28,7 @@ const FetchTicketsParcAttractions = () => {
         // Get query parameters for event name and event city
         const eventName = queryParams.get('eventName');
         const eventCity = queryParams.get('eventCity');
-        const eventType =  "Parc d'attractions";
+        const eventType =  "Parc_attractions";
 
         // Create the API URL with optional query parameters
         const apiUrl = 'http://localhost:8080/api/tickets/search';
