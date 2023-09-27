@@ -31,7 +31,7 @@ export const MenuItems = [
     // },
     {
         Title: "Mon profil",
-        url: "/user/accountsettings",
+        url: "/user/compte",
         cName: "menu-utilisateur",
     },
     {
