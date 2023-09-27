@@ -3,7 +3,9 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faCalendar, faLocationPin, faMoneyBills, faShoppingCart,} from "@fortawesome/free-solid-svg-icons";
 import PaymentButton from "../payment/PaymentButton";
-import "../payment/payment.css";
+import "../../components/cart/add-remove-cart.css"
+import "../../components/header/header-store.css"
+import "../../App.css"
 
 export default function PurchaseCart() {
     const [cart, setCart] = useState([]);
@@ -11,13 +13,12 @@ export default function PurchaseCart() {
     const [loading, setLoading] = useState(true);
 
     const eventTypeImages = {
-        Théâtre: 'https://images.pexels.com/photos/269140/pexels-photo-269140.jpeg?auto=compress&cs=tinysrgb&w=600',
-        Concert: 'https://media.istockphoto.com/id/1305198154/fr/photo/concert-de-roche-foule-encourageante-devant-des-lumi%C3%A8res-color%C3%A9es-lumineuses-de-sc%C3%A8ne.webp?b=1&s=612x612&w=0&k=20&c=K_MBJTpI5kTdnuArZ7GN4edU1QceEFkgpUaUCmMma8A=',
+        Theatre: 'https://media.istockphoto.com/id/1295114854/fr/photo/fauteuils-rouges-dun-th%C3%A9%C3%A2tre-pr%C3%AAt-pour-un-spectacle-en-plein-air-en-ville-de-nuit-image1060842696.jpg',
+        Concert: 'https://media.istockphoto.com/id/1305198154/fr/photo/concert-de-roche-foule-encourageante-devant-des-lumi%C3%A8res-color%C3%A9es-lumineuses-de-sc%C3%A8ne.webp?b=1&s=612x612&w=0&k=20&c=K_MBJTpI5kTdnuArZ7GN4edU1QceEFkgpUaUCmMma8A',
         Spectacle: 'https://media.istockphoto.com/id/72983254/fr/photo/femme-de-sentir-un-bouquet-de-roses-sur-la-sc%C3%A8ne-de-th%C3%A9%C3%A2tre.jpg?s=612x612&w=0&k=20&c=xvM_iTkIpLuuCAiXn4-7skMjM2Ho-9sms6_RUHT5XyM=',
         Festival: 'https://media.istockphoto.com/id/1457408719/fr/photo/photo-de-groupe-du-festival-avec-des-amis.webp?b=1&s=612x612&w=0&k=20&c=0eEoUpZbbhqZ2RU-6VpfOOwWfJmOACTgVsuuptV-v3A=',
         Match: 'https://media.istockphoto.com/id/1432118426/fr/photo/encourager-l%C3%A9quipe-de-rugby-pr%C3%A9f%C3%A9r%C3%A9e-%C3%A0-la-t%C3%A9l%C3%A9vision-dans-un-bar.webp?b=1&s=612x612&w=0&k=20&c=CIxJNXkzRSD9eeAJu3oOusJWm80Z3IaWFswZQ7pq7dg=',
         Parc_attractions: 'https://media.istockphoto.com/id/1051006012/fr/photo/h%C3%A9h%C3%A9-samuser-dans-un-parc-dattractions.jpg?s=612x612&w=0&k=20&c=2R2sOlVLuDyxVGxYKDtkJkKrqaw7ibARlwRSCKiJqC4=',
-        // Ajoutez d'autres valeurs et URL d'images au besoin
     };
 
     const axiosInstance = axios.create({
@@ -160,24 +161,27 @@ export default function PurchaseCart() {
         <div className="store-container">
             <div className="store-box">
                 {/*<input type="text" className="search-input" placeholder="Recherchez un ticket" />*/}
+                <span className="store-title">
+ Consultez nos produits en vente
+ </span>
                 <div>
                     {cart.length > 0 && (
-                        <button className="clear-btn" onClick={clearCart}>
+                        <button className="store-clear-btn" onClick={clearCart}>
                             Vider le panier
                         </button>
                     )}
                 </div>
-                <div>
-          <span>
-            <FontAwesomeIcon icon={faShoppingCart} />
-          </span>
+                <div className="store-cart-icon">
+ <span>
+ <FontAwesomeIcon icon={faShoppingCart} />
+ </span>
                     <span>{getCartTotal()}</span>
                 </div>
             </div>
             {loading ? <p>Chargement en cours...</p> : renderTickets()}
-            <div className="cart-section">
-                <h2>Mon Panier</h2>
-                {cart.length === 0 ? <p>Le panier est vide</p> : renderCart()}
+            <div className="purchase-cart-section">
+                <h2>Votre Panier</h2>
+                {cart.length === 0 ? <p>Le panier est vide actuellement</p> : renderCart()}
             </div>
         </div>
     );
