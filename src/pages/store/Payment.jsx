@@ -1,7 +1,7 @@
 import React from 'react';
 import MailList from "../../components/mailList/MailList";
 import Footer from "../../components/footer/Footer";
-import PaymentPage from "../../components/payment/PaymentPage";
+import PaymentPage from "../payment/PaymentPage";
 
 const Payment = () => {
     return (

@@ -123,7 +123,7 @@ export default function Selling() {
                             <option value="Spectacle">Spectacle</option>
                             <option value="Festival">Festival</option>
                             <option value="Match">Match</option>
-                            <option value="Parc d'attractions">Parc d'attractions</option>
+                            <option value="Parc_attractions">Parc d'attractions</option>
 
                             {/* Ajoutez d'autres options au besoin */}
                         </select>
