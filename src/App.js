@@ -19,7 +19,6 @@ import Login from "./pages/login/Login";
 import Selling from "./pages/tickets/Selling";
 import ShowCartContent from "./pages/store/ShowCartContent";
 import Payment from "./pages/store/Payment";
-import PurchaseCart from "./pages/tickets/PurchaseCart";
 
 function App() {
     return (
