@@ -10,7 +10,7 @@
 //             <Row className="store-row">
 //                 <Col>
 //                     <div className="text-center">
-//                         <h3 className="header-title">Consultez nos tickets en vente</h3>
+//                         <h3 className="store-header-title">Consultez nos tickets en vente</h3>
 //                     </div>
 //                 </Col>
 //                 <Col xs="auto">
@@ -43,7 +43,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import "./header-search.css"
 import { useNavigate } from 'react-router-dom'; // Update the import
 
-const HeaderStore = () => {
+const HeaderSearch = () => {
     const [eventName, setEventName] = useState('');
     const [eventCity, setEventCity] = useState('');
     const navigate = useNavigate(); // Use useNavigate instead of useHistory
@@ -68,16 +68,11 @@ const HeaderStore = () => {
     };
 
     return (
-        <div className="container-search">
-
-            <div className="store-row">
-                <div>
-                    <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" />
-                </div>
-
+        <div className="search-page-container">
+            <div className="search-left-content">
                 <div>
                     <div className="text-center">
-                        <h3 className="header-title">Consultez nos tickets en vente</h3>
+                        <h3 className="search-header-title">Trouvez un évènement dans votre ville</h3>
                     </div>
                 </div>
                 <div>
@@ -103,13 +98,15 @@ const HeaderStore = () => {
                     <button className="search-btn" onClick={handleSearch}>
                         Rechercher
                     </button>
-
-                    {/*</div>*/}
                 </div>
             </div>
-
+            <div className="search-right-content">
+                <div className="search-cart-container">
+                    <FontAwesomeIcon icon={faShoppingCart} className="search-cart-icon" />
+                </div>
+            </div>
         </div>
     );
 };
 
-export default HeaderStore;
+export default HeaderSearch;

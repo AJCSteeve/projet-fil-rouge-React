@@ -131,19 +131,20 @@ const AddRemoveCart = () => {
         </div>
     )
 
+    {/*Le conenu du HeaderStore.jsx*/}
     return (
         <nav className="store-container">
             <div className="store-box">
-                <input type="text" className="search-input" placeholder="Recherchez un ticket" />
-                <button className="store-btn"  onClick={() => navigateTo(PAGE_PRODUCTS)}>
+                <input type="text" className="store-search-input" placeholder="Recherchez un ticket" />
+                <button className="store-btn-consult" onClick={() => navigateTo(PAGE_PRODUCTS)}>
                     Consultez nos produits en vente
                 </button>
                 <div>
                     {cart.length > 0 && (
-                        <button className="clear-btn" onClick={clearCart}>Vider le panier</button>
+                        <button className="store-clear-btn" onClick={clearCart}>Vider le panier</button>
                     )}
                 </div>
-                <div className="cart-icon" onClick={() => navigateTo(PAGE_CART)}>
+                <div className="store-cart-icon" onClick={() => navigateTo(PAGE_CART)}>
                     <span>
                         <FontAwesomeIcon icon={faShoppingCart} />
                     </span>
