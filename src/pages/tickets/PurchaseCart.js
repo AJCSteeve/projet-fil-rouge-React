@@ -97,8 +97,7 @@ export default function PurchaseCart() {
                 {tickets.map((product) => (
                     <div className="card-custom" key={product.id}>
                         <img
-                            src={eventTypeImages[product.eventType]}
-                            alt={product.eventName}
+                            src={eventTypeImages[product.eventType]} alt={product.eventName}
                         />
                         <h3 className="card-title">{product.eventType}</h3>
                         <p className="card-descr">{product.eventName}</p>

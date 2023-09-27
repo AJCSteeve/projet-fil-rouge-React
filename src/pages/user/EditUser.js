@@ -63,13 +63,7 @@ export default function EditUser(){
             <form onSubmit={(ev) => onSubmit(ev)}>
                 <div className="edit-user-form-group">
                     <label htmlFor="username" className="edit-user-form-label">Identifiant <span>*</span></label>
-                    <input type='text'
-                           id="username"
-                           className="edit-user-form-control"
-                           placeholder="Veuillez entrer votre identifiant svp"
-                           name="username"
-                           value={username}
-                           onChange={(event)=>onInputChange(event)}/>
+                    <p>{username}</p>
                 </div>
                 <div className="edit-user-form-group">
                     <label htmlFor="phoneNumber" className="edit-user-form-label">Téléphone <span>*</span></label>

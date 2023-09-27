@@ -15,20 +15,20 @@ export const MenuItems = [
         cName: "menu-login",
     },
     {
-        Title: "Tickets",
+        Title: "Acheter",
         url: "/store",
         cName: "menu-tickets",
     },
     {
-        Title: "Search",
+        Title: "Rechercher",
         url: "/search",
         cName: "menu-search",
     },
-    {
-        Title: "Transaction",
-        url: "/tickets/purchase",
-        cName: "menu-transaction",
-    },
+    // {
+    //     Title: "Transaction",
+    //     url: "/tickets/purchase",
+    //     cName: "menu-transaction",
+    // },
     {
         Title: "Mon profil",
         url: "/user/accountsettings",
@@ -39,9 +39,9 @@ export const MenuItems = [
         url: "/tickets/selling",
         cName: "menu-vente",
     },
-    {
-        Title: "Acheter",
-        url: "/tickets/purchase",
-        cName: "menu-achat",
-    },
+    // {
+    //     Title: "Acheter",
+    //     url: "/tickets/purchase",
+    //     cName: "menu-achat",
+    // },
 ];

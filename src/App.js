@@ -12,8 +12,6 @@ import FetchTicketsFestival from "./pages/search/FetchTicketsFestival";
 import FetchTicketsMatch from "./pages/search/FetchTicketsMatch";
 import FetchTicketsParcAttractions from "./pages/search/FetchTicketsParcAttractions";
 import TransactionRating from "./components/transaction/TransactionRating";
-import CheckSellingHistory from "./components/transaction/CheckSellingHistory";
-import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory";
 import Navbar from "./components/navbar/Navbar";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
@@ -49,8 +47,6 @@ function App() {
                         <Route path="/tickets/selling" element={<Selling/>}/>
                         <Route path="/tickets/purchase" element={<PurchaseCart/>}/>
                         <Route path="/transaction/rating" element={<TransactionRating/>}/>
-                        <Route path="/transaction/history/selling" element={<CheckSellingHistory/>}/>
-                        <Route path="/transaction/history/purchase" element={<CheckPurchaseHistory/>}/>
                     </Routes>
                     {/*fixme the background image isn't displayed, while the picture URL is right.*/}
                     <div className='bg-image p-5 text-center shadow-1-strong rounded mb-5 text-light'></div>
