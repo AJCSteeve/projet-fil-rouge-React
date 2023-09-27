@@ -136,7 +136,7 @@ export default function Selling() {
                             required
                             onChange={(e) => onInputChange(e)}
                         />
-                        <p>{userData.username} required</p>
+                        <p>Vendeur: {userData.username}</p>
                         <div>
                             <button type="submit" className="selling-btn">Soumettre</button>
                         </div>
