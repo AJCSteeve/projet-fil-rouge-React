@@ -31,7 +31,7 @@ const Login = () => {
                 const { token, userId } = response.data;
                 localStorage.setItem('jwtToken', token);
                 localStorage.setItem('userId',userId);
-                navigate("/user/:activepage");
+                navigate("/user/compte");
             } else {
                 throw new Error('Authentication failed');
             }
