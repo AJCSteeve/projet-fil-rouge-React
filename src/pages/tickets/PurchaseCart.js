@@ -80,15 +80,25 @@ export default function PurchaseCart() {
             newCart.push(itemInCart);
         }
         setCart(newCart);
+    };
 
-        axiosInstance
-            .put("/tickets/purchase", { id: product.id })
-            .then((response) => {
-                console.log("Ticket acheté avec succès !");
-            })
-            .catch((error) => {
-                console.error("Erreur lors de l'achat du ticket :", error);
-            });
+    const handlePayment = async() =>{
+        try{
+            for (const product of cart) {
+                axiosInstance
+                    .put("/tickets/purchase", { id: product.id })
+                    .then((response) => {
+                        console.log("Ticket acheté avec succès !");
+                    })
+                    .catch((error) => {
+                        console.error("Erreur lors de l'achat du ticket :", error);
+                    });
+            }
+
+        }catch (error)
+        {
+            console.error("Erreur lors du paiement :", error);
+        }
     };
 
     const renderTickets = () => (
@@ -133,15 +143,15 @@ export default function PurchaseCart() {
                             <FontAwesomeIcon icon={faCalendar} /> {product.date}
                         </p>
                         <button className={"card-btn"} onClick={() => removeFromCart(product)}>
-                            Remove
+                            Enlever
                         </button>
                     </div>
                 ))}
             </section>
             <div className={"total-amount"}>Montant total : €{getTotalSum()}</div>
-            <div className={"payment-btn"}>
+            <button className={"payment-btn"} onClick={handlePayment}>
                 <PaymentButton />
-            </div>
+            </button>
         </div>
     );
 
