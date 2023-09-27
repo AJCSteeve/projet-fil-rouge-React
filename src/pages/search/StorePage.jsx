@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import FetchTicketsAll from './FetchTicketsAll';
 import AddRemoveCart from '../../components/cart/AddRemoveCart';
+import HeaderSearch from "../../components/header/HeaderSearch";
 
 function StorePage() {
     // State to manage cart items
@@ -19,11 +20,14 @@ function StorePage() {
 
     return (
         <div>
-            {/* Pass cartItems and addToCart as props to FetchTicketsAll */}
-            <FetchTicketsAll cartItems={cartItems} addToCart={addToCart} />
+            <HeaderSearch />
+            <div>
+                {/* Pass cartItems and addToCart as props to FetchTicketsAll */}
+                <FetchTicketsAll cartItems={cartItems} addToCart={addToCart} />
 
-            {/* Pass cartItems and removeFromCart as props to AddRemoveCart */}
-            <AddRemoveCart cartItems={cartItems} removeFromCart={removeFromCart} />
+                {/* Pass cartItems and removeFromCart as props to AddRemoveCart */}
+                <AddRemoveCart cartItems={cartItems} removeFromCart={removeFromCart} />
+            </div>
         </div>
     );
 }

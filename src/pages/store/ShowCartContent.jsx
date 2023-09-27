@@ -10,10 +10,10 @@ const ShowCartContent = () => {
     return (
             <div>
                 <AddRemoveCart />
-                {/*<Container className="home-container">
+                {/* <div className="home-container">
                     <MailList />
                     <Footer />
-                </Container>*/}
+                </div>*/}
             </div>
     );
 };
