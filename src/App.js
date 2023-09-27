@@ -11,7 +11,6 @@ import FetchTicketsConcert from "./pages/search/FetchTicketsConcert";
 import FetchTicketsFestival from "./pages/search/FetchTicketsFestival";
 import FetchTicketsMatch from "./pages/search/FetchTicketsMatch";
 import FetchTicketsParcAttractions from "./pages/search/FetchTicketsParcAttractions";
-import PurchaseTickets from "./components/transaction/PurchaseTickets";
 import TransactionRating from "./components/transaction/TransactionRating";
 import CheckSellingHistory from "./components/transaction/CheckSellingHistory";
 import CheckPurchaseHistory from "./components/transaction/CheckPurchaseHistory";
@@ -21,6 +20,7 @@ import Login from "./pages/login/Login";
 import Selling from "./pages/tickets/Selling";
 import ShowCartContent from "./pages/store/ShowCartContent";
 import Payment from "./pages/store/Payment";
+import PurchaseCart from "./pages/tickets/PurchaseCart";
 
 function App() {
     return (
@@ -47,7 +47,7 @@ function App() {
                         <Route path="/paiement" element={<Payment/>}/>
 
                         <Route path="/tickets/selling" element={<Selling/>}/>
-                        <Route path="/tickets/purchase" element={<PurchaseTickets/>}/>
+                        <Route path="/tickets/purchase" element={<PurchaseCart/>}/>
                         <Route path="/transaction/rating" element={<TransactionRating/>}/>
                         <Route path="/transaction/history/selling" element={<CheckSellingHistory/>}/>
                         <Route path="/transaction/history/purchase" element={<CheckPurchaseHistory/>}/>

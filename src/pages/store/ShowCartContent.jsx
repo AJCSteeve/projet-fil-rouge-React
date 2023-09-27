@@ -1,15 +1,13 @@
 import React from 'react';
 import "../../App.css"
 import "../home/home.css"
-import MailList from "../../components/mailList/MailList";
-import Footer from "../../components/footer/Footer";
-import AddRemoveCart from "../../components/cart/AddRemoveCart";
+import PurchaseCart from "../tickets/PurchaseCart";
 
 
 const ShowCartContent = () => {
     return (
             <div>
-                <AddRemoveCart />
+                <PurchaseCart />
                 {/*<Container className="home-container">
                     <MailList />
                     <Footer />

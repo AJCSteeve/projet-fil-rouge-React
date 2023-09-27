@@ -39,4 +39,9 @@ export const MenuItems = [
         url: "/tickets/selling",
         cName: "menu-vente",
     },
+    {
+        Title: "Acheter",
+        url: "/tickets/purchase",
+        cName: "menu-achat",
+    },
 ];

@@ -5,7 +5,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCalendar, faLocationPin, faMoneyBills, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import "./add-remove-cart.css"
 import "../header/header-store.css"
-import PaymentButton from "../payment/PaymentButton";
+import PaymentButton from "../../pages/payment/PaymentButton";
 
 const PAGE_PRODUCTS = 'products';
 const PAGE_CART = 'cart';
