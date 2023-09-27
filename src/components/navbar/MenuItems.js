@@ -14,11 +14,11 @@ export const MenuItems = [
         url: "/login",
         cName: "menu-login",
     },
-    {
-        Title: "Acheter",
-        url: "/store",
-        cName: "menu-tickets",
-    },
+    // {
+    //     Title: "Acheter",
+    //     url: "/store",
+    //     cName: "menu-tickets",
+    // },
     {
         Title: "Rechercher",
         url: "/search",
