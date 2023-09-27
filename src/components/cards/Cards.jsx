@@ -56,7 +56,7 @@ const Cards = () => {
                 </div>
                 <div className="eventItem">
                     <img src="https://media.istockphoto.com/id/1051006012/fr/photo/h%C3%A9h%C3%A9-samuser-dans-un-parc-dattractions.jpg?s=612x612&w=0&k=20&c=2R2sOlVLuDyxVGxYKDtkJkKrqaw7ibARlwRSCKiJqC4="
-                         alt={"parc d'attractions"}
+                         alt={"parc attractions"}
                          className={"eventImg"}></img>
                     <div className="eventTitle">
                         <h1 className="event-title">Parc d'attractions</h1>

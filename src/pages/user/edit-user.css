@@ -14,7 +14,12 @@
 .edit-user-form-group {
     margin-bottom: 20px;
 }
-
+.edit-user-form-group>p {
+    font-weight: bold;
+    margin: 10px;
+    color: firebrick;
+    font-size: 20px;
+}
 .edit-user-form-label {
     font-size: 18px;
     font-weight: bold;
