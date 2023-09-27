@@ -166,9 +166,8 @@ export default function PurchaseCart() {
     );
 
     return (
-        <nav className="store-container">
+        <div className="store-container">
             <div className="store-box">
-                <input type="text" className="store-search-input" placeholder="Recherchez un ticket" />
                 <button className="store-btn-consult" onClick={() => navigateTo(PAGE_PRODUCTS)}>
                     Consultez nos produits en vente
                 </button>
@@ -184,14 +183,11 @@ export default function PurchaseCart() {
                     <span>{getCartTotal()}</span>
                 </div>
             </div>
-
-
-            {/*{loading ? <p>Chargement en cours...</p> : renderTickets()}
+            {loading ? <p>Chargement en cours...</p> : renderTickets()}
             <div className="cart-section">
                 <h2>Mon Panier</h2>
                 {cart.length === 0 ? <p>Le panier est vide</p> : renderCart()}
-            </div>*/}
-
-        </nav>
+            </div>
+        </div>
     );
 }

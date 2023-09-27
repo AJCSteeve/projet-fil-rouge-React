@@ -18,7 +18,7 @@ import Login from "./pages/login/Login";
 import Selling from "./pages/tickets/Selling";
 import ShowCartContent from "./pages/store/ShowCartContent";
 import Payment from "./pages/store/Payment";
-import PurchasePage from "./pages/tickets/PurchasePage";
+import PurchaseCart from "./pages/tickets/PurchaseCart";
 
 function App() {
     return (
@@ -45,7 +45,7 @@ function App() {
                         <Route path="/paiement" element={<Payment/>}/>
 
                         <Route path="/tickets/selling" element={<Selling/>}/>
-                        <Route path="/tickets/purchase" element={<PurchasePage/>}/>
+                        <Route path="/tickets/purchase" element={<ShowCartContent/>}/>
                         <Route path="/transaction/rating" element={<TransactionRating/>}/>
                     </Routes>
                     {/*fixme the background image isn't displayed, while the picture URL is right.*/}
