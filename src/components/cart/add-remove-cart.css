@@ -65,19 +65,6 @@
     margin: 0.5rem 1.5rem;
     cursor: pointer;
 }
-.clear-btn {
-    text-align: center;
-    background-color: #c60b1e;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: bold;
-    margin: 5px;
-}
 
 .total-amount {
     text-align: center;
